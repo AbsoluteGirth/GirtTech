@@ -49,7 +49,7 @@ elseif z1 == z2 then
     end
 end
 
-if amount ~= math.floor(center) then
+if ((center % 1) ~= 0) then
     center1 = center-0.5
     center2 = center+0.5
     dist = dist + 0.5
