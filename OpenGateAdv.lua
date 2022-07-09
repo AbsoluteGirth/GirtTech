@@ -69,6 +69,7 @@ if oddeven == even then
             currentpos = currentpos + 1
         end
         sleep(tonumber(args))
+        currentpos = currentpos-1
         while currentpos >= 0 do
             exec("fill "..x1.." "..y1.." "..(center1-currentpos).." "..x2.." "..y2.." "..(center1-currentpos).." "..block)
             exec("fill "..x1.." "..y1.." "..(center2+currentpos).." "..x2.." "..y2.." "..(center2+currentpos).." "..block)
