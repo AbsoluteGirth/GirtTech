@@ -59,8 +59,6 @@ else
     dist = dist + 1
 end
 
-term.write(center.." "..center1.." "..center2)
-
 local currentpos = 0
 if oddeven == even then
     if axis == "z" then
