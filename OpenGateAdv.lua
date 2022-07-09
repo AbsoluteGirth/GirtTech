@@ -43,8 +43,10 @@ if x1 == x2 then
 elseif z1 == z2 then
     axis = "x"
     if x1 < x2 then
-        center = (x1+((x2-x1)/2))
+        dist = ((x2-x1)/2)
+        center = (x1+dist)
     elseif x1 > x2 then
+        dist = ((x1-x2)/2)
         center = (x2+((x1-x2)/2))
     end
 end
