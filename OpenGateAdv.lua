@@ -12,7 +12,7 @@ local y1 = 80
 local z1 = 498
 local x2 = 21
 local y2 = 81
-local z2 = 505
+local z2 = 504
 
 
 
@@ -55,7 +55,9 @@ if amount ~= math.floor(center) then
     dist = dist + 0.5
     oddeven = even
 else
-    oddeven = odd
+    center1 = center - 1 
+    center2 = center + 1
+    oddeven = even
     
 end
 
