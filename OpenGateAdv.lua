@@ -9,7 +9,7 @@ local speed = "0.5"
 local block = "minecraft:nether_brick_fence"
 local x1 = 21
 local y1 = 80
-local z1 = 499
+local z1 = 498
 local x2 = 21
 local y2 = 81
 local z2 = 504
@@ -55,8 +55,8 @@ if amount ~= math.floor(center) then
     dist = dist + 0.5
     oddeven = even
 else
-    center1 = center - 1 
-    center2 = center + 1
+    center1 = center
+    center2 = center
     oddeven = even
 
     
