@@ -49,6 +49,7 @@ end
 if amount ~= math.floor(center) then
     center1 = center-0.5
     center2 = center+0.5
+end
 
 print(center)
 print(center1)
