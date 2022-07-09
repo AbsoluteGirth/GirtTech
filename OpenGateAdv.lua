@@ -12,7 +12,7 @@ local y1 = 80
 local z1 = 498
 local x2 = 21
 local y2 = 81
-local z2 = 504
+local z2 = 505
 
 
 
