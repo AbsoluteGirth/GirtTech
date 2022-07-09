@@ -29,6 +29,9 @@ end
 -- find center
 
 local center = nil
+local center1 = nil
+local center2= nil
+
 if x1 == x2 then
     if z1 < z2 then
         center = (z1+((z2-z1)/2))
@@ -43,7 +46,13 @@ elseif z1 == z2 then
     end
 end
 
+if amount ~= math.floor(center) then
+    center1 = center-0.5
+    center2 = center+0.5
+
 print(center)
+print(center1)
+print(center2)
 
 --local currentheight = 0
 
