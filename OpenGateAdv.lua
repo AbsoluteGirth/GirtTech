@@ -63,7 +63,7 @@ else
     
 end
 
-
+print("balls")
 
 local currentpos = 0
 if oddeven == even then
