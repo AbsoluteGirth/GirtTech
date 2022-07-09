@@ -62,7 +62,7 @@ else
     
 end
 
-print(center)
+term.write(center)
 
 local currentpos = 0
 if oddeven == even then
