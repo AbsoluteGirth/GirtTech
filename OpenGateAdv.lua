@@ -30,15 +30,22 @@ end
 
 local center = nil
 local center1 = nil
-local center2= nil
+local center2 = nil
+local oddeven = nil
+local dist = nil
+local axis = nil
 
 if x1 == x2 then
+    axis = "z"
     if z1 < z2 then
-        center = (z1+((z2-z1)/2))
+        dist = ((z2-z1)/2)
+        center = (z1+dist)
     elseif z1 > z2 then
-        center = (z2+((z1-z2)/2))
+        dist = ((z1-z2)/2)
+        center = (z2+dist)
     end
 elseif z1 == z2 then
+    axis = "x"
     if x1 < x2 then
         center = (x1+((x2-x1)/2))
     elseif x1 > x2 then
@@ -49,11 +56,25 @@ end
 if amount ~= math.floor(center) then
     center1 = center-0.5
     center2 = center+0.5
+    dist = dist-0.5
+    oddeven = even
+else
+    oddeven = odd
+    
 end
 
-print(center)
-print(center1)
-print(center2)
+
+
+local currentpos = 0
+if oddeven == even then
+    if axis == "z" then
+        while currentpos <= dist do
+            exec("fill "..x1.." "..y1.." "..(z1-currentpos).." "..x2.." "..y2.." "..(z2+currentpos).." minecraft:air")
+            sleep(tonumber(speed))
+            currentpos = currentpos + 1
+        end
+    end
+end
 
 --local currentheight = 0
 
