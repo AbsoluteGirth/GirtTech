@@ -5,7 +5,7 @@ local args = ...
 
 -- Door setup --
 
-local speed = "0.5"
+local speed = 1
 local block = "minecraft:nether_brick_fence"
 local x1 = 21
 local y1 = 80
@@ -61,6 +61,8 @@ else
 
     
 end
+
+print(center)
 
 local currentpos = 0
 if oddeven == even then
