@@ -15,10 +15,6 @@ local y2 = 81
 local z2 = 498
 
 
--- in dev
-local openstyle = 0
-
-
 
 -- Don't touch anything past here --
 
@@ -63,7 +59,7 @@ else
     
 end
 
-
+sleep(2)
 local currentpos = 0
 if oddeven == even then
     if axis == "z" then
