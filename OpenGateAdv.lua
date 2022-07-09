@@ -9,10 +9,10 @@ local speed = "0.5"
 local block = "minecraft:nether_brick_fence"
 local x1 = 21
 local y1 = 80
-local z1 = 505
+local z1 = 498
 local x2 = 21
 local y2 = 81
-local z2 = 498
+local z2 = 505
 
 
 
