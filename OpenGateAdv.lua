@@ -59,7 +59,6 @@ else
     
 end
 
-sleep(2)
 local currentpos = 0
 if oddeven == even then
     if axis == "z" then
