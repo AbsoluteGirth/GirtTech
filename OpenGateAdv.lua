@@ -56,7 +56,7 @@ end
 if amount ~= math.floor(center) then
     center1 = center-0.5
     center2 = center+0.5
-    dist = dist - 0.5
+    dist = dist + 0.5
     oddeven = even
 else
     oddeven = odd
@@ -67,7 +67,7 @@ end
 local currentpos = 0
 if oddeven == even then
     if axis == "z" then
-        while currentpos <= dist do
+        while currentpos < dist do
             exec("fill "..x1.." "..y1.." "..(center1-currentpos).." "..x2.." "..y2.." "..(center1-currentpos).." minecraft:air")
             exec("fill "..x1.." "..y1.." "..(center2+currentpos).." "..x2.." "..y2.." "..(center2+currentpos).." minecraft:air")
             sleep(tonumber(speed))
