@@ -68,7 +68,7 @@ local currentpos = 0
 if oddeven == even then
     if axis == "z" then
         while currentpos <= dist do
-            exec("fill "..x1.." "..y1.." "..(z1+currentpos).." "..x2.." "..y2.." "..(z2-currentpos).." minecraft:air")
+            exec("fill "..x1.." "..y1.." "..(z1+currentpos).." "..x2.." "..y2.." "..(z2+currentpos).." minecraft:air")
             sleep(tonumber(speed))
             currentpos = currentpos + 1
         end
