@@ -69,6 +69,7 @@ if oddeven == even then
     if axis == "z" then
         while currentpos < dist do
             exec("fill "..x1.." "..y1.." "..(center1-currentpos).." "..x2.." "..y2.." "..(center1-currentpos).." minecraft:dirt")
+            sleep(1)
             exec("fill "..x1.." "..y1.." "..(center2+currentpos).." "..x2.." "..y2.." "..(center2+currentpos).." minecraft:stone")
             sleep(tonumber(speed))
             currentpos = currentpos + 1
