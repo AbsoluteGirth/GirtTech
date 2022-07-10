@@ -59,10 +59,11 @@ while true do
         term.write("           ")
 
         -- Draw screen
-        term.setCursorPos(25,2)
+        term.setCursorPos(28,2)
         term.setBackgroundColor(colors.black)
         term.write("                        ")
 
+        -- Draw selected category
         if category == 1 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,5)
