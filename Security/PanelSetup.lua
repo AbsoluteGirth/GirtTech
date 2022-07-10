@@ -35,7 +35,7 @@ while true do
     end
 
     term.setCursorPos(1,5)
-    if selection == 1 then
+    if selection == 3 then
         term.write("[Wireless]")
     else
         term.write(" Wireless")
