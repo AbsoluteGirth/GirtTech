@@ -364,8 +364,8 @@ while true do
             term.setCursorPos(1,17)
             term.write("Checkout  > ")
             for i=1,#list do
-                table.insert(reciept, list[i])
-                table.insert(reciept, price[i])
+                table.insert(reciept, (list[i]))
+                table.insert(reciept, (price[i]))
             end
             shell.run("PrintReciept",reciept)
         end
