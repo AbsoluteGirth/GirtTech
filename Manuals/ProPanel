@@ -1,0 +1,154 @@
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+     ****************
+       GirtTech Inc
+     ****************
+
+     Pro panel manual
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+
+
+
+Congratulations on your purchase of the new GirtTech Security Panel Pro
+
+This guide will cover getting you set up and making the most of your new personal security gaurd!
+
+
+
+
+
+
+------------------------
+1. Installing Your Panel
+------------------------
+
+First, install your panel(s) on a wall near your garage or gate.
+(Make sure you are able to access your panel from the inside or you may have some difficulty leaving)
+
+Once you have your panel(s) positioned in a good location you are ready to move on to the next step.
+
+
+   
+-------------------------       
+2. Configuring your panel
+          pt.1
+-------------------------
+
+Now you have your panel installed, you are ready to start configuring your panel.
+
+First, turn on your panel and wait for it to boot up
+
+Next, hold "ctrl + T" to enter setup mode.
+
+Then type in "edit GirtTechPanelPro" and hit enter.
+
+-------------------------
+3. Configuring your panel
+          cont. 
+-------------------------
+
+Now you are in setup mode, you will see these options:
+
+password = ""
+passwordlen = 4
+opentime = 5
+bgcolor = colors.lightGray
+buttoncolor = colors.gray
+textcolor = colors.white
+
+These are used to setup and customise your pro panel.
+
+-------------------------
+4. Configuring your panel
+       cont. cont.
+-------------------------
+
+To set up your panel you will need to modify these values.
+
+
+password:
+This is the code you will use to unlock your gate/garage.
+
+
+passwordlen:
+This is how long your password is (This can be up to 6 characters)
+
+-------------------------
+5. Configuring your panel
+    cont. cont. cont.
+-------------------------
+opentime:
+This is how long your gate/garage will stay open for before automatically locking again.
+
+Once these are set you can move onto customisation or skip ahead to set up your opener.
+
+
+
+
+
+-------------------------
+6. Customising your panel
+-------------------------
+
+Your panel can me customised using the 3 values:
+
+bgcolor     (background) 
+buttoncolor       (keys)
+textcolor    (lettering)
+
+These can be customised by replacing the colors with colors from the reference list.
+
+
+
+
+
+------------------------
+7. Saving changes 
+------------------------
+
+Once you're finished configuring your panel, press "ctrl" and select "Save", then repeat but select "Exit" then type "reboot" or press and hold "ctrl + r"
+
+
+
+
+
+
+
+
+
+
+------------------------
+8. Color reference
+------------------------
+colors.white
+colors.orange
+colors.magenta
+colors.lightBlue
+colors.yellow
+colors.lime
+colors.pink
+colors.gray
+colors.lightGray
+colors.cyan
+colors.purple
+colors.blue
+colors.brown
+colors.green
+colors.red
+colors.black
+
