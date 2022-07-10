@@ -96,7 +96,7 @@ while true do
         term.write(" Total       | Y      ")
 
         -- Draw buttons
-        Term.setBackgroundColor(colors.lightGray)
+        term.setBackgroundColor(colors.lightGray)
         term.setCursorPos(13,3)
         term.write("               ")
         term.setCursorPos(14,3)
