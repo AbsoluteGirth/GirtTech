@@ -361,7 +361,7 @@ while true do
         elseif category == 6 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,17)
-            term.write("Checkout  > ")
+            term.write("Checkout > ")
             shell.run("PrintReciept")
         end
 
