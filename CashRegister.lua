@@ -7,9 +7,12 @@ local item1 = "iPiss"
 local item1price = 50000
 local item2 = "iPiss Case"
 local item2price = 2000
+local item
+
 
 local items = {}
-local price = {}
+local prices = {}
+local total = 0
 local category = 1
 -- size 51, 19
 
@@ -97,7 +100,10 @@ while true do
         term.setCursorPos(29,18)
         term.write(" Total       | Y      ")
 
-        --[[ Draw buttons
+        -- Button Reference
+
+        --[[
+        
         term.setBackgroundColor(colors.gray)
         term.setCursorPos(13,2)
         term.write("               ")
@@ -125,6 +131,7 @@ while true do
         term.write("               ")
         term.setCursorPos(13,15)
         term.write("               ")
+
         ]]--
 
         -- Draw selected category
@@ -132,6 +139,17 @@ while true do
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,5)
             term.write(" iPiss   > ")
+
+            term.setBackgroundColor(colors.gray)
+            term.setCursorPos(13,2)
+            term.write("               ")
+            term.setCursorPos(13,3)
+            term.write("    [iPiss]    ")
+            term.setCursorPos(13,4)
+            term.write("    Y50,000    ")
+            term.setCursorPos(13,5)
+            term.write("               ")
+            
         elseif category == 2 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,7)
@@ -152,7 +170,7 @@ while true do
 
         while true do
             local evnet, button, x, y = os.pullEvent("mouse_click")
-            if x <= 11 then
+            if x <= 11 then -- Categories
                 if y == 5 then
                     category = 1
                     break
@@ -168,6 +186,23 @@ while true do
                 elseif y == 13 then
                     category = 5
                     break
+                end
+            
+            elseif x >= 13 and x <= 28 then
+                if t >= 2 and y <=5 then
+                    if category == 1 then
+                        list = list..item1
+                        prices = prices..item1price
+                        total = total + item1price
+                        
+                        term.setcursorpos(1,17)
+                        term.write(list)
+                        term.setCursorPos(1,18)
+                        term.write(prices)
+                        term.setcursorpos(1,19)
+                        term.write(total)
+                        
+                    end
                 end
             end
         end 
