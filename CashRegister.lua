@@ -20,6 +20,7 @@ while true do
     local items = {}
     local price = {}
     while true do
+
         -- Draw categries --
         term.setBackgroundColor(colors.white)
         term.clear()
@@ -107,9 +108,10 @@ while true do
         --if list1[1] ~= nil then
         for i=1,#list do
             term.setCursorPos(29,ypos)
-            term.write(list[i])
-            ypos = ypos + 1
+            term.write("                      ")
             term.setCursorPos(29,ypos)
+            term.write(list[i])
+            term.setCursorPos(51-(string.len(prices[i])),ypos)
             term.write(prices[i])
             ypos = ypos + 1
         
@@ -117,6 +119,7 @@ while true do
         term.setCursorPos(43,18)
         term.write(total)
         term.setTextColor(colors.white)
+        
         -- Button Reference
 
         --[[
