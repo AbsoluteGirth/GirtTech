@@ -103,7 +103,7 @@ while true do
 
 
         -- write values on screen
-        term.setTextColor(colors.red)
+        term.setTextColor(colors.green)
         local ypos = 2
         --if list1[1] ~= nil then
         for i=1,#list do
