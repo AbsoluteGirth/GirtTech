@@ -10,7 +10,7 @@ local item2price = 2000
 local item
 
 
-local items = {}
+local list = {}
 local prices = {}
 local total = 0
 local category = 1
