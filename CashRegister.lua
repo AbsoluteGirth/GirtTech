@@ -7,8 +7,8 @@ local item1 = "iPiss"
 local item1price = 50000
 local item2 = "iPiss Case"
 local item2price = 2500
-local item3 = 
-local item3price = 
+local item3 = ""
+local item3price = 0
 
 local list = {}
 local prices = {}
