@@ -38,7 +38,7 @@ if args ~= "open" and args ~= "close" then
 end
 
 if args == "close" then 
-    currentheight = height
+    currentheight = height - 1
 end
 
 if args ~= "open" then
