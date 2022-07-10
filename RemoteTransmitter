@@ -1,0 +1,83 @@
+local modem = peripheral.find("modem")
+-- Girt Tech Inc --
+--v1.0
+
+-- Remote Setup --
+
+local password = ""
+local requirepassword = false
+local transmitchannel =  -- Max = 65535
+local openmode = "m" -- M = manual T = timed
+local opentime = 5
+
+local bgcolor = colors.lightGray
+local buttoncolor = colors.gray
+local textcolor = colors.white
+
+
+
+term.setBackgroundColor(bgcolor)
+term.setTextColor(textcolor)
+term.clear()
+
+while true do
+    if requirepassword == true
+        -- Keypad goes here
+    end
+
+    if openmode == "m" then
+        term.setCursorPos(7,6)
+        term.write("Door Control:")
+        
+        term.setCursorPos(7,7)
+        term.setBackgroundColor(buttoncolor)
+        term.write("              ")
+        term.setCursorPos(7,8)
+        term.write("    [OPEN]    ")
+        term.setCursorPos(7,9)
+        term.write("              ")
+
+        term.setCursorPos(7,13)
+        term.setBackgroundColor(buttoncolor)
+        term.write("              ")
+        term.setCursorPos(7,14)
+        term.write("    [SHUT]    ")
+        term.setCursorPos(7,15)
+        term.write("              ")
+    
+    elseif openmode == "t"
+        term.setCursorPos(7,8)
+        term.write("Door Control:")
+        
+        term.setCursorPos(7,10)
+        term.setBackgroundColor(buttoncolor)
+        term.write("              ")
+        term.setCursorPos(7,11)
+        term.write("    [OPEN]    ")
+        term.setCursorPos(7,12)
+        term.write("              ")
+    end
+
+    while true do
+        local evnet, button, x, y = os.pullEvent("mouse_click")
+        if x >= 7 and x <= 20 then
+            if y >= 7 and y <= 9 then
+                if openmode == "m" then
+                    modem.transmit(transmitchannel,1,"open")
+                    break
+                end
+            elseif y >= 10 and y <= 12 then
+                if openmode == "t" then
+                    modem.transmit(transmit,1,opentime)
+                    sleep(opentime)
+                    break
+                end
+            elseif y >= 13 and y <= 15 then
+                if openmode == "m" then
+                    modem.transmit(transmitchannel,1,"close")
+                    break
+                end
+            end
+        end
+    end
+end
