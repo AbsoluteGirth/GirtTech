@@ -217,18 +217,18 @@ while true do
                                     if y >= 7 and y <= 9 then
                                         if openmode == "m" then
                                             modem.transmit(transmitchannel,1,"open")
-                                            break
+                                            
                                         end
                                     elseif y >= 10 and y <= 12 then
                                         if openmode == "t" then
                                             modem.transmit(transmitchannel,1,opentime)
                                             sleep(opentime)
-                                            break
+                                            
                                         end
                                     elseif y >= 13 and y <= 15 then
                                         if openmode == "m" then
                                             modem.transmit(transmitchannel,1,"close")
-                                            break
+                                            
                                         end
                                     
                                     elseif y >= 17 and y <= 19 then
