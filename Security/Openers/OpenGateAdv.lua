@@ -6,13 +6,15 @@ local args = ...
 -- Door setup --
 
 local speed = 0.5
-local block = "minecraft:nether_brick_fence"
-local x1 = 21
-local y1 = 80
-local z1 = 498
-local x2 = 21
-local y2 = 81
-local z2 = 505
+local block = ""
+local x1 = 
+local y1 = 
+local z1 = 
+local x2 = 
+local y2 = 
+local z2 = 
+
+
 
 
 

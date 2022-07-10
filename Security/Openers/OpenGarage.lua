@@ -6,12 +6,12 @@ local args = ...
  
 -- Door setup --
  
-local speed = "0.2"
+local speed = 0.2
 local block = ""
-local x1 = ""
-local z1 = ""
-local x2 = ""
-local z2 = ""
+local x1 = 
+local z1 = 
+local x2 = 
+local z2 = 
 local y = 
 local height = 
  

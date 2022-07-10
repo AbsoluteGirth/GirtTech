@@ -5,9 +5,20 @@ local args = ...
 
 --Gate setup
 
+
 local coords1 = ""
 local coords2 = ""
 local block = ""
+
+
+
+
+
+
+
+
+
+-- Don't touch anything past here --
 
 if args == nil then
     args = "5"
