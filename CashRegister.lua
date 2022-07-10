@@ -195,11 +195,11 @@ while true do
                         table.insert(prices, item1price)
                         total = total + item1price
                         
-                        term.setcursorpos(1,17)
+                        term.setCursorPos(1,17)
                         term.write(list)
                         term.setCursorPos(1,18)
                         term.write(prices)
-                        term.setcursorpos(1,19)
+                        term.setCursorPos(1,19)
                         term.write(total)
                         
                     end
