@@ -41,7 +41,7 @@ function TurnTo(dir)
         print(facing)
         turtle.turnRight()
         facing = facing + 1
-        if facing = 5 then 
+        if facing == 5 then 
             facing = 1
         end
     end
