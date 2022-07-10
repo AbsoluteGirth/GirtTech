@@ -38,3 +38,8 @@ term.setCursorPos(1,10)
 term.write(" Openers   ")
 term.setCursorPos(1,11)
 term.write("           ")
+
+
+
+
+term.setCursorPos(1,19)
