@@ -10,7 +10,7 @@ while true do
     local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
     if control == "open" then
         shell.run("Opener","open")
-    if control == "close"
+    if control == "close" then
         shell.run("Opener","close")
     else
         shell.run("Opener",control)
