@@ -196,9 +196,9 @@ while true do
                         total = total + item1price
                         
                         term.setCursorPos(1,17)
-                        term.write(list)
+                        term.write(list[1])
                         term.setCursorPos(1,18)
-                        term.write(prices)
+                        term.write(prices[1])
                         term.setCursorPos(1,19)
                         term.write(total)
                         
