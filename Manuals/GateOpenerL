@@ -70,6 +70,7 @@ Next type in "edit opendoor" and hit enter.
 
 
 
+
 -------------------------
 3.Configuring your opener
           cont.
@@ -87,11 +88,6 @@ z2
 
 these will need to be completed in order to use your opener.
 
-
-
-
-
-
 -------------------------
 4.Configuring your opener
        cont. cont.
@@ -101,6 +97,11 @@ these will need to be completed in order to use your opener.
 
 speed:
 This is how fast your door will open.
+
+
+
+
+
 
 
 -------------------------
@@ -114,14 +115,29 @@ The material your door is made of. NOTE: Some types of gate will require special
 x1 ,y1, z1:
 The coordinates of the bottom left corner of your gate. 
 
+
+
+-------------------------
+6.Configuring your opener
+  cont. cont. cont. cont.
+-------------------------
 x2, y2, z2:
 The coordinates of the top right corner of your gate  
 
 
 
 
+
+
+
+
+
+
+
+
+
 -------------------------
-6.Saving and testing
+7.Saving and testing
 -------------------------
 Once you are finished setting up your opener, press "ctrl" and select save, then repeat but select "Exit". Once you have done this make sure to reboot your panel by typing "reboot" or pressing and holding "ctrl + R".
 
