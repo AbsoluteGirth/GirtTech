@@ -111,7 +111,7 @@ while true do
             term.setCursorPos(29,i)
             term.write(prices[i])
             ypos = ypos + 1
-        
+        end
         term.setCursorPos(43,18)
         term.write(total)
 
