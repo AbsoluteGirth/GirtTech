@@ -502,6 +502,9 @@ while true do
                         table.insert(prices, item53price)
                         _G.total = _G.total + item53price
                         break 
+
+
+                        
                     end
                 end
             end
