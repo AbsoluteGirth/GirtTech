@@ -197,6 +197,8 @@ while true do
                         
                         term.setCursorPos(1,17)
                         term.write(list[1])
+                        if list[2] ~= nil then
+                            term.write(list[2])
                         term.setCursorPos(1,18)
                         term.write(prices[1])
                         term.setCursorPos(1,19)
