@@ -66,36 +66,61 @@ end
 local currentpos = 0
 
 if axis == "z" then
-    while currentpos < dist do
-        exec("fill "..x1.." "..y1.." "..(center1-currentpos).." "..x2.." "..y2.." "..(center1-currentpos).." minecraft:air")
-        exec("fill "..x1.." "..y1.." "..(center2+currentpos).." "..x2.." "..y2.." "..(center2+currentpos).." minecraft:air")
-        sleep(tonumber(speed))
-        currentpos = currentpos + 1
+    if args ~= "close" then
+        while currentpos < dist do
+            exec("fill "..x1.." "..y1.." "..(center1-currentpos).." "..x2.." "..y2.." "..(center1-currentpos).." minecraft:air")
+            exec("fill "..x1.." "..y1.." "..(center2+currentpos).." "..x2.." "..y2.." "..(center2+currentpos).." minecraft:air")
+            sleep(tonumber(speed))
+            currentpos = currentpos + 1
+        end
     end
-    sleep(tonumber(args))
-    currentpos = currentpos-1
-    while currentpos >= 0 do
-        exec("fill "..x1.." "..y1.." "..(center1-currentpos).." "..x2.." "..y2.." "..(center1-currentpos).." "..block)
-        exec("fill "..x1.." "..y1.." "..(center2+currentpos).." "..x2.." "..y2.." "..(center2+currentpos).." "..block)
-        sleep(tonumber(speed))
-        currentpos = currentpos - 1
+
+    if args ~= "open" and args ~= "close" then
+        sleep(tonumber(args))
+        currentpos = currentpos-1
+    end
+
+    if args == "close" then 
+        currentpos = dist - 1
+    end
+
+    if args ~= "open" then 
+        while currentpos >= 0 do
+            exec("fill "..x1.." "..y1.." "..(center1-currentpos).." "..x2.." "..y2.." "..(center1-currentpos).." "..block)
+            exec("fill "..x1.." "..y1.." "..(center2+currentpos).." "..x2.." "..y2.." "..(center2+currentpos).." "..block)
+            sleep(tonumber(speed))
+            currentpos = currentpos - 1
+        end
     end
 end
 
+
 if axis == "x" then
-    while currentpos < dist do
-        exec("fill "..(center1-currentpos).." "..y1.." "..z1.." "..(center1-currentpos).." "..y2.." "..z1.." minecraft:air")
-        exec("fill "..(center2+currentpos).." "..y1.." "..z1.." "..(center2+currentpos).." "..y2.." "..z1.." minecraft:air")
-        sleep(tonumber(speed))
-        currentpos = currentpos + 1
-    end
-    sleep(tonumber(args))
-    currentpos = currentpos-1
-    while currentpos >= 0 do
-        exec("fill "..(center1-currentpos).." "..y1.." "..z1.." "..(center1-currentpos).." "..y2.." "..z1.." "..block)
-        exec("fill "..(center2+currentpos).." "..y1.." "..z1.." "..(center2+currentpos).." "..y2.." "..z1.." "..block)
-        sleep(tonumber(speed))
-        currentpos = currentpos - 1
+    if args ~= "close" then
+        while currentpos < dist do
+            exec("fill "..(center1-currentpos).." "..y1.." "..z1.." "..(center1-currentpos).." "..y2.." "..z1.." minecraft:air")
+            exec("fill "..(center2+currentpos).." "..y1.." "..z1.." "..(center2+currentpos).." "..y2.." "..z1.." minecraft:air")
+            sleep(tonumber(speed))
+            currentpos = currentpos + 1
+        end
+
+        if args ~= "open" and args ~= "close" then
+            sleep(tonumber(args))
+            currentpos = currentpos-1
+        end
+
+        if args == "close" then 
+            currentpos = dist - 1
+        end
+
+        if args ~= "open" then
+            while currentpos >= 0 do
+                exec("fill "..(center1-currentpos).." "..y1.." "..z1.." "..(center1-currentpos).." "..y2.." "..z1.." "..block)
+                exec("fill "..(center2+currentpos).." "..y1.." "..z1.." "..(center2+currentpos).." "..y2.." "..z1.." "..block)
+                sleep(tonumber(speed))
+                currentpos = currentpos - 1
+            end
+        end
     end
 end
 
