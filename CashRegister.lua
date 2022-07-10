@@ -227,17 +227,14 @@ while true do
                         table.insert(list, item1)
                         table.insert(prices, item1price)
                         total = total + item1price
-                       
+                        break
                     end
-                    break
                     
-                    if y >= 7 and y <= 10 then
-                        if category == 1 then
-                            table.insert(list, item2)
-                            table.insert(prices, item2price)
-                            total = total + item2price
-                            
-                        end
+                elseif y >= 7 and y <= 10 then
+                    if category == 1 then
+                        table.insert(list, item2)
+                        table.insert(prices, item2price)
+                        total = total + item2price
                         break
                     end
                 end
