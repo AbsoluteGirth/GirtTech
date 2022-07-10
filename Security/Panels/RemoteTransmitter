@@ -46,7 +46,7 @@ while true do
         term.setCursorPos(7,15)
         term.write("              ")
     
-    elseif openmode == "t"
+    elseif openmode == "t" then
         term.setCursorPos(7,8)
         term.write("Door Control:")
         
