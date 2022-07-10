@@ -5,10 +5,10 @@ write("listening on port 5")
 while true do
     local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
     if control == "open" then
-        shell.run("opendoor","open")
+        shell.run("Opener","open")
     if control == "close"
-        shell.run("opendoor","close")
+        shell.run("Opener","close")
     else
-        shell.run("opendoor",control)
+        shell.run("Opener",control)
     end
 end
