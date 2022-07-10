@@ -472,6 +472,9 @@ while true do
                         table.insert(prices, item52price)
                         _G.total = _G.total + item52price
                         break 
+                    elseif category == 7 then
+                        reset = 1
+                        break
                     end
                 elseif y >= 12 and y <= 15 then
                     if category == 1 then
