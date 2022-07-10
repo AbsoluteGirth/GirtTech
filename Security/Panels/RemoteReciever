@@ -1,6 +1,6 @@
 local modem = peripheral.find("modem")
 
-lcoal recievechannel = 6969
+local recievechannel = 6969
 
 
 modem.open(recievechannel)
