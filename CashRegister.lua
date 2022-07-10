@@ -512,5 +512,8 @@ while true do
             if reset == 1 then
                 break
             end
-    end
+        if reset == 1 then
+            break
+        end
+    end 
 end
