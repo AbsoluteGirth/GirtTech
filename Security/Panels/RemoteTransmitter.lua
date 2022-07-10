@@ -221,7 +221,7 @@ while true do
                                             break
                                         end
                                     
-                                    elseif y >= 17 and y <= 19
+                                    elseif y >= 17 and y <= 19 then
                                         os.reboot()
                                         
                                     end
