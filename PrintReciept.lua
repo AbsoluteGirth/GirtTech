@@ -36,7 +36,6 @@ if ink > 5 then
         printer.write("Total:")
         printer.setCursorPos(24-(string.len(total)),ypos+1)
         printer.write("Y"..total)
-        
         printer.endPage()
     end
 end
