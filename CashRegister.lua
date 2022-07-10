@@ -50,9 +50,11 @@ _G.list = {}
 _G.prices = {}
 _G.total = 0
 local category = 1
+local reset = 0
 -- size 51, 19
 
 while true do
+    reset = 0
     local items = {}
     local price = {}
     while true do
@@ -358,28 +360,33 @@ while true do
             term.setCursorPos(13,15)
             term.write("               ")
 
-        elseif category == 6 then
+        elseif category == 7 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,17)
             term.write("Checkout > ")
-            shell.run("PrintReciept")
-
-            term.setBackgroundColor(colors.red)
-            term.setCursorPos(13,12)
-            term.write("              ")
-            term.setCursorPos(13,13)
-            term.write("   [Cancel]   ")
-            term.setCursorPos(13,14)
-            term.write("              ")
-
 
             term.setBackgroundColor(colors.green)
-            term.setCursorPos(13,16)
-            term.write("              ")
-            term.setCursorPos(13,17)
-            term.write("  [Checkout]  ")
-            term.setCursorPos(13,18)
-            term.write("              ")
+            --button1
+            term.setCursorPos(13,2)
+            term.write("               ")
+            term.setCursorPos(13,3)
+            term.write("  [Checkout]   ")
+            term.setCursorPos(13,4)
+            term.write("               ")
+            term.setCursorPos(13,5)
+            term.write("               ")
+            
+            term.setBackgroundColor(colors.red)
+            --button2
+            term.setCursorPos(13,7)
+            term.write("               ")
+            term.setCursorPos(13,8)
+            term.write("    [Clear]    ")
+            term.setCursorPos(13,9)
+            term.write("               ")
+            term.setCursorPos(13,10)
+            term.write("               ")
+            --button3
 
 
         end
@@ -403,7 +410,7 @@ while true do
                     category = 5
                     break
                 elseif y == 17 then
-                    category = 6
+                    category = 7
                     break
                 end
             
@@ -434,6 +441,9 @@ while true do
                         table.insert(prices, item51price)
                         _G.total = _G.total + item51price
                         break 
+                    elseif category == 7 then
+                        shell.run("PrintReciept")
+                        break
                     end
                     
                 elseif y >= 7 and y <= 10 then
@@ -493,5 +503,8 @@ while true do
                 end
             end
         end 
+        if reset = 1 then
+            break
+        end
     end
 end
