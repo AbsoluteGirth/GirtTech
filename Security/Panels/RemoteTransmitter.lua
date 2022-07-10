@@ -161,8 +161,8 @@ while true do
                             
                         else   
                             term.setBackgroundColor(colors.green)
-                            term.setCursorPos(9,5)
-                            term.write("Unlocked")
+                            term.setCursorPos(10,5)
+                            term.write("Correct")
                             sleep(1)
 
                             term.setBackgroundColor(bgcolor)
