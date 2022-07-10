@@ -26,8 +26,8 @@ while true do
                 print("Creating Remote")
                 sleep(0.2)
                 print("Do not remove!")
-                if fs.exists("/disk/startup") == fasle then
-                    fs.copy("/transmitter","/disk/startup")
+                if fs.exists("/disk/startup.lua") == fasle then
+                    fs.copy("/transmitter.lua","/disk/startup.lua")
                     sleep(0.8)
                     print("Copy finished!!")
                     sleep(1)
