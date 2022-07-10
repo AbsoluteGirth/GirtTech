@@ -46,7 +46,7 @@ local item53price = 1500
 
 --Fees
 local item61 = "Delivery"
-local price61 = 2000
+local item61price = 2000
 local item62 = "Panel install"
 local item62price = 15000
 local item63 = "Setup"
