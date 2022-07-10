@@ -47,10 +47,10 @@ local item53price = 1500
 --Fees
 local item61 = "Delivery"
 local price61 = 2000
-local item52 = "Panel install"
-local item52price = 15000
-local item53 = "Setup"
-local item53price = 1500
+local item62 = "Panel install"
+local item62price = 15000
+local item63 = "Setup"
+local item63price = 1500
 
 
 _G.list = {}
