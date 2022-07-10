@@ -73,9 +73,5 @@ function TurnTo(dir)
     end
 end
 
-sleep(1)
-TurnTo(3)
-sleep(1)
-TurnTo(2)
-
+LeaveBase()
 ReturnHome()
