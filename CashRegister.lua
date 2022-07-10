@@ -366,6 +366,7 @@ while true do
             for i=1,#list do
                 table.insert(reciept, list[i])
                 table.insert(reciept, price[i])
+            end
             shell.run("PrintReciept",reciept)
         end
 
