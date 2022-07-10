@@ -55,10 +55,7 @@ local reset = 0
 
 while true do
     reset = 0
-    local items = {}
-    local price = {}
     while true do
-
         -- Draw categries --
         term.setBackgroundColor(colors.white)
         term.clear()
@@ -473,7 +470,8 @@ while true do
                         _G.total = _G.total + item52price
                         break 
                     elseif category == 7 then
-                        reset = 1
+                        G.list = {}
+                        _G.prices = {}
                         break
                     end
                 elseif y >= 12 and y <= 15 then
@@ -502,18 +500,9 @@ while true do
                         table.insert(prices, item53price)
                         _G.total = _G.total + item53price
                         break 
-
-
-
                     end
                 end
             end
-        end 
-            if reset == 1 then
-                break
-            end
-        if reset == 1 then
-            break
         end
     end 
 end
