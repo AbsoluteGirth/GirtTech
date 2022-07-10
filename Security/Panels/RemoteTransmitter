@@ -22,6 +22,7 @@ term.clear()
 
 while true do
     if requirepassword == true then
+        print("brokey lmao")
         -- Keypad goes here
     end
 
