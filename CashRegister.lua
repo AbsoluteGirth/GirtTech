@@ -191,8 +191,8 @@ while true do
             elseif x >= 13 and x <= 28 then
                 if y >= 2 and y <=5 then
                     if category == 1 then
-                        list = list..item1
-                        prices = prices..item1price
+                        table.insert(list, item1)
+                        table.insert(prices, item1price)
                         total = total + item1price
                         
                         term.setcursorpos(1,17)
