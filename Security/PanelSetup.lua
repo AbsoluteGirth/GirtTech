@@ -65,11 +65,11 @@ while true do
     end
 
     if selection == 0 then 
-        selection = 1
+        selection = 3
     end
 
     if selection == 4 then
-        selection = 3
+        selection = 1
     end
 
     term.clear()
