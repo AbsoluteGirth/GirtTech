@@ -365,20 +365,20 @@ while true do
             shell.run("PrintReciept")
 
             term.setBackgroundColor(colors.red)
-            term.setCursorPos(14,12)
+            term.setCursorPos(13,12)
             term.write("              ")
-            term.setCursorPos(14,13)
+            term.setCursorPos(13,13)
             term.write("   [Cancel]   ")
-            term.setCursorPos(14,14)
+            term.setCursorPos(13,14)
             term.write("              ")
 
 
             term.setBackgroundColor(colors.green)
-            term.setCursorPos(14,16)
+            term.setCursorPos(13,16)
             term.write("              ")
-            term.setCursorPos(14,17)
+            term.setCursorPos(13,17)
             term.write("  [Checkout]  ")
-            term.setCursorPos(14,18)
+            term.setCursorPos(13,18)
             term.write("              ")
 
 
