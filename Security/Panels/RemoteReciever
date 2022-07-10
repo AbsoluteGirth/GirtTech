@@ -1,7 +1,7 @@
 local modem = peripheral.find("modem")
 
 local recievechannel = 6969
-
+print("1")
 
 modem.open(recievechannel)
 term.clear()
