@@ -104,13 +104,15 @@ while true do
         -- write values on screen
         term.setTextColor(colors.red)
         local ypos = 2
-        for i in#list do
-            term.setCursorPos(29,i)
-            term.write(list[i])
-            ypos = ypos + 1
-            term.setCursorPos(29,i)
-            term.write(prices[i])
-            ypos = ypos + 1
+        if list1 ~= nil
+            for i in#list do
+                term.setCursorPos(29,i)
+                term.write(list[i])
+                ypos = ypos + 1
+                term.setCursorPos(29,i)
+                term.write(prices[i])
+                ypos = ypos + 1
+            end
         end
         term.setCursorPos(43,18)
         term.write(total)
