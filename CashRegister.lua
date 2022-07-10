@@ -312,6 +312,7 @@ while true do
                         table.insert(prices, item52price)
                         total = total + item52price
                         break 
+                    end
                 elseif y >= 12 and y <= 15 then
                     if category == 1 then
                         table.insert(list, item13)
