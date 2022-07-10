@@ -21,7 +21,7 @@ term.setTextColor(textcolor)
 term.clear()
 
 while true do
-    if requirepassword == true
+    if requirepassword == true then
         -- Keypad goes here
     end
 
