@@ -364,8 +364,24 @@ while true do
             term.write("Checkout > ")
             shell.run("PrintReciept")
 
+            term.setBackgroundColor(colors.red)
+            term.setCursorPos(15,12)
+            term.write("              ")
+            term.setCursorPos(15,13)
+            term.write("   [Cancel]   ")
+            term.setCursorPos(15,14)
+            term.write("              ")
+
+
             term.setBackgroundColor(colors.green)
-            term.setCursorPos()
+            term.setCursorPos(15,16)
+            term.write("              ")
+            term.setCursorPos(15,17)
+            term.write("  [Checkout]  ")
+            term.setCursorPos(15,18)
+            term.write("              ")
+
+
         end
 
         while true do
