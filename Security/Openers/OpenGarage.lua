@@ -1,6 +1,7 @@
 local args = ...
 -- Girt Tech Inc
--- v1.0
+-- Garage Opener
+-- v2.0
  
  
 -- Door setup --
