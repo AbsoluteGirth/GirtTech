@@ -59,6 +59,7 @@ function ReturnHome()
     for i = 1, amount do 
         turtle.turnRight()
     end
+end
 
     
 
