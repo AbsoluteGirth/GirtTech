@@ -9,6 +9,7 @@ term.setCursorPos(1,1)
 term.write("listening on port "..recievechannel)
 while true do
     local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
+    print(control)
     if control == "open" then
         shell.run("Opener","open")
     elseif control == "close" then
