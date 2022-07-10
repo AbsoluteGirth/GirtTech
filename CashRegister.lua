@@ -44,6 +44,13 @@ local item52price = 500
 local item53 = "iDrive disk"
 local item53price = 1500
 
+--Fees
+local item61 = "Delivery"
+local price61 = 2000
+local item52 = "Panel install"
+local item52price = 15000
+local item53 = "Setup"
+local item53price = 1500
 
 
 _G.list = {}
@@ -89,7 +96,7 @@ while true do
         term.setCursorPos(1,14)
         term.write("           ")
         term.setCursorPos(1,15)
-        term.write("           ")
+        term.write(" Fees      ")
         term.setCursorPos(1,16)
         term.write("           ")
         term.setCursorPos(1,17)
@@ -357,6 +364,41 @@ while true do
             term.setCursorPos(13,15)
             term.write("               ")
 
+        elseif category == 6 then
+            term.setBackgroundColor(colors.gray)
+            term.setCursorPos(1,15)
+            term.write(" Fees    > ")
+
+            -- Draw add-item buttons
+
+            --button1
+            term.setCursorPos(13,2)
+            term.write("               ")
+            term.setCursorPos(13,3)
+            term.write("  [Delivery]   ")
+            term.setCursorPos(13,4)
+            term.write("    Y2,000     ")
+            term.setCursorPos(13,5)
+            term.write("               ")
+            --button2
+            term.setCursorPos(13,7)
+            term.write("               ")
+            term.setCursorPos(13,8)
+            term.write("[Panel install]")
+            term.setCursorPos(13,9)
+            term.write("    Y15,000    ")
+            term.setCursorPos(13,10)
+            term.write("               ")
+            --button3
+            term.setCursorPos(13,12)
+            term.write("               ")
+            term.setCursorPos(13,13)
+            term.write("    [Setup]    ")
+            term.setCursorPos(13,14)
+            term.write("    Y1,500     ")
+            term.setCursorPos(13,15)
+            term.write("               ")
+
         elseif category == 7 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,17)
@@ -406,6 +448,9 @@ while true do
                 elseif y == 13 then
                     category = 5
                     break
+                elseif y == 15 then
+                    category = 6
+                    break
                 elseif y == 17 then
                     category = 7
                     break
@@ -438,6 +483,11 @@ while true do
                         table.insert(prices, item51price)
                         _G.total = _G.total + item51price
                         break 
+                    elseif category == 6 then
+                        table.insert(list, item61)
+                        table.insert(prices, item61price)
+                        _G.total = _G.total + item61price
+                        break 
                     elseif category == 7 then
                         shell.run("PrintReciept")
                         break
@@ -468,6 +518,11 @@ while true do
                         table.insert(list, item52)
                         table.insert(prices, item52price)
                         _G.total = _G.total + item52price
+                        break 
+                    elseif category == 6 then
+                        table.insert(list, item62)
+                        table.insert(prices, item62price)
+                        _G.total = _G.total + item62price
                         break 
                     elseif category == 7 then
                         _G.list = {}
@@ -500,6 +555,11 @@ while true do
                         table.insert(list, item53)
                         table.insert(prices, item53price)
                         _G.total = _G.total + item53price
+                        break 
+                    elseif category == 6 then
+                        table.insert(list, item63)
+                        table.insert(prices, item63price)
+                        _G.total = _G.total + item63price
                         break 
                     end
                 end
