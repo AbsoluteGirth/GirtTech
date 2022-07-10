@@ -105,9 +105,9 @@ while true do
                 end
 
                 print("Install complete")
-                term.setCursorPos(1,3)
                 local i = 5
                 while i >=0 do 
+                    term.setCursorPos(1,3)
                     term.write("Rebooting in "..i)
                     sleep(1)
                     i = i - 1
