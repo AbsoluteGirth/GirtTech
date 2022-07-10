@@ -86,7 +86,8 @@ while true do
                 opener = selection   
                 term.clear()
                 term.setCursorPos(1,1)
-                print(Installing)
+                print("Installing")
+                sleep(0.5)
                 
                 if panel == 1 then
                     fs.copy("disk/panelbasic", "/startup")
