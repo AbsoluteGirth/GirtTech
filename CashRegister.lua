@@ -336,7 +336,7 @@ while true do
             term.setCursorPos(13,3)
             term.write(" [iPrint Ink]  ")
             term.setCursorPos(13,4)
-            term.write("   Y5,000      ")
+            term.write("    Y5,000     ")
             term.setCursorPos(13,5)
             term.write("               ")
             --button2
@@ -345,7 +345,7 @@ while true do
             term.setCursorPos(13,8)
             term.write(" [iPrint Paper]")
             term.setCursorPos(13,9)
-            term.write("      Y500     ")
+            term.write("     Y500      ")
             term.setCursorPos(13,10)
             term.write("               ")
             --button3
