@@ -26,7 +26,13 @@ while true do
                 print("Creating Remote")
                 sleep(0.2)
                 print("Do not remove!")
-                if fs.exists("/disk/startup.lua") == fasle then
+                if fs.exists("/disk/startup.lua") then
+                    term.clear()
+                    term.setCursorPos(1,1)
+                    print("ERROR!")
+                    print("File 'startup' already exists")
+                    print("Please remove file and try again")
+                else
                     fs.copy("/transmitter.lua","/disk/startup.lua")
                     sleep(0.8)
                     print("Copy finished!!")
@@ -34,12 +40,6 @@ while true do
                     term.clear()
                     term.setCursorPos(1,1)
                     print("Please remove remote...")
-                else
-                    term.clear()
-                    term.setCursorPos(1,1)
-                    print("ERROR!")
-                    print("File 'startup' already exists")
-                    print("Please remove file and try again")
                 end
             end
         end
