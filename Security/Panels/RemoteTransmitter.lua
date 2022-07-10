@@ -154,14 +154,14 @@ while true do
                         term.setCursorBlink(false)
                         if cIn ~= password then
                             term.setBackgroundColor(colors.red)
-                            term.setCursorPos(12,5)
+                            term.setCursorPos(9,5)
                             term.write("Incorrect")
                             sleep(2)
                             break  
                             
                         else   
                             term.setBackgroundColor(colors.green)
-                            term.setCursorPos(12,5)
+                            term.setCursorPos(9,5)
                             term.write("Unlocked")
                             sleep(1)
 
