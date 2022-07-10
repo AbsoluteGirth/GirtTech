@@ -503,7 +503,7 @@ while true do
                 end
             end
         end 
-        if reset = 1 then
+        if reset == 1 then
             break
         end
     end
