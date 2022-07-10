@@ -24,16 +24,27 @@ if args == nil then
 end
  
 local currentheight = 0
- 
-while currentheight < height do
-    exec("fill "..x1.." "..(y+currentheight).." "..z1.." "..x2.." "..(y+currentheight).." "..z2.." minecraft:air")
-    sleep(tonumber(speed))
-    currentheight = (currentheight+1)
+if args ~= "close" then
+    while currentheight < height do
+        exec("fill "..x1.." "..(y+currentheight).." "..z1.." "..x2.." "..(y+currentheight).." "..z2.." minecraft:air")
+        sleep(tonumber(speed))
+        currentheight = (currentheight+1)
+    end
 end
-sleep(tonumber(args))
-currentheight = (currentheight-1)
-while currentheight >= 0 do
-    exec("fill "..x1.." "..(y+currentheight).." "..z1.." "..x2.." "..(y+currentheight).." "..z2.." "..block)
-    sleep(tonumber(speed))
+
+if args ~= "open" and args ~= "close" then
+    sleep(tonumber(args))
     currentheight = (currentheight-1)
+end
+
+if args == "close" then 
+    currentheight = height
+end
+
+if args ~= "open" then
+    while currentheight >= 0 do
+        exec("fill "..x1.." "..(y+currentheight).." "..z1.." "..x2.." "..(y+currentheight).." "..z2.." "..block)
+        sleep(tonumber(speed))
+        currentheight = (currentheight-1)
+    end
 end

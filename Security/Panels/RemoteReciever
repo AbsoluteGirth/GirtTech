@@ -1,5 +1,9 @@
 local modem = peripheral.find("modem")
-modem.open(5)
+
+lcoal recievechannel = 6969
+
+
+modem.open(recievechannel)
 term.clear()
 write("listening on port 5")
 while true do

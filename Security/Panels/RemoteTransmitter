@@ -8,7 +8,7 @@ local password = ""
 local requirepassword = false
 local transmitchannel =  -- Max = 65535
 local openmode = "m" -- M = manual T = timed
-local opentime = 5
+local opentime = 6969
 
 local bgcolor = colors.lightGray
 local buttoncolor = colors.gray
