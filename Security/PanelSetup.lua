@@ -85,9 +85,34 @@ while true do
             else
                 opener = selection   
                 term.clear()
-                print(panel)
-                print(opener)
-                sleep(5)
+                term.setCursorPos(1,1)
+                print(Installing)
+                
+                if panel == 1 then
+                    fs.copy("disk/panelbasic", "/startup")
+                elseif panel == 2 then
+                    fs.copy("disk/panelpro", "/startup")
+                elseif panel == 3 then
+                    fs.copy("disk/panelbasicpanelwireless", "/startup")
+                end
+
+                if opener == 1 then
+                    fs.copy("disk/simplegate", "/Opener")
+                elseif opener == 2 then
+                    fs.copy("disk/advgate", "/Opener")
+                elseif opener == 3 then
+                    fs.copy("disk/garage", "/Opener")
+                end
+
+                print("Install complete")
+                term.setCursorPos(1,3)
+                local i = 5
+                while i >=0 do 
+                    term.write("Rebooting in "..i)
+                    sleep(1)
+                    i = i - 1
+                end
+                os.reboot()
             end 
         end
     end
