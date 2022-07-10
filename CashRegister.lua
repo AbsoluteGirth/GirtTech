@@ -1,3 +1,5 @@
+-- wget run https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/CashRegister.lua
+
 -- Cash register --
 
 -- price list
@@ -115,13 +117,13 @@ while true do
         term.setCursorPos(13,10)
         term.write("               ")
 
-        term.setCursorPos(13,11)
-        term.write("               ")
         term.setCursorPos(13,12)
         term.write("               ")
         term.setCursorPos(13,13)
         term.write("               ")
         term.setCursorPos(13,14)
+        term.write("               ")
+        term.setCursorPos(13,15)
         term.write("               ")
 
 
