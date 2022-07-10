@@ -6,9 +6,9 @@
 local item1 = "iPiss"
 local item1price = 50000
 local item2 = "iPiss Case"
-local item2price = 2000
-local item
-
+local item2price = 2500
+local item3 = 
+local item3price
 
 local list = {}
 local prices = {}
@@ -170,6 +170,15 @@ while true do
             term.setCursorPos(13,5)
             term.write("               ")
 
+            term.setCursorPos(13,7)
+            term.write("               ")
+            term.setCursorPos(13,8)
+            term.write("    [Case]     ")
+            term.setCursorPos(13,9)
+            term.write("    Y2,500     ")
+            term.setCursorPos(13,10)
+            term.write("               ")
+
         elseif category == 2 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,7)
@@ -218,11 +227,16 @@ while true do
                         table.insert(list, item1)
                         table.insert(prices, item1price)
                         total = total + item1price
-                        
-                        term.setCursorPos(1,17)
-                        term.write(list[1])
-                        if list[2] ~= nil then
-                            term.write(list[2])
+                       
+                    end
+                    break
+                    
+                    if y >= 7 and y <= 10 then
+                        if category == 1 then
+                            table.insert(list, item2)
+                            table.insert(prices, item2price)
+                            total = total + item2price
+                            
                         end
                         break
                     end
