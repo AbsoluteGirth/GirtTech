@@ -91,7 +91,7 @@ while true do
         term.setCursorPos(29,16)
         term.write("                      ")
         term.setCursorPos(29,17)
-        term.write("                      ")
+        term.write(" ____________________ ")
         term.setCursorPos(29,18)
         term.write(" Total       | Y      ")
 
