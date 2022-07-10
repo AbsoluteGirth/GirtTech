@@ -26,10 +26,10 @@ term.write("listening on port "..recievechannel)
 while true do
     local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
     if control == "open" then
-        shell.run("Opener","open")
+        shell.run("opendoor","open")
     elseif control == "close" then
-        shell.run("Opener","close")
+        shell.run("opendoor","close")
     else
-        shell.run("Opener",control)
+        shell.run("opendoor",control)
     end
 end

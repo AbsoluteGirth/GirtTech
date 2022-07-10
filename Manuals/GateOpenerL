@@ -9,7 +9,7 @@
        GirtTech Inc
      ****************
     Gate opener manual
-          (Small)    
+         (Large)   
     
     
     
@@ -24,7 +24,7 @@
     
     
 
-Congratulations on your purchase of the new GirtTech gate opener S.
+Congratulations on your purchase of the new GirtTech gate opener L.
 
 This guide will cover getting you set up and making the most of your new personal security gaurd!
 
@@ -76,9 +76,14 @@ Next type in "edit opendoor" and hit enter.
 -------------------------
 You are now in setup mode and will see these options:
 
-coords1
-coords2
-block
+speed 
+block 
+x1  
+y1  
+z1  
+x2  
+y2  
+z2  
 
 these will need to be completed in order to use your opener.
 
@@ -94,11 +99,9 @@ these will need to be completed in order to use your opener.
 
 *Make sure all these are setup correctly as setting up incorrectly could cause harm to you or your surroundings*
 
-coords1:
-This is where the bottom left corner of your gate is located
+speed:
+This is how fast your door will open.
 
-coords2:
-This is where the top right corner of your gate is located
 
 -------------------------
 5.Configuring your opener
@@ -106,10 +109,13 @@ This is where the top right corner of your gate is located
 -------------------------
 
 block:
-This is the material of your gate. NOTE: Some types of gate will require specialist installation, please contact your local GirtTech branch if you are unsure.
+The material your door is made of. NOTE: Some types of gate will require specialist installation, please contact your local GirtTech branch if you are unsure.
 
+x1 ,y1, z1:
+The coordinates of the bottom left corner of your gate. 
 
-
+x2, y2, z2:
+The coordinates of the top right corner of your gate  
 
 
 
