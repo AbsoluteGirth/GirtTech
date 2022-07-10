@@ -105,7 +105,7 @@ while true do
         term.setTextColor(colors.red)
         local ypos = 2
         --if list1[1] ~= nil then
-        for i in#list do
+        for i=1,#list do
             term.setCursorPos(29,i)
             term.write(list[i])
             ypos = ypos + 1
