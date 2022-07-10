@@ -1,0 +1,14 @@
+local modem = peripheral.find("modem")
+modem.open(5)
+term.clear()
+write("listening on port 5")
+while true do
+    local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
+    if control == "open" then
+        shell.run("opendoor","open")
+    if control == "close"
+        shell.run("opendoor","close")
+    else
+        shell.run("opendoor",control)
+    end
+end
