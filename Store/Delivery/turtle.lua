@@ -38,7 +38,6 @@ end
 
 function TurnTo(dir)
     while facing ~= dir do
-        print(facing)
         turtle.turnRight()
         facing = facing + 1
         if facing == 5 then 
@@ -47,5 +46,7 @@ function TurnTo(dir)
     end
 end
 
+sleep(1)
 TurnTo(3)
+sleep(1)
 TurnTo(2)
