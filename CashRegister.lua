@@ -46,8 +46,8 @@ local item53price = 1500
 
 
 
-list = {}
-prices = {}
+_G.list = {}
+_G.prices = {}
 local reciept = {}
 local total = 0
 local category = 1
