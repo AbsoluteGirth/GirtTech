@@ -46,8 +46,8 @@ local item53price = 1500
 
 
 
-global list = {}
-global prices = {}
+global list={}
+global prices={}
 local reciept = {}
 local total = 0
 local category = 1
