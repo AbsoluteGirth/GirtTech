@@ -36,6 +36,32 @@ function LeaveBase()
     end
 end
 
+function ReturnHome()
+    TurnTo(3)
+    amount = 22
+    for i = 1, amount do 
+        turtle.forward()
+    end
+    turtle.turnRight()
+    modem.transmit(30030,1,"open")
+    sleep(2)
+    amount = 7
+    for i = 1, amount do 
+        turtle.forward()
+    end
+    modem.transmit(30030,1,"close")
+    turtle.turnLeft()
+    amount = 5
+    for i = 1, amount do 
+        turtle.forward()
+    end
+    amount = 6
+    for i = 1, amount do 
+        turtle.turnRight()
+    end
+
+    
+
 function TurnTo(dir)
     while facing ~= dir do
         turtle.turnRight()
@@ -50,3 +76,5 @@ sleep(1)
 TurnTo(3)
 sleep(1)
 TurnTo(2)
+
+ReturnHome()
