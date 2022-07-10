@@ -98,7 +98,22 @@ while true do
         term.setCursorPos(29,17)
         term.write(" ____________________ ")
         term.setCursorPos(29,18)
-        term.write(" Total       | Y      ")
+        term.write(" Total     | Y        ")
+
+
+        -- write values on screen
+        term.setTextColor(colors.red)
+        local ypos = 2
+        for i in#list
+            term.setCursorPos(29,i)
+            term.write(list[i])
+            ypos = ypos + 1
+            term.setCursorPos(29,i)
+            term.write(prices[i])
+            ypos = ypos + 1
+        
+        term.setCursorPos(43,18)
+        term.write(total)
 
         -- Button Reference
 
@@ -200,11 +215,7 @@ while true do
                         if list[2] ~= nil then
                             term.write(list[2])
                         end
-                        term.setCursorPos(1,18)
-                        term.write(prices[1])
-                        term.setCursorPos(1,19)
-                        term.write(total)
-                        
+                        break
                     end
                 end
             end
