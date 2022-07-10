@@ -32,7 +32,7 @@ while true do
                 sleep(1)
                 term.clear()
                 term.setCursorPos(1,1)
-                term.print("Please remove remote...")
+                print("Please remove remote...")
             end
         end
     end
