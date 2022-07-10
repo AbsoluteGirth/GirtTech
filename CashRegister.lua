@@ -184,7 +184,7 @@ while true do
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,13)
             term.write(" Extras  > ")
-            
+
         end
 
         while true do
@@ -222,6 +222,7 @@ while true do
                         break
                     end
                 end
+            end
             end
         end 
     end
