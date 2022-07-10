@@ -11,6 +11,9 @@ local price = {}
 
 -- size 51, 19
 
+
+-- Draw categries --
+
 term.setBackgroundColor(colors.white)
 term.clear()
 term.setBackgroundColor(colors.lightGray)
@@ -21,10 +24,8 @@ term.write("           ")
 term.setCursorPos(1,3)
 term.write("           ")
 term.setCursorPos(1,4)
-term.setBackgroundColor(colors.gray)
-term.write(" iPiss   > ")
+term.write(" iPiss     ")
 term.setCursorPos(1,5)
-term.setBackgroundColor(colors.lightGray)
 term.write("           ")
 term.setCursorPos(1,6)
 term.write(" iPoo      ")
@@ -38,6 +39,23 @@ term.setCursorPos(1,10)
 term.write(" Openers   ")
 term.setCursorPos(1,11)
 term.write("           ")
+term.setCursorPos(1,12)
+term.write("           ")
+term.setCursorPos(1,13)
+term.write("           ")
+term.setCursorPos(1,14)
+term.write("           ")
+term.setCursorPos(1,15)
+term.write("           ")
+term.setCursorPos(1,16)
+term.write("           ")
+term.setCursorPos(1,17)
+term.write("           ")
+term.setCursorPos(1,18)
+term.write("           ")
+term.setCursorPos(1,19)
+term.write("           ")
+
 
 
 
