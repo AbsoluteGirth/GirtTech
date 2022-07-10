@@ -2,13 +2,49 @@
 
 -- Cash register --
 
--- price list
-local item1 = "iPiss"
-local item1price = 50000
-local item2 = "iPiss Case"
-local item2price = 2500
-local item3 = ""
-local item3price = 0
+-- price list --
+
+--iPiss
+local item11 = "iPiss"
+local item11price = 50000
+local item12 = "iPiss Case"
+local item12price = 2500
+local item13 = ""
+local item13price = 0
+
+--iPoo
+local item21 = "iPoo"
+local item21price = 100000
+local item22 = "iDrive"
+local item22price = 7000
+local item23 = "iPrint"
+local item23price = 10000
+
+--Panels
+local item31 = "Pro panel"
+local item31price = 15000
+local item32 = "Basic panel"
+local item32price = 10000
+local item33 = "Wireless panel"
+local item33price = 30000
+
+--Openers
+local item41 = "Gate opener S"
+local item41price = 20000
+local item42 = "Gate opener L"
+local item42price = 25000
+local item43 = "Garage opener"
+local item43price = 35000
+
+--Extras
+local item51 = "iPrint Ink"
+local item51price = 5000
+local item52 = "iPrint Paper"
+local item52price = 500
+local item53 = "iDrive disk"
+local item53price = 1500
+
+
 
 local list = {}
 local prices = {}
@@ -221,21 +257,87 @@ while true do
                     break
                 end
             
-            elseif x >= 13 and x <= 28 then
+            elseif x >= 13 and x <= 28 then -- Add-item buttons
                 if y >= 2 and y <=5 then
                     if category == 1 then
-                        table.insert(list, item1)
-                        table.insert(prices, item1price)
-                        total = total + item1price
+                        table.insert(list, item11)
+                        table.insert(prices, item11price)
+                        total = total + item11price
                         break
+                    elseif category == 2 then
+                        table.insert(list, item21)
+                        table.insert(prices, item21price)
+                        total = total + item21price
+                        break
+                    elseif category == 3 then
+                        table.insert(list, item31)
+                        table.insert(prices, item31price)
+                        total = total + item31price
+                        break
+                    elseif category == 4 then
+                        table.insert(list, item41)
+                        table.insert(prices, item41price)
+                        total = total + item41price
+                        break     
+                    elseif category == 5 then
+                        table.insert(list, item51)
+                        table.insert(prices, item51price)
+                        total = total + item51price
+                        break 
                     end
                     
                 elseif y >= 7 and y <= 10 then
                     if category == 1 then
-                        table.insert(list, item2)
-                        table.insert(prices, item2price)
-                        total = total + item2price
+                        table.insert(list, item12)
+                        table.insert(prices, item12price)
+                        total = total + item12price
                         break
+                    elseif category == 2 then
+                        table.insert(list, item22)
+                        table.insert(prices, item22price)
+                        total = total + item22price
+                        break
+                    elseif category == 3 then
+                        table.insert(list, item32)
+                        table.insert(prices, item32price)
+                        total = total + item32price
+                        break
+                    elseif category == 4 then
+                        table.insert(list, item42)
+                        table.insert(prices, item42price)
+                        total = total + item42price
+                        break     
+                    elseif category == 5 then
+                        table.insert(list, item52)
+                        table.insert(prices, item52price)
+                        total = total + item52price
+                        break 
+                elseif y >= 12 and y <= 15 then
+                    if category == 1 then
+                        table.insert(list, item13)
+                        table.insert(prices, item13price)
+                        total = total + item13price
+                        break
+                    elseif category == 2 then
+                        table.insert(list, item23)
+                        table.insert(prices, item23price)
+                        total = total + item23price
+                        break
+                    elseif category == 3 then
+                        table.insert(list, item33)
+                        table.insert(prices, item33price)
+                        total = total + item33price
+                        break
+                    elseif category == 4 then
+                        table.insert(list, item43)
+                        table.insert(prices, item43price)
+                        total = total + item43price
+                        break     
+                    elseif category == 5 then
+                        table.insert(list, item53)
+                        table.insert(prices, item53price)
+                        total = total + item53price
+                        break 
                     end
                 end
             end
