@@ -8,7 +8,7 @@ local password = "6969"
 local passwordlen = 4
 local requirepassword = true
 local transmitchannel = 6969 -- Max = 65535
-local openmode = "m" -- M = manual T = timed
+local openmode = "t" -- M = manual T = timed
 local opentime = 5
 
 local bgcolor = colors.lightGray
