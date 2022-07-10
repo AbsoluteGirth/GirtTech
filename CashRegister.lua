@@ -107,6 +107,6 @@ while true do
             end
         end 
     end
-
+end
 
 term.setCursorPos(1,19)
