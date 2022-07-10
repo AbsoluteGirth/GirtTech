@@ -53,7 +53,7 @@ while true do
 
         elseif key == keys.enter then
             panel = selection   
-            selection = "next"
+            selection = 5
             break
         end
     end
