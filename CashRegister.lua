@@ -99,11 +99,11 @@ while true do
         term.setBackgroundColor(colors.lightGray)
         term.setCursorPos(13,3)
         term.write("               ")
-        term.setCursorPos(14,3)
+        term.setCursorPos(13,4)
         term.write("               ")
-        term.setCursorPos(15,3)
+        term.setCursorPos(13,5)
         term.write("               ")
-        term.setCursorPos(16,3)
+        term.setCursorPos(13,6)
         term.write("               ")
 
 
