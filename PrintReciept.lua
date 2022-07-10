@@ -10,11 +10,11 @@ if ink > 5 then
         printer.newPage()
         printer.setPageTitle("Reciept"..time)
         printer.setCursorPos(8,2)
-        printer.write("**********")
+        printer.write("***********")
         printer.setCursorPos(9,3)
         printer.write("GIRT TECH")
         printer.setCursorPos(8,4)
-        printer.write("**********")
+        printer.write("***********")
         
         local ypos = 6
 
@@ -23,16 +23,20 @@ if ink > 5 then
             printer.write("...................")
             printer.setCursorPos(2,ypos)
             printer.write(list[i])
-            printer.setCursorPos(20-(string.len(prices[i])),ypos)
+            printer.setCursorPos(25-(string.len(prices[i])),ypos)
             printer.write(prices[i])
+            printer.setCursorPos(25,ypos)
+            printer.write(" ")
             ypos = ypos + 1
         end
 
         printer.setCursorPos(2,ypos)
-        printer.write("___________________")
+        printer.write("_______________________")
         printer.setCursorPos(2,ypos+1)
-        printer.write("Total:             ")
-        printer.setCursorPos(19-(string.len(total[i])),ypos+1)
+        printer.write("Total:")
+        printer.setCursorPos(24-(string.len(total)),ypos+1)
         printer.write("Y"..total)
+        
+        printer.endPage()
     end
 end
