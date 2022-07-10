@@ -153,7 +153,7 @@ while true do
         
         end
         term.setCursorPos(43,18)
-        term.write(total)
+        term.write(_G.total)
         term.setTextColor(colors.white)
         
         -- Button Reference
@@ -393,27 +393,27 @@ while true do
                     if category == 1 then
                         table.insert(list, item11)
                         table.insert(prices, item11price)
-                        total = total + item11price
+                        _G.total = _G.total + item11price
                         break
                     elseif category == 2 then
                         table.insert(list, item21)
                         table.insert(prices, item21price)
-                        total = total + item21price
+                        _G.total = _G.total + item21price
                         break
                     elseif category == 3 then
                         table.insert(list, item31)
                         table.insert(prices, item31price)
-                        total = total + item31price
+                        _G.total = _G.total + item31price
                         break
                     elseif category == 4 then
                         table.insert(list, item41)
                         table.insert(prices, item41price)
-                        total = total + item41price
+                        _G.total = _G.total + item41price
                         break     
                     elseif category == 5 then
                         table.insert(list, item51)
                         table.insert(prices, item51price)
-                        total = total + item51price
+                        _G.total = _G.total + item51price
                         break 
                     end
                     
@@ -421,54 +421,54 @@ while true do
                     if category == 1 then
                         table.insert(list, item12)
                         table.insert(prices, item12price)
-                        total = total + item12price
+                        _G.total = _G.total + item12price
                         break
                     elseif category == 2 then
                         table.insert(list, item22)
                         table.insert(prices, item22price)
-                        total = total + item22price
+                        _G.total = _G.total + item22price
                         break
                     elseif category == 3 then
                         table.insert(list, item32)
                         table.insert(prices, item32price)
-                        total = total + item32price
+                        _G.total = _G.total + item32price
                         break
                     elseif category == 4 then
                         table.insert(list, item42)
                         table.insert(prices, item42price)
-                        total = total + item42price
+                        _G.total = _G.total + item42price
                         break     
                     elseif category == 5 then
                         table.insert(list, item52)
                         table.insert(prices, item52price)
-                        total = total + item52price
+                        _G.total = _G.total + item52price
                         break 
                     end
                 elseif y >= 12 and y <= 15 then
                     if category == 1 then
                         table.insert(list, item13)
                         table.insert(prices, item13price)
-                        total = total + item13price
+                        _G.total = _G.total + item13price
                         break
                     elseif category == 2 then
                         table.insert(list, item23)
                         table.insert(prices, item23price)
-                        total = total + item23price
+                        _G.total = _G.total + item23price
                         break
                     elseif category == 3 then
                         table.insert(list, item33)
                         table.insert(prices, item33price)
-                        total = total + item33price
+                        _G.total = _G.total + item33price
                         break
                     elseif category == 4 then
                         table.insert(list, item43)
                         table.insert(prices, item43price)
-                        total = total + item43price
+                        _G.total = _G.total + item43price
                         break     
                     elseif category == 5 then
                         table.insert(list, item53)
                         table.insert(prices, item53price)
-                        total = total + item53price
+                        _G.total = _G.total + item53price
                         break 
                     end
                 end
