@@ -59,7 +59,7 @@ while true do
         term.write("           ")
 
         -- Draw screen
-        term.setCursorPos(28,2)
+        term.setCursorPos(29,2)
         term.setBackgroundColor(colors.black)
         term.write("                      ")
 
