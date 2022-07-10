@@ -48,6 +48,7 @@ local item53price = 1500
 
 local list = {}
 local prices = {}
+local reciept = {}
 local total = 0
 local category = 1
 -- size 51, 19
@@ -94,7 +95,7 @@ while true do
         term.setCursorPos(1,16)
         term.write("           ")
         term.setCursorPos(1,17)
-        term.write("           ")
+        term.write("Checkout   ")
         term.setCursorPos(1,18)
         term.write("           ")
         term.setCursorPos(1,19)
@@ -358,6 +359,14 @@ while true do
             term.setCursorPos(13,15)
             term.write("               ")
 
+        elseif category == 6 then
+            term.setBackgroundColor(colors.gray)
+            term.setCursorPos(1,17)
+            term.write("Checkout  > ")
+            for i=1,#list do
+                table.insert(reciept, list[i])
+                table.insert(reciept, price[i])
+            shell.run("PrintReciept",reciept)
         end
 
         while true do
@@ -377,6 +386,9 @@ while true do
                     break
                 elseif y == 13 then
                     category = 5
+                    break
+                elseif y == 17 then
+                    category = 6
                     break
                 end
             
