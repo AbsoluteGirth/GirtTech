@@ -90,19 +90,22 @@ while true do
                 sleep(0.5)
                 
                 if panel == 1 then
-                    fs.copy("disk/panelbasic", "/startup")
+                    fs.copy("disk/panels/BasicPanel", "/startup")
+                    os.setComputerLabel("Girt Tech Basic Security Panel")
                 elseif panel == 2 then
-                    fs.copy("disk/panelpro", "/startup")
+                    fs.copy("disk/panels/ProPanel", "/startup")
+                    os.setComputerLabel("Girt Tech Pro Security Panel")
                 elseif panel == 3 then
-                    fs.copy("disk/panelbasicpanelwireless", "/startup")
+                    fs.copy("disk/panels/wireless/reciever", "/startup")
+                    os.setComputerLabel("Girt Tech Wireless Security Panel")
                 end
 
                 if opener == 1 then
-                    fs.copy("disk/simplegate", "/Opener")
+                    fs.copy("disk/openers/OpenGateS", "/opendoor")
                 elseif opener == 2 then
-                    fs.copy("disk/advgate", "/Opener")
+                    fs.copy("disk/openers/OpenGateL", "/opendoor")
                 elseif opener == 3 then
-                    fs.copy("disk/garage", "/Opener")
+                    fs.copy("disk/openers/OpenGarage", "/opendoor")
                 end
 
                 print("Install complete")
