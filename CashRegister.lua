@@ -61,7 +61,7 @@ while true do
         -- Draw screen
         term.setCursorPos(28,2)
         term.setBackgroundColor(colors.black)
-        term.write("                        ")
+        term.write("                       ")
 
         -- Draw selected category
         if category == 1 then
