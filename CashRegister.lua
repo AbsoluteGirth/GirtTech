@@ -106,17 +106,17 @@ while true do
         local ypos = 2
         --if list1[1] ~= nil then
         for i=1,#list do
-            term.setCursorPos(29,i)
+            term.setCursorPos(29,ypos)
             term.write(list[i])
             ypos = ypos + 1
-            term.setCursorPos(29,i)
+            term.setCursorPos(29,ypos)
             term.write(prices[i])
             ypos = ypos + 1
         
         end
         term.setCursorPos(43,18)
         term.write(total)
-
+        term.setTextColor(colors.white)
         -- Button Reference
 
         --[[
