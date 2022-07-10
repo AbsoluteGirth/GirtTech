@@ -63,7 +63,7 @@ while true do
             term.write("[x]")
             
             term.setBackgroundColor(colors.green)
-            term.setCursorPos(12,14)
+            term.setCursorPos(16,14)
             term.write("[o]")
          
             --screen
