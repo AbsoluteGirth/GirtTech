@@ -152,7 +152,14 @@ while true do
                         end
                     elseif y == 14 then  --o
                         term.setCursorBlink(false)
-                        if cIn == password then
+                        if cIn ~= password then
+                            term.setBackgroundColor(colors.red)
+                            term.setCursorPos(22,5)
+                            term.write("Incorrect")
+                            sleep(2)
+                            break  
+                            
+                        else   
                             term.setBackgroundColor(colors.green)
                             term.setCursorPos(22,5)
                             term.write("Unlocked")
@@ -228,14 +235,6 @@ while true do
                                 end
                             end
                         end
-
-                        else
-                            term.setBackgroundColor(colors.red)
-                            term.setCursorPos(22,5)
-                            term.write("Incorrect")
-                            sleep(2)
-                        end
-                        break
                     end        
                 end
             end
