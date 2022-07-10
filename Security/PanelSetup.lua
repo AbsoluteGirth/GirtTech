@@ -60,7 +60,7 @@ while true do
 end
 
 while true do
-    if selecton == "next" then
+    if selecton == 5 then
         break
     end
 
@@ -115,3 +115,5 @@ while true do
         end
     end
 end
+print(panel)
+print(opener)
