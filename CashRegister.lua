@@ -471,7 +471,7 @@ while true do
                     elseif category == 3 then
                         table.insert(list, item31)
                         table.insert(prices, item31price)
-                        _G.total = _G.total + item31price
+                        _G.total = _G.total + item31price\
                         break
                     elseif category == 4 then
                         table.insert(list, item41)
