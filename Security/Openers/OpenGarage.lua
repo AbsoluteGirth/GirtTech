@@ -1,12 +1,12 @@
 local args = ...
 -- Girt Tech Inc
--- Garage Opener
+-- Garage Opener 
 -- v2.0
  
  
--- Door setup --
+-- Door Config --
  
-local speed = 0.2
+local speed = 0.5
 local block = ""
 local x1 = 
 local z1 = 
@@ -15,9 +15,8 @@ local z2 =
 local y = 
 local height = 
  
- 
- 
- 
+
+
 -- Don't touch anything past here --
  
 if args == nil then

@@ -1,15 +1,15 @@
 local modem = peripheral.find("modem")
 -- Girt Tech Inc --
 -- Remote Transmitter
---v1.0
+-- v1.0
 
--- Remote Setup --
+-- Remote Config --
 
-local password = "6969"
-local passwordlen = 4
+local password = ""
+local passwordlen = 6
 local requirepassword = true
 local transmitchannel =  -- Max = 65535
-local openmode = "t" -- M = manual T = timed
+local openmode = "m" -- M = manual T = timed
 local opentime = 5
 
 local bgcolor = colors.lightGray
@@ -17,7 +17,7 @@ local buttoncolor = colors.gray
 local textcolor = colors.white
 
 
--- Don't touch anything below here
+-- Don't touch anything past here --
 
 term.setBackgroundColor(bgcolor)
 term.setTextColor(textcolor)

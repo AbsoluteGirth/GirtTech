@@ -1,24 +1,23 @@
--- Girt tech inc
+-- Girt Tech Inc --
+-- Pro Panel
 -- V2.0
  
---Set your password
+-- Panel Config --
+
+
+
 local password = ""
- 
---Enter the length of password
-local passwordlen = 5
- 
---Set how long you want the door/gate
---to stay open for
+local passwordlen = 6
 local opentime = 5
  
---Change the look of your panel
 local bgcolor = colors.lightGray
 local buttoncolor = colors.gray
 local textcolor = colors.white
+
+
  
  
- 
--- Girt tech IP DO NOT LOOK!!!!!
+-- Don't touch anything past here --
  
  
  

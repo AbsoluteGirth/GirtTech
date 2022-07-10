@@ -1,6 +1,23 @@
 local modem = peripheral.find("modem")
+-- Girt Tech Inc --
+-- Wireless Reciever
+-- v1.0
 
-local recievechannel = 6969
+
+-- Reciever Config --
+
+
+
+
+
+local recievechannel = 
+
+
+
+
+
+
+-- Don't touch anything past here --
 
 modem.open(recievechannel)
 term.clear()

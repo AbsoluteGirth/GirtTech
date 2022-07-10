@@ -1,9 +1,10 @@
 -- Girt Tech Inc --
---v1.0
+-- Basic Panel
+-- v1.0
  
--- Panel Setup --
- 
- 
+
+
+-- Panel Config -- 
  
 local password = ""
 local opentime = 5

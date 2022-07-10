@@ -1,9 +1,10 @@
 local args = ...
 -- Girt Tech Inc
+-- Gate Opener L
 -- v1.0
 
 
--- Door setup --
+-- Door Config --
 
 local speed = 0.5
 local block = ""
@@ -13,8 +14,6 @@ local z1 =
 local x2 = 
 local y2 = 
 local z2 = 
-
-
 
 
 

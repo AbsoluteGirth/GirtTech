@@ -1,15 +1,14 @@
 local args = ...
 -- Girt Tech Inc --
 -- Gate Opener S
---v2.0
+-- v2.0
 
---Gate setup
 
+-- Gate Config --
 
 local coords1 = ""
 local coords2 = ""
 local block = ""
-
 
 
 
