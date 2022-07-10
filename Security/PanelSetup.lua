@@ -6,11 +6,11 @@ local opener = nil
 while true do
     
     if selection == 0 then 
-        selection = 1
+        selection = 3
     end
 
     if selection == 4 then
-        selection = 3
+        selection = 1
     end
 
     term.clear()
@@ -81,13 +81,14 @@ while true do
                 menu = 2
                 panel = selection   
                 selection = 1
+                break
             else
                 opener = selection   
                 term.clear()
                 print(panel)
                 print(opener)
+                sleep(5)
             end 
-            break
         end
     end
 end
