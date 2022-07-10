@@ -48,8 +48,7 @@ local item53price = 1500
 
 _G.list = {}
 _G.prices = {}
-local reciept = {}
-local total = 0
+_G.total = 0
 local category = 1
 -- size 51, 19
 
@@ -363,10 +362,6 @@ while true do
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,17)
             term.write("Checkout  > ")
-            --[[for i=1,#list do
-                table.insert(reciept, (list[i]))
-                table.insert(reciept, (price[i]))
-            end]]--
             shell.run("PrintReciept")
         end
 
