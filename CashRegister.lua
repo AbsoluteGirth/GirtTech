@@ -470,7 +470,7 @@ while true do
                         _G.total = _G.total + item52price
                         break 
                     elseif category == 7 then
-                        G.list = {}
+                        _G.list = {}
                         _G.prices = {}
                         _G.total = 0
                         break
