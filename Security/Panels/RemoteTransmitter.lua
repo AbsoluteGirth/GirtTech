@@ -163,6 +163,9 @@ while true do
                             term.setBackgroundColor(colors.green)
                             term.setCursorPos(22,5)
                             term.write("Unlocked")
+                            sleep(1)
+
+                            term.setBackgroundColor(bgcolor)
                             term.clear()
 
                             term.setBackgroundColor(colors.red)
