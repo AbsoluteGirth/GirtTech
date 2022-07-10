@@ -21,11 +21,11 @@ local item23 = "iPrint"
 local item23price = 10000
 
 --Panels
-local item31 = "Pro panel"
-local item31price = 15000
-local item32 = "Basic panel"
-local item32price = 10000
-local item33 = "Wireless panel"
+local item31 = "Basic panel"
+local item31price = 10000
+local item32 = "Pro panel"
+local item32price = 15000
+local item33 = "Remote panel"
 local item33price = 30000
 
 --Openers
@@ -161,6 +161,10 @@ while true do
         --[[
         
         term.setBackgroundColor(colors.gray)
+
+        -- Draw add-item buttons
+
+        --button1
         term.setCursorPos(13,2)
         term.write("               ")
         term.setCursorPos(13,3)
@@ -169,7 +173,7 @@ while true do
         term.write("               ")
         term.setCursorPos(13,5)
         term.write("               ")
-
+        --button2
         term.setCursorPos(13,7)
         term.write("               ")
         term.setCursorPos(13,8)
@@ -178,7 +182,7 @@ while true do
         term.write("               ")
         term.setCursorPos(13,10)
         term.write("               ")
-
+        --button3
         term.setCursorPos(13,12)
         term.write("               ")
         term.setCursorPos(13,13)
@@ -195,7 +199,8 @@ while true do
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,5)
             term.write(" iPiss   > ")
-
+            
+            -- Draw add-item buttons
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(13,2)
             term.write("               ")
@@ -219,21 +224,139 @@ while true do
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,7)
             term.write(" iPoo    > ")
+            
+            -- Draw add-item buttons
+            term.setCursorPos(13,2)
+            term.write("               ")
+            term.setCursorPos(13,3)
+            term.write("    [iPoo]     ")
+            term.setCursorPos(13,4)
+            term.write("   Y100,000    ")
+            term.setCursorPos(13,5)
+            term.write("               ")
+
+            term.setCursorPos(13,7)
+            term.write("               ")
+            term.setCursorPos(13,8)
+            term.write("   [iDrive]    ")
+            term.setCursorPos(13,9)
+            term.write("    Y7,000     ")
+            term.setCursorPos(13,10)
+            term.write("               ")
+
+            term.setCursorPos(13,12)
+            term.write("               ")
+            term.setCursorPos(13,13)
+            term.write("   [iPrint]    ")
+            term.setCursorPos(13,14)
+            term.write("   Y10,000     ")
+            term.setCursorPos(13,15)
+            term.write("               ")
 
         elseif category == 3 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,9)
             term.write(" Panels  > ")
 
+            -- Draw add-item buttons
+
+            --button1
+            term.setCursorPos(13,2)
+            term.write("               ")
+            term.setCursorPos(13,3)
+            term.write("               ")
+            term.setCursorPos(13,4)
+            term.write("               ")
+            term.setCursorPos(13,5)
+            term.write("               ")
+            --button2
+            term.setCursorPos(13,7)
+            term.write("               ")
+            term.setCursorPos(13,8)
+            term.write("               ")
+            term.setCursorPos(13,9)
+            term.write("               ")
+            term.setCursorPos(13,10)
+            term.write("               ")
+            --button3
+            term.setCursorPos(13,12)
+            term.write("               ")
+            term.setCursorPos(13,13)
+            term.write("               ")
+            term.setCursorPos(13,14)
+            term.write("               ")
+            term.setCursorPos(13,15)
+            term.write("               ")
+
         elseif category == 4 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,11)
             term.write(" Openers > ")
 
+            -- Draw add-item buttons
+
+            --button1
+            term.setCursorPos(13,2)
+            term.write("               ")
+            term.setCursorPos(13,3)
+            term.write(" [Basic Panel] ")
+            term.setCursorPos(13,4)
+            term.write("    Y10,000    ")
+            term.setCursorPos(13,5)
+            term.write("               ")
+            --button2
+            term.setCursorPos(13,7)
+            term.write("               ")
+            term.setCursorPos(13,8)
+            term.write("  [Pro Panel]  ")
+            term.setCursorPos(13,9)
+            term.write("    Y15,000    ")
+            term.setCursorPos(13,10)
+            term.write("               ")
+            --button3
+            term.setCursorPos(13,12)
+            term.write("               ")
+            term.setCursorPos(13,13)
+            term.write(" [Remote Panel]")
+            term.setCursorPos(13,14)
+            term.write("    Y30,000    ")
+            term.setCursorPos(13,15)
+            term.write("               ")
+
         elseif category == 5 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,13)
             term.write(" Extras  > ")
+
+            -- Draw add-item buttons
+
+            --button1
+            term.setCursorPos(13,2)
+            term.write("               ")
+            term.setCursorPos(13,3)
+            term.write("[Gate opener S]")
+            term.setCursorPos(13,4)
+            term.write("    Y20,000    ")
+            term.setCursorPos(13,5)
+            term.write("               ")
+            --button2
+            term.setCursorPos(13,7)
+            term.write("               ")
+            term.setCursorPos(13,8)
+            term.write("[Gate opener L]")
+            term.setCursorPos(13,9)
+            term.write("    Y25,000    ")
+            term.setCursorPos(13,10)
+            term.write("               ")
+            --button3
+            term.setCursorPos(13,12)
+            term.write("               ")
+            term.setCursorPos(13,13)
+            term.write("[Garage Opener]")
+            term.setCursorPos(13,14)
+            term.write("    Y35,000    ")
+            term.setCursorPos(13,15)
+            term.write("               ")
 
         end
 
