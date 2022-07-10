@@ -18,7 +18,6 @@ local textcolor = colors.white
  
  
  
- 
 -- Girt tech IP DO NOT LOOK!!!!!
  
  
