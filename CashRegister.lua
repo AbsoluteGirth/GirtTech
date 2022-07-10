@@ -108,7 +108,7 @@ while true do
         --if list1[1] ~= nil then
         for i=1,#list do
             term.setCursorPos(29,ypos)
-            term.write("                      ")
+            term.write("......................")
             term.setCursorPos(29,ypos)
             term.write(list[i])
             term.setCursorPos(51-(string.len(prices[i])),ypos)
