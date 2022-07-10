@@ -1,7 +1,6 @@
 -- 25 21
 printer = peripheral.wrap("bottom")
 local time = os.time()
-printer.setPageTitle("Reciept"..time)
 local ink = printer.getInkLevel()
 local paper = printer.getPaperLevel()
 
@@ -9,6 +8,7 @@ if ink > 5 then
     if paper > 5 then
         -- Print header
         printer.newPage()
+        printer.setPageTitle("Reciept"..time)
         printer.setCursorPos(8,2)
         printer.write("**********")
         printer.setCursorPos(9,3)
@@ -21,7 +21,7 @@ if ink > 5 then
         for i=1,#list do
             printer.setCursorPos(2,ypos)
             printer.write("...................")
-            printer.setCursorPos(29,ypos)
+            printer.setCursorPos(2,ypos)
             printer.write(list[i])
             printer.setCursorPos(20-(string.len(prices[i])),ypos)
             printer.write(prices[i])
