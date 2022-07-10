@@ -149,7 +149,7 @@ while true do
             term.write("    Y50,000    ")
             term.setCursorPos(13,5)
             term.write("               ")
-            
+
         elseif category == 2 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,7)
@@ -189,7 +189,7 @@ while true do
                 end
             
             elseif x >= 13 and x <= 28 then
-                if t >= 2 and y <=5 then
+                if y >= 2 and y <=5 then
                     if category == 1 then
                         list = list..item1
                         prices = prices..item1price
