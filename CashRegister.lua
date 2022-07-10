@@ -104,7 +104,7 @@ while true do
         -- write values on screen
         term.setTextColor(colors.red)
         local ypos = 2
-        if list1 ~= nil
+        if list1 ~= nil then
             for i in#list do
                 term.setCursorPos(29,i)
                 term.write(list[i])
