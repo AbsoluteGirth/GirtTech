@@ -472,6 +472,7 @@ while true do
                     elseif category == 7 then
                         G.list = {}
                         _G.prices = {}
+                        _G.total = 0
                         break
                     end
                 elseif y >= 12 and y <= 15 then
