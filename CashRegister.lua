@@ -93,7 +93,7 @@ while true do
         term.setCursorPos(29,17)
         term.write("                      ")
         term.setCursorPos(29,18)
-        term.write("Total        | Y      ")
+        term.write(" Total       | Y      ")
 
         -- Draw selected category
         if category == 1 then
