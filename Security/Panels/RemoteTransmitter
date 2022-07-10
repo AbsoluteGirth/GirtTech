@@ -71,7 +71,7 @@ while true do
                 end
             elseif y >= 10 and y <= 12 then
                 if openmode == "t" then
-                    modem.transmit(transmit,1,opentime)
+                    modem.transmit(transmitchannel,1,opentime)
                     sleep(opentime)
                     break
                 end
