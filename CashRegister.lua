@@ -169,18 +169,22 @@ while true do
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,7)
             term.write(" iPoo    > ")
+
         elseif category == 3 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,9)
             term.write(" Panels  > ")
+
         elseif category == 4 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,11)
             term.write(" Openers > ")
+
         elseif category == 5 then
             term.setBackgroundColor(colors.gray)
             term.setCursorPos(1,13)
             term.write(" Extras  > ")
+            
         end
 
         while true do
