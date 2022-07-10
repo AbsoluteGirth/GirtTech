@@ -504,13 +504,13 @@ while true do
                         break 
 
 
-                        
+
                     end
                 end
             end
         end 
-        if reset == 1 then
-            break
-        end
+            if reset == 1 then
+                break
+            end
     end
 end
