@@ -1,3 +1,5 @@
+-- wget run https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/Store/Delivery/turtle.lua
+
 modem = peripheral.find("modem")
 local amount = 0
 local curx = 0
@@ -55,7 +57,7 @@ function ReturnHome()
     for i = 1, amount do 
         turtle.forward()
     end
-    amount = 6
+    amount = 2
     for i = 1, amount do 
         turtle.turnRight()
     end
