@@ -33,7 +33,7 @@ while true do
                     print("File 'startup' already exists")
                     print("Please remove file and try again")
                 else
-                    fs.copy("/transmitter.lua","/disk/startup.lua")
+                    fs.copy("/transmitter","/disk/startup.lua")
                     sleep(0.8)
                     print("Copy finished!!")
                     sleep(1)
