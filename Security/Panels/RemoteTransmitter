@@ -28,6 +28,7 @@ while true do
 
     if openmode == "m" then
         term.setCursorPos(7,6)
+        term.setBackgroundColor(bgcolor)
         term.write("Door Control:")
         
         term.setCursorPos(7,7)
@@ -48,6 +49,7 @@ while true do
     
     elseif openmode == "t" then
         term.setCursorPos(7,8)
+        term.setBackgroundColor(bgcolor)
         term.write("Door Control:")
         
         term.setCursorPos(7,10)
