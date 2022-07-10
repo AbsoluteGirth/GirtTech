@@ -24,7 +24,7 @@ while true do
                 term.clear()
                 term.setCursorPos(1,1)
                 print("Creating Remote")
-                sleep(0.1)
+                sleep(0.2)
                 print("Do not remove!")
                 if fs.exists("disk/startup") == fasle then
                     fs.copy("/transmitter","/disk/startup")
