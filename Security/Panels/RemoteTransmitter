@@ -6,9 +6,9 @@ local modem = peripheral.find("modem")
 
 local password = ""
 local requirepassword = false
-local transmitchannel =  -- Max = 65535
+local transmitchannel = 6969-- Max = 65535
 local openmode = "m" -- M = manual T = timed
-local opentime = 6969
+local opentime = 5
 
 local bgcolor = colors.lightGray
 local buttoncolor = colors.gray
