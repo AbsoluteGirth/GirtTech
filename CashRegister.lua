@@ -48,7 +48,7 @@ local item53price = 1500
 
 _G.list = {}
 _G.prices = {}
-_G.total = 0
+_G.total = 
 local category = 1
 -- size 51, 19
 
