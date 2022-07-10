@@ -97,7 +97,7 @@ while true do
         term.setCursorPos(29,18)
         term.write(" Total       | Y      ")
 
-        -- Draw buttons
+        --[[ Draw buttons
         term.setBackgroundColor(colors.gray)
         term.setCursorPos(13,2)
         term.write("               ")
@@ -125,7 +125,7 @@ while true do
         term.write("               ")
         term.setCursorPos(13,15)
         term.write("               ")
-
+        ]]--
 
         -- Draw selected category
         if category == 1 then
