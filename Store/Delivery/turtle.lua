@@ -133,9 +133,6 @@ target[1] = read()
 target[2] = read()
 target[3] = read()
 
-
-LeaveBase()
-
 Launch(5)
 
 GoTo(target[1], target[3])
