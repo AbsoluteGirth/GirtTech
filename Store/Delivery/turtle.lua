@@ -154,6 +154,7 @@ while true do
                 modem.transmit(42069,1,"Leaving warehouse")
                 LeaveBase()
                 modem.transmit(42069,1,"Out for delivery")
+                Launch(150)
                 GoTo(target[1], target[2])
                 modem.transmit(42069,1,"Delivering package")
                 Dropoff()
