@@ -1,3 +1,5 @@
+-- wget run https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/Store/Delivery/turtleController.lua
+
 modem = peripheral.find("modem")
 modem.open(42069)
 
