@@ -6,7 +6,7 @@
 -- 4 = -z
 
 
-local launchPos = {388,63}
+local launchPos = {384,63}
 
 modem = peripheral.find("modem")
 local amount = 0
@@ -138,7 +138,7 @@ function Deliver()
     DropOff()
     modem.transmit(42069,1,"Returning to warehouse")
     GoTo(launchPos[1], launchPos[2])
-    RetutnHome()
+    ReturnHome()
     modem.transmit(42069,1,"Delivery complete")
     sleep(5)
     modem.transmit(42069,1,"reset")
