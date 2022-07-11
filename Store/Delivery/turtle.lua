@@ -6,11 +6,11 @@
 -- 4 = -z
 
 
-local launchPos = {384,63}
+local launchPos = {383,64}
 
 modem = peripheral.find("modem")
 local amount = 0
-local location = {384,63}
+local location = {383,64}
 local target = {}
 local facing = 1
 
@@ -23,7 +23,7 @@ function LeaveBase()
     turtle.turnRight()
     modem.transmit(30030,1,"open")
     sleep(2)
-    amount = 7
+    amount = 8
     for i = 1, amount do 
         turtle.forward()
     end
@@ -40,14 +40,14 @@ function ReturnHome()
         turtle.down()
     end
     TurnTo(3)
-    amount = 18
+    amount = 17
     for i = 1, amount do 
         turtle.forward()
     end
     turtle.turnRight()
     modem.transmit(30030,1,"open")
     sleep(2)
-    amount = 7
+    amount = 8
     for i = 1, amount do 
         turtle.forward()
     end
