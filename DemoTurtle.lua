@@ -9,7 +9,7 @@ function enterStage()
     end
     amount = 9
     for i = 1, amount do 
-        turtle.foreward()
+        turtle.forward()
     end
     amount = 4
     for i = 1, amount do 
@@ -17,7 +17,7 @@ function enterStage()
     end
     amount = 6
     for i = 1, amount do 
-        turtle.foreward()
+        turtle.forward()
     end
     amount = 6
     for i = 1, amount do 
@@ -36,7 +36,7 @@ function exit()
     turtle.turnLeft()
     amount = 5
     for i = 1, amount do 
-        turtle.foreward()
+        turtle.forward()
     end
 end
 
