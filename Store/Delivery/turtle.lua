@@ -142,6 +142,7 @@ while true do
     term.write("make sure crate is in slot 1")
     while true do
         local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
+        print(control)
         if #target == 2 then 
             if control == "go" then
                 --deliver
