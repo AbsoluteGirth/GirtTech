@@ -101,13 +101,13 @@ function GoTo(x, z)
         TurnTo(2)
         while location[2] < tonumber(z) do
             turtle.forward()
-            location[2] = location[3] + 1
+            location[2] = location[2] + 1
         end
     elseif location[2] > tonumber(z) then
         TurnTo(4)
         while location[2] > tonumber(z) do
             turtle.forward()
-            location[2] = location[3] - 1
+            location[2] = location[2] - 1
         end
     end
 end
@@ -136,7 +136,7 @@ function Deliver()
     modem.transmit(42069,1,"Leaving warehouse")
     LeaveBase()
     modem.transmit(42069,1,"Out for delivery")
-    Launch(150)
+    Launch(100)
     GoTo(target[1], target[2])
     modem.transmit(42069,1,"Delivering package")
     Dropoff()
