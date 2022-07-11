@@ -138,5 +138,5 @@ LeaveBase()
 
 Launch(5)
 
-Goto(target[1], target[3])
-Dropoff()
+GoTo(target[1], target[3])
+DropOff()
