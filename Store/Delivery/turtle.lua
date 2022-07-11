@@ -68,7 +68,7 @@ function ReturnHome()
 end
 
 function Launch(height)
-    while i = 1,height do
+    for i=1,height do
         turtle.up()
         i = i + 1
     end
