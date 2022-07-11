@@ -143,7 +143,8 @@ while true do
     while true do
         local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
         print(control)
-        print(target)
+        print(target[1])
+        peint(target[2])
         if #target == 2 then 
             if control == "go" then
                 --deliver
