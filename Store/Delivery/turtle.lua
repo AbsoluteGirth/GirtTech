@@ -138,7 +138,7 @@ while true do
     term.clear()
     term.setCursorPos(1,1)
     term.write("Ready for delivery")
-    term.setCursorPos(2,1)
+    term.setCursorPos(1,2)
     term.write("make sure crate is in slot 1")
     while true do
         local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
