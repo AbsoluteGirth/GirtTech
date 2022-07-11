@@ -172,21 +172,3 @@ while true do
         end
     end
 end
-
-
-
-
-
-    Launch(150)
-
-    GoTo(target[1], target[2])
-
-    DropOff()
-
-    Launch(150)
-
-    GoTo(launchPos[1], launchPos[2])
-
-    ReturnHome()
-
-end
