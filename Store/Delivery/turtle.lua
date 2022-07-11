@@ -84,28 +84,28 @@ function TurnTo(dir)
 end
 
 function GoTo(x, z)
-    if location[1] < x then
+    if location[1] < tonumber(x) then
         TurnTo(1)
-        while location[1] < x do
+        while location[1] < tonumber(x) do
             turtle.forward()
             location[1] = location[1] + 1
         end
-    elseif location[1] > x then
+    elseif location[1] > tonumber(x) then
         TurnTo(3)
-        while location[1] > x do
+        while location[1] > tonumber(x) do
             turtle.forward()
             location[1] = location[1] - 1
         end
     end
-    if location[3] < z then
+    if location[3] < tonumber(z) then
         TurnTo(2)
-        while location[3] < z do
+        while location[3] < tonumber(z) do
             turtle.forward()
             location[3] = location[3] + 1
         end
-    elseif location[3] > z then
+    elseif location[3] > tonumber(z) then
         TurnTo(4)
-        while location[3] > z do
+        while location[3] > tonumber(z) do
             turtle.forward()
             location[3] = location[3] - 1
         end
