@@ -128,47 +128,51 @@ function DropOff()
     end
 end
 
-
-
-
+function Deliver()
+    term.clear()
+    term.setCursorPos(1,1)
+    print("Thank you for your purchase!")
+    print("Please drop by again soon!")
+    modem.transmit(42069,1,"Leaving warehouse")
+    LeaveBase()
+    modem.transmit(42069,1,"Out for delivery")
+    Launch(150)
+    GoTo(target[1], target[2])
+    modem.transmit(42069,1,"Delivering package")
+    Dropoff()
+    modem.transmit(42069,1,"Returning to warehouse")
+    GoTo(launchPos[1], launchPos[2])
+    RetutnHome()
+    modem.transmit(42069,1,"Delivery complete")
+    sleep(5)
+    modem.transmit(42069,1,"reset")
+end
 
 while true do
     target = {}
-    modem.open(42069)
     term.clear()
     term.setCursorPos(1,1)
-    term.write("Ready for delivery")
+    term.write("Enter destination x:")
     term.setCursorPos(1,2)
-    term.write("make sure crate is in slot 1")
-    while true do
-        local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
-        term.setCursorPos(1,2)
-        print(target[1])
-        print(target[2])
-        
-        if control == "go" then
-            --deliver
-            modem.close(42069)
-            term.clear()
-            term.setCursorPos(1,1)
-            print("Thank you for your purchase!")
-            print("Please drop by again soon!")
-            modem.transmit(42069,1,"Leaving warehouse")
-            LeaveBase()
-            modem.transmit(42069,1,"Out for delivery")
-            Launch(150)
-            GoTo(target[1], target[2])
-            modem.transmit(42069,1,"Delivering package")
-            Dropoff()
-            modem.transmit(42069,1,"Returning to warehouse")
-            GoTo(launchPos[1], launchPos[2])
-            RetutnHome()
-            modem.transmit(42069,1,"Delivery complete")
-            sleep(5)
-            modem.transmit(42069,1,"reset")
-            break
-        else
-            table.insert(target,control)
-        end
+    target[1] = read()
+
+
+    term.clear()
+    term.setCursorPos(1,1)
+    term.write("Enter destination z:")
+    term.setCursorPos(1,2)
+    target[2] = read()
+
+    term.clear()
+    term.setCursorPos(1,1)
+    term.write("Delivering to:")
+    term.setCursorPos(1,2)
+    term.write("x: "..target[1].."z: "..target[2])
+    term.setCursorPos(1,3)
+    term.write("Is this correct? (y/n)")
+    term.setCursorPos(1,4)
+    local confirm = read()
+    if confirm == "y" then 
+        Deliver()
     end
 end
