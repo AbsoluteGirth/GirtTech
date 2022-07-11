@@ -142,36 +142,32 @@ while true do
     term.write("make sure crate is in slot 1")
     while true do
         local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
-        print(control)
+        term.setCursorPos(1,2)
         print(target[1])
         print(target[2])
-        if #target == 2 then 
-            if control == "go" then
-                --deliver
-                modem.close(42069)
-                term.clear()
-                term.setCursorPos(1,1)
-                print("Thank you for your purchase!")
-                print("Please drop by again soon!")
-                modem.transmit(42069,1,"Leaving warehouse")
-                LeaveBase()
-                modem.transmit(42069,1,"Out for delivery")
-                Launch(150)
-                GoTo(target[1], target[2])
-                modem.transmit(42069,1,"Delivering package")
-                Dropoff()
-                modem.transmit(42069,1,"Returning to warehouse")
-                GoTo(launchPos[1], launchPos[2])
-                RetutnHome()
-                modem.transmit(42069,1,"Delivery complete")
-                sleep(5)
-                modem.transmit(42069,1,"reset")
-                break
-            else
-                break
-            end
-
-        elseif  ((tonumber(control) % 1) == 0) == true then
+        
+        if control == "go" then
+            --deliver
+            modem.close(42069)
+            term.clear()
+            term.setCursorPos(1,1)
+            print("Thank you for your purchase!")
+            print("Please drop by again soon!")
+            modem.transmit(42069,1,"Leaving warehouse")
+            LeaveBase()
+            modem.transmit(42069,1,"Out for delivery")
+            Launch(150)
+            GoTo(target[1], target[2])
+            modem.transmit(42069,1,"Delivering package")
+            Dropoff()
+            modem.transmit(42069,1,"Returning to warehouse")
+            GoTo(launchPos[1], launchPos[2])
+            RetutnHome()
+            modem.transmit(42069,1,"Delivery complete")
+            sleep(5)
+            modem.transmit(42069,1,"reset")
+            break
+        else
             table.insert(target,control)
         end
     end
