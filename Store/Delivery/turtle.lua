@@ -10,7 +10,7 @@ local launchPos = {388,63}
 
 modem = peripheral.find("modem")
 local amount = 0
-local location = {388,63}
+local location = {384,63}
 local target = {}
 local facing = 1
 
@@ -29,13 +29,9 @@ function LeaveBase()
     end
     modem.transmit(30030,1,"close")
     turtle.turnLeft()
-    amount = 22
+    amount = 18
     for i = 1, amount do 
         turtle.forward()
-    end
-    amount = 4
-    for i = 1, amount do 
-        turtle.turnLeft()
     end
 end
 
@@ -44,7 +40,7 @@ function ReturnHome()
         turtle.down()
     end
     TurnTo(3)
-    amount = 22
+    amount = 18
     for i = 1, amount do 
         turtle.forward()
     end
@@ -139,7 +135,7 @@ function Deliver()
     Launch(100)
     GoTo(target[1], target[2])
     modem.transmit(42069,1,"Delivering package")
-    Dropoff()
+    DropOff()
     modem.transmit(42069,1,"Returning to warehouse")
     GoTo(launchPos[1], launchPos[2])
     RetutnHome()
