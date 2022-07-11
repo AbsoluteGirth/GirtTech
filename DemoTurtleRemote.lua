@@ -1,8 +1,10 @@
 modem = peripheral.find("modem")
 
 while true do
+    term.setBackgroundColor(colors.lightGray)
+    term.clear()
     term.setCursorPos(7,3)
-    term.setBackgroundColor(buttoncolor)
+    term.setBackgroundColor(colors.gray)
     term.write("              ")
     term.setCursorPos(7,4)
     term.write("    [enter]   ")
@@ -10,7 +12,7 @@ while true do
     term.write("              ")
 
     term.setCursorPos(7,7)
-    term.setBackgroundColor(buttoncolor)
+    term.setBackgroundColor(colors.gray)
     term.write("              ")
     term.setCursorPos(7,8)
     term.write("    [jump]    ")
@@ -18,7 +20,7 @@ while true do
     term.write("              ")
 
     term.setCursorPos(7,13)
-    term.setBackgroundColor(buttoncolor)
+    term.setBackgroundColor(colors.gray)
     term.write("              ")
     term.setCursorPos(7,14)
     term.write("    [exit]    ")
