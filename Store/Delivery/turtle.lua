@@ -6,15 +6,12 @@
 -- 4 = -z
 
 
-local launchPos = {388,65,63}
+local launchPos = {388,63}
 
 modem = peripheral.find("modem")
 local amount = 0
-local location = {388,65,63}
+local location = {388,63}
 local target = {}
-local distx = 0
-local disty = 0
-local distz = 0
 local facing = 1
 
 --Leave base
@@ -97,17 +94,17 @@ function GoTo(x, z)
             location[1] = location[1] - 1
         end
     end
-    if location[3] < tonumber(z) then
+    if location[2] < tonumber(z) then
         TurnTo(2)
-        while location[3] < tonumber(z) do
+        while location[2] < tonumber(z) do
             turtle.forward()
-            location[3] = location[3] + 1
+            location[2] = location[3] + 1
         end
     elseif location[3] > tonumber(z) then
         TurnTo(4)
-        while location[3] > tonumber(z) do
+        while location[2] > tonumber(z) do
             turtle.forward()
-            location[3] = location[3] - 1
+            location[2] = location[3] - 1
         end
     end
 end
@@ -129,11 +126,23 @@ function DropOff()
 end
 
 
---[[target[1] = read()
-target[2] = read()
-target[3] = read()]]--
 
-Launch(5)
 
---GoTo(target[1], target[3])
-DropOff()
+
+while true do
+
+    --set target here
+
+    Launch(150)
+
+    GoTo(target[1], target[2])
+
+    DropOff()
+
+    Launch(150)
+
+    GoTo(launchPos[1], launchPos[2])
+
+    ReturnHome()
+
+end
