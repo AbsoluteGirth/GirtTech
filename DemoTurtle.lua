@@ -37,6 +37,8 @@ function exit()
     amount = 5
     for i = 1, amount do 
         turtle.foreward()
+    end
+end
 
 while true do
     local event,side,chan,rchan,message,dist = os.pullEvent("modem_message")
