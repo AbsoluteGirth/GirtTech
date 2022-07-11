@@ -32,20 +32,17 @@ while true do
         local evnet, button, x, y = os.pullEvent("mouse_click")
         if x >= 7 and x <= 20 then
             if y >= 3 and y <= 5 then
-                if openmode == "m" then
-                    modem.transmit(1234,1,"enter")
-                    break
-                end
+                modem.transmit(1234,1,"enter")
+                break
+              
             elseif y >= 7 and y <= 9 then
-                if openmode == "t" then
-                    modem.transmit(1234,1,"jump")
-                    break
-                end
+                modem.transmit(1234,1,"jump")
+                break
+
             elseif y >= 13 and y <= 15 then
-                if openmode == "m" then
-                    modem.transmit(1234,1,"exit")
-                    break
-                end
+                modem.transmit(1234,1,"exit")
+                break
+                
             end
         end
     end
