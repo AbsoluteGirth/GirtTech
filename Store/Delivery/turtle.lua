@@ -129,9 +129,9 @@ function DropOff()
 end
 
 
-target[1] = input()
-target[2] = input()
-target[3] = input()
+target[1] = read()
+target[2] = read()
+target[3] = read()
 
 
 LeaveBase()
