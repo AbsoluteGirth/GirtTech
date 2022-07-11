@@ -130,11 +130,11 @@ function DropOff()
 end
 
 
-target[1] = read()
+--[[target[1] = read()
 target[2] = read()
-target[3] = read()
+target[3] = read()]]--
 
 Launch(5)
 
-GoTo(target[1], target[3])
+--GoTo(target[1], target[3])
 DropOff()
