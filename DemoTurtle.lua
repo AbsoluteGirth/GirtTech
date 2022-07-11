@@ -1,7 +1,7 @@
 modem = peripheral.find("modem")
 
 local amount = 0
-
+modem.open(1234)
 function enterStage()
     amount = 6
     for i = 1, amount do 
