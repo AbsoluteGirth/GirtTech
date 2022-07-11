@@ -40,6 +40,9 @@ function LeaveBase()
 end
 
 function ReturnHome()
+    while turtle.detectDown() == false do
+        turtle.down()
+    end
     TurnTo(3)
     amount = 22
     for i = 1, amount do 
@@ -130,8 +133,49 @@ end
 
 
 while true do
+    target = {}
+    modem.open(42069)
+    term.clear()
+    term.setCursorPos(1,1)
+    term.write("Ready for delivery")
+    term.setCursorPos(2,1)
+    term.write("make sure crate is in slot 1")
+    while true do
+        local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
+        if #target == 2 then 
+            if control == "go" then
+                --deliver
+                modem.close(42069)
+                term.clear()
+                term.setCursorPos(1,1)
+                print("Thank you for your purchase!")
+                print("Please drop by again soon!")
+                modem.transmit(42069,1,"Leaving warehouse")
+                LeaveBase()
+                modem.transmit(42069,1,"Out for delivery")
+                GoTo(target[1], target[2])
+                modem.transmit(42069,1,"Delivering package")
+                Dropoff()
+                modem.transmit(42069,1,"Returning to warehouse")
+                GoTo(launchPos[1], launchPos[2])
+                RetutnHome()
+                modem.transmit(42069,1,"Delivery complete")
+                sleep(5)
+                modem.transmit(42069,1,"reset")
+                break
+            else
+                break
+            end
 
-    --set target here
+        elseif  ((tonumber(control) % 1) == 0) == true then
+            table.insert(target,control)
+        end
+    end
+end
+
+
+
+
 
     Launch(150)
 
