@@ -29,7 +29,7 @@ function LeaveBase()
     end
     modem.transmit(30030,1,"close")
     turtle.turnLeft()
-    amount = 18
+    amount = 17
     for i = 1, amount do 
         turtle.forward()
     end
