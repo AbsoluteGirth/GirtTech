@@ -103,7 +103,7 @@ function GoTo(x, z)
             turtle.forward()
             location[2] = location[3] + 1
         end
-    elseif location[3] > tonumber(z) then
+    elseif location[2] > tonumber(z) then
         TurnTo(4)
         while location[2] > tonumber(z) do
             turtle.forward()
@@ -167,7 +167,7 @@ while true do
     term.setCursorPos(1,1)
     term.write("Delivering to:")
     term.setCursorPos(1,2)
-    term.write("x: "..target[1].."z: "..target[2])
+    term.write("x: "..target[1].." z: "..target[2])
     term.setCursorPos(1,3)
     term.write("Is this correct? (y/n)")
     term.setCursorPos(1,4)
