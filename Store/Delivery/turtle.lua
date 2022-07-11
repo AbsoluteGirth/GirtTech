@@ -68,6 +68,7 @@ function ReturnHome()
 end
 
 function Launch(height)
+    local targetheight = location[2] + height
     while location[2] < height do
         turtle.up()
         location[2] = location[2] + 1
