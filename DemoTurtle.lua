@@ -2,7 +2,7 @@ modem = peripheral.find("modem")
 
 local amount = 0
 
-function enterStage
+function enterStage()
     amount = 6
     for i = 1, amount do 
         turtle.up()
