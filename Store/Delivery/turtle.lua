@@ -121,7 +121,7 @@ function DropOff()
     turtle.placeDown()
     turtle.select(2)
     slot = 2
-    while turtle.dropdown(all) do 
+    while turtle.dropDown(all) do 
         slot = slot + 1
         turtle.dropDown(all)
         turtle.select(slot)
