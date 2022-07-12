@@ -1,3 +1,12 @@
+modem = peripheral.find("modem")
+
+local fromTurt = 65101
+local fromServ = 65100
+modem.open(fromTurt)
+modem.open(fromServ)
+local screens = {"insertCard","pleaseWait","PIN"}
+term.setCursorBlink(false)
+
 function drawATM()
     term.setBackgroundColor(colors.white)
     term.clear()
@@ -114,9 +123,9 @@ function drawScreen(screen)
     end
 end
 
+--function readbuttons()
 
-local screens = {"insertCard","pleaseWait","PIN"}
-term.setCursorBlink(false)
+
 
 for i = 1,#screns do
     drawATM()
