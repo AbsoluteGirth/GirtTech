@@ -183,7 +183,7 @@ function readButtons()
         end
 
     elseif y == 18 then 
-        elseif x >= 16 and x <= 18 then 
+        if x >= 16 and x <= 18 then 
             return("num0")
         elseif x >= 24 and x <= 29 then
             return("buttonEnter")
