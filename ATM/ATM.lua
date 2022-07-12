@@ -1,6 +1,6 @@
 function drawATM()
     term.setBackgroundColor(colors.gray)
-    term.clear
+    term.clear()
     paintutils.drawFilledBox(8,1,44,21,colors.lightGray)
     term.setBackgroundColor(colors.gray)
     
