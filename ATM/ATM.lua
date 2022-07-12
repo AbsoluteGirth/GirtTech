@@ -96,7 +96,7 @@ function drawScreen(screen)
         term.setCursorPos(9,6)
         term.write("INSERT CARD")
     
-    elseif screen = "pleaseWait" then 
+    elseif screen == "pleaseWait" then 
         term.setCursorPos(10,5)
         term.write("PLEASE WAIT")
         term.setCursorPos(9,5)
@@ -110,7 +110,7 @@ function drawScreen(screen)
         term.setCursorPos(8,5)
         term.write("press enter")
         term.setCursorPos(11,8)
-        
+
     end
 end
 
