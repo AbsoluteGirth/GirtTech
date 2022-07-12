@@ -60,7 +60,7 @@ function drawATM()
     term.write("CANCEL")
     term.setBackgroundColor(colors.yellow)
     term.setCursorPos(24,14)
-    term.write(" BACK ")
+    term.write("CLEAR ")
     term.setBackgroundColor(colors.green)
     term.setCursorPos(24,18)
     term.write("SELECT")
@@ -123,12 +123,75 @@ function drawScreen(screen)
     end
 end
 
---function readbuttons()
+function readButtons()
+    local event, button, x, y = os.pullEvent("mouse_click")
+    
+    if y == 3 then 
+        if x >= 10 and x <= 12 then 
+            return("button1")
+        elseif x >= 30 and x <= 32 then
+            return("button5")
+        end
+    elseif y == 5 then 
+        if x >= 10 and x <= 12 then 
+            return("button2")
+        elseif x >= 30 and x <= 32 then
+            return("button6")
+        end
+    elseif y == 7 then 
+        if x >= 10 and x <= 12 then 
+            return("button3")
+        elseif x >= 30 and x <= 32 then
+            return("button7")
+        end
+    elseif y == 9 then 
+        if x >= 10 and x <= 12 then 
+            return("button4")
+        elseif x >= 30 and x <= 32 then
+            return("button8")
+        end
+    
+    elseif y == 12 then 
+        if x >= 12 and x <= 14 then 
+            return("num1")
+        elseif x >= 16 and x <= 18 then 
+            return("num2")
+        elseif x >= 20 and x <= 22 then
+            return("num3")
+        elseif x >= 24 and x <= 29 then
+            return("buttonCancel")
+        end
 
+    elseif y == 14 then 
+        if x >= 12 and x <= 14 then 
+            return("num4")
+        elseif x >= 16 and x <= 18 then 
+            return("num5")
+        elseif x >= 20 and x <= 22 then
+            return("num6")
+        elseif x >= 24 and x <= 29 then
+            return("buttonClear")
+        end
 
+    elseif y == 16 then 
+        if x >= 12 and x <= 14 then 
+            return("num7")
+        elseif x >= 16 and x <= 18 then 
+            return("num8")
+        elseif x >= 20 and x <= 22 then
+            return("num9")
+        end
 
-for i = 1,#screens do
-    drawATM()
-    drawScreen(screens[i])
-    read()
+    elseif y == 18 then 
+        elseif x >= 16 and x <= 18 then 
+            return("num0")
+        elseif x >= 24 and x <= 29 then
+            return("buttonEnter")
+        end
+end
+
+drawATM()
+while true do 
+    term.setCursorPos(1,1)
+    print(readButtons())
 end
