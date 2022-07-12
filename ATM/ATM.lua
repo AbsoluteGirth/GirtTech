@@ -188,6 +188,7 @@ function readButtons()
         elseif x >= 24 and x <= 29 then
             return("buttonEnter")
         end
+    end
 end
 
 drawATM()
