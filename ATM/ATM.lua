@@ -127,7 +127,7 @@ end
 
 
 
-for i = 1,#screns do
+for i = 1,#screens do
     drawATM()
     drawScreen(screens[i])
     read()
