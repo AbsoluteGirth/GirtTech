@@ -57,6 +57,7 @@ function drawATM()
     term.write("SELECT")
 
     term.setBackgroundColor(colors.black)
+    term.setTextColor(colors.white)
     term.setCursorPos(36,4)
     term.write(" CARD ")
     term.setCursorPos(36,13)
