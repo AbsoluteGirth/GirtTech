@@ -87,8 +87,38 @@ function drawATM()
 
 end
 
+function drawScreen(screen)
+    paintutils.drawFilledBox(14,2,28,9,colors.white)
+    term.setBackgroundColor (colors.white)
+    term.setTextColor(colors.black)
+    
+    if screen == "insertCard" then 
+        term.setCursorPos(9,6)
+        term.write("INSERT CARD")
+    
+    elseif screen = "pleaseWait" then 
+        term.setCursorPos(10,5)
+        term.write("PLEASE WAIT")
+        term.setCursorPos(9,5)
+        term.write("Reading Card")
 
-drawATM()
-paintutils.drawFilledBox(14,2,28,9,colors.white)
+    elseif screen == "PIN" then
+        term.setCursorPos(8,3)
+        term.write("Please enter")
+        term.setCursorPos(8,4)
+        term.write("your pin and")
+        term.setCursorPos(8,5)
+        term.write("press enter")
+        term.setCursorPos(11,8)
+        
+    end
+end
+
 term.setCursorBlink(false)
+drawATM()
+drawScreen("insertCard")
 read()
+drawScreen("pleaseWait")
+read()
+drawScreen("PIN")
+read("* ")
