@@ -3,6 +3,7 @@ function drawATM()
     term.clear()
     paintutils.drawFilledBox(8,1,44,21,colors.lightGray)
     term.setBackgroundColor(colors.gray)
+    term.setTextColor(colors.black)
     
     term.setCursorPos(10,3)
     term.write("  >")
@@ -53,7 +54,7 @@ function drawATM()
     term.write(" BACK ")
     term.setBackgroundColor(colors.green)
     term.setCursorPos(24,18)
-    term.write("ENTER")
+    term.write("SELECT")
 
     term.setBackgroundColor(colors.black)
     term.setCursorPos(36,4)
@@ -87,6 +88,6 @@ end
 
 
 drawATM()
-paintutils.drawFilledBox(14,2,28,10,colors.white)
+paintutils.drawFilledBox(14,2,28,9,colors.white)
 term.setCursorBlink(false)
 read()
