@@ -93,32 +93,33 @@ function drawScreen(screen)
     term.setTextColor(colors.black)
     
     if screen == "insertCard" then 
-        term.setCursorPos(9,6)
+        term.setCursorPos(16,6)
         term.write("INSERT CARD")
     
     elseif screen == "pleaseWait" then 
-        term.setCursorPos(10,5)
+        term.setCursorPos(17,5)
         term.write("PLEASE WAIT")
-        term.setCursorPos(9,5)
+        term.setCursorPos(16,5)
         term.write("Reading Card")
 
     elseif screen == "PIN" then
-        term.setCursorPos(8,3)
+        term.setCursorPos(15,3)
         term.write("Please enter")
-        term.setCursorPos(8,4)
+        term.setCursorPos(15,4)
         term.write("your pin and")
-        term.setCursorPos(8,5)
+        term.setCursorPos(15,5)
         term.write("press enter")
-        term.setCursorPos(11,8)
+        term.setCursorPos(18,8)
 
     end
 end
 
+
+local screens = {"insertCard","pleaseWait","PIN"}
 term.setCursorBlink(false)
-drawATM()
-drawScreen("insertCard")
-read()
-drawScreen("pleaseWait")
-read()
-drawScreen("PIN")
-read("* ")
+
+for i = 1,#screns do
+    drawATM()
+    drawScreen(screens[i])
+    read()
+end
