@@ -143,9 +143,18 @@ function drawScreen(screen)
                 x = 14
             end
         end
-    elseif screen == "bal" then 
-        term.setCursorPos(1,1)
 
+    elseif screen == "bal" then 
+        term.setCursorPos(15,3)
+        term.write("Your account")
+        term.setCursorPos(15,4)
+        term.write("balance is:")
+        term.setCursorPos(16,6)
+        term.write("Y"..balance)
+        term.setCursorPos(14,9)
+        term.write("Withdraw")
+        term.setCursorPos(24,9)
+        term.write("Other")
     end
 end
 
@@ -218,7 +227,7 @@ function readButtons()
 end
 
 drawATM()
-drawScreen("test")
+drawScreen("bal")
 while true do 
     term.setCursorPos(1,1)
     
