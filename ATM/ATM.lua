@@ -142,7 +142,7 @@ function drawScreen(screen)
             end
         end
     elseif screen == "bal" then 
-        term.setCursorPos
+        term.setCursorPos(1,1)
 
     end
 end
