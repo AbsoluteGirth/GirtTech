@@ -132,6 +132,7 @@ function drawScreen(screen)
             x = x + 1
             if x == 29 then 
                 y = y + 1
+                x = 14
             end
             term.setCursorPos(x,y)
             term.setBackgroundColor(colors.black)
@@ -139,6 +140,7 @@ function drawScreen(screen)
             x = x + 1
             if x == 29 then 
                 y = y + 1
+                x = 14
             end
         end
     elseif screen == "bal" then 
