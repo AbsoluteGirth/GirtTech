@@ -125,7 +125,7 @@ function drawScreen(screen)
     elseif screen == "test" then
         local x = 14
         local y = 2
-        while y < 15 do 
+        while y < 10 do 
             term.setCursorPos(x,y)
             term.setBackgroundColor(colors.white)
             term.write(" ")
