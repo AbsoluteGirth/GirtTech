@@ -140,6 +140,7 @@ function drawScreen(screen)
             if x == 29 then 
                 y = y + 1
             end
+        end
     elseif screen == "bal" then 
         term.setCursorPos
 
