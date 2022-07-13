@@ -8,6 +8,7 @@ modem.open(fromTurt)
 modem.open(fromServ)
 local screens = {"insertCard","pleaseWait","PIN"}
 term.setCursorBlink(false)
+local balance = 12340000
 
 function drawATM()
     term.setBackgroundColor(colors.white)
