@@ -1,3 +1,5 @@
+-- wget run https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/ATM/ATM.lua
+
 modem = peripheral.find("modem")
 
 local fromTurt = 65101
@@ -120,6 +122,27 @@ function drawScreen(screen)
         term.write("press enter")
         term.setCursorPos(18,8)
 
+    elseif screen == "test" then
+        local x = 14
+        local y = 2
+        while y < 15 do 
+            term.setCursorPos(x,y)
+            term.setBackgroundColor(colors.white)
+            term.write(" ")
+            x = x + 1
+            if x == 29 then 
+                y = y + 1
+            end
+            term.setCursorPos(x,y)
+            term.setBackgroundColor(colors.black)
+            term.write(" ")
+            x = x + 1
+            if x == 29 then 
+                y = y + 1
+            end
+    elseif screen == "bal" then 
+        term.setCursorPos
+
     end
 end
 
@@ -192,7 +215,9 @@ function readButtons()
 end
 
 drawATM()
+drawScreen("test")
 while true do 
     term.setCursorPos(1,1)
+    
     print(readButtons())
 end
