@@ -297,7 +297,7 @@ end
 
 function readCard()
     local card = fs.open("disk/card", "r")
-    print(card.readAll())
+    print(card.readLine())
 end
 
 while true do 
