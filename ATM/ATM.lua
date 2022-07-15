@@ -229,49 +229,70 @@ end
 function pinInput()
     local pinInput = ""
     term.setCursorPos(18,8)
-    while string.len(pinInput) < 4 do 
+    while true do
         local buttonPress = readButtons()
 
         if buttonPress == "num1" then 
-            pinInput = pinInput.."1"
-            term.write("* ")
+            if string.len(pinInput) < 4 then 
+                pinInput = pinInput.."1"
+                term.write("* ")
+            end
         elseif buttonPress == "num2" then 
-            pinInput = pinInput.."2"
-            term.write("* ")
+            if string.len(pinInput) < 4 then 
+                pinInput = pinInput.."2"
+                term.write("* ")
+            end
         elseif buttonPress == "num3" then 
-            pinInput = pinInput.."3"
-            term.write("* ")
+            if string.len(pinInput) < 4 then 
+                pinInput = pinInput.."3"
+                term.write("* ")
+            end
         elseif buttonPress == "num4" then 
-            pinInput = pinInput.."4"
-            term.write("* ")
+            if string.len(pinInput) < 4 then 
+                pinInput = pinInput.."4"
+                term.write("* ")
+            end
         elseif buttonPress == "num5" then 
-            pinInput = pinInput.."5"
-            term.write("* ")
+            if string.len(pinInput) < 4 then 
+                pinInput = pinInput.."5"
+                term.write("* ")
+            end
         elseif buttonPress == "num6" then 
-            pinInput = pinInput.."6"
-            term.write("* ")
+            if string.len(pinInput) < 4 then 
+                pinInput = pinInput.."6"
+                term.write("* ")
+            end
         elseif buttonPress == "num7" then 
-            pinInput = pinInput.."7"
-            term.write("* ")
+            if string.len(pinInput) < 4 then 
+                pinInput = pinInput.."7"
+                term.write("* ")
+            end
         elseif buttonPress == "num8" then 
-            pinInput = pinInput.."8"
-            term.write("* ")
+            if string.len(pinInput) < 4 then 
+                pinInput = pinInput.."8"
+                term.write("* ")
+            end
         elseif buttonPress == "num9" then 
-            pinInput = pinInput.."9"
-            term.write("* ")
+            if string.len(pinInput) < 4 then 
+                pinInput = pinInput.."9"
+                term.write("* ")
+            end
         elseif buttonPress == "num0" then 
-            pinInput = pinInput.."0"
-            term.write("* ")
+            if string.len(pinInput) < 4 then 
+                pinInput = pinInput.."0"
+                term.write("* ")
+            end
         elseif buttonPress == "buttonEnter" then 
-            term.write("Pin: "..pinInput)
+            return pinInput
         elseif buttonPress == "buttonClear" then 
             term.setCursorPos(18,8)
             term.write("        ")
             pinInput = ""
             term.setCursorPos(18,8)
+        elseif buttonPress == "buttonCancel" then
+            return "cancel"
         end
     end
-    return pinInput
 end
 
 
