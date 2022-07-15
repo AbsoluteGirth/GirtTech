@@ -229,7 +229,7 @@ end
 function pinInput()
     local pinInput = ""
     while string.len(pinInput) < 4 do 
-        lcoal buttonPress = readButtons()
+        local buttonPress = readButtons()
         term.setCursorPos(18,8)
 
         if buttonPress == "num1" then 
