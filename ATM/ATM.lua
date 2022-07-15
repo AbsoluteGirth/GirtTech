@@ -295,11 +295,15 @@ function pinInput()
     end
 end
 
+function readCard()
+    local card = fs.open("disk/card", r)
+    print(card.readAll())
 
 while true do 
     drawATM()
     drawScreen("PIN")
     local pin = pinInput()
     print(pin)
+    readCard()
     sleep(2)
 end
