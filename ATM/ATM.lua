@@ -262,7 +262,7 @@ function pinInput()
             pinInput = pinInput.."0"
             term.write("* ")
         elseif buttonPress == "buttonEnter" then 
-            term.write("Pin entered")
+            term.write("Pin: "..pinInput)
         elseif buttonPress == "buttonClear" then 
             term.setCursorPos(18,8)
             term.write("        ")
