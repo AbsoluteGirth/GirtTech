@@ -228,6 +228,7 @@ end
 
 function pinInput()
     local pinInput = ""
+    term.setCursorPos(18,8)
     while string.len(pinInput) < 4 do 
         local buttonPress = readButtons()
 
@@ -270,6 +271,7 @@ function pinInput()
             term.setCursorPos(18,8)
         end
     end
+    return pin
 end
 
 
@@ -277,9 +279,5 @@ while true do
     drawATM()
     drawScreen("PIN")
     local pin = pinInput()
-    if pin == "correct" then
-        -- login
-    else
-        -- show invalid pin screen\
-    end
+    print pin
 end
