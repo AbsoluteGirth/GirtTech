@@ -116,12 +116,11 @@ function drawScreen(screen)
 
     elseif screen == "PIN" then
         term.setCursorPos(15,3)
-        term.write("Please enter")
+        term.write("Please input")
         term.setCursorPos(15,4)
         term.write("your pin and")
         term.setCursorPos(15,5)
         term.write("press enter")
-        term.setCursorPos(18,8)
 
     elseif screen == "test" then
         local x = 14
@@ -227,10 +226,59 @@ function readButtons()
     end
 end
 
-drawATM()
-drawScreen("bal")
+function pinInput()
+    local pinInput = ""
+    while string.len(pinInput) < 4 do 
+        lcoal input = readButtons()
+        term.setCursorPos(18,8)
+
+        if input == "num1" then 
+            pinInput = .."1"
+            term.write("* ")
+        elseif input == "num2" then 
+            pinInput = .."2"
+            term.write("* ")
+        elseif input == "num3" then 
+            pinInput = .."3"
+            term.write("* ")
+        elseif input == "num4" then 
+            pinInput = .."4"
+            term.write("* ")
+        elseif input == "num5" then 
+            pinInput = .."5"
+            term.write("* ")
+        elseif input == "num6" then 
+            pinInput = .."6"
+            term.write("* ")
+        elseif input == "num7" then 
+            pinInput = .."7"
+            term.write("* ")
+        elseif input == "num8" then 
+            pinInput = .."8"
+            term.write("* ")
+        elseif input == "num9" then 
+            pinInput = .."9"
+            term.write("* ")
+        elseif input == "num0" then 
+            pinInput = .."0"
+            term.write("* ")
+        elseif input == "buttonEnter" then 
+            term.write("Pin entered")
+        elseif input == "buttonClear" then 
+            term.setCursorPos(18,8)
+            term.write("        ")
+            pinInput = ""
+        end
+    end
+end
+
+
 while true do 
-    term.setCursorPos(1,1)
-    
-    print(readButtons())
+    drawATM()
+    drawScreen("PIN")
+    local pin = pinInput()
+    if pin == "correct" then
+        -- login
+    else
+        -- show invalid pin screen\
 end
