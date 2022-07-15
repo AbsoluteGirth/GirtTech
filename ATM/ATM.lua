@@ -281,4 +281,5 @@ while true do
         -- login
     else
         -- show invalid pin screen\
+    end
 end
