@@ -233,34 +233,34 @@ function pinInput()
         term.setCursorPos(18,8)
 
         if buttonPress == "num1" then 
-            pinInput = .."1"
+            pinInput = pinInput.."1"
             term.write("* ")
         elseif buttonPress == "num2" then 
-            pinInput = .."2"
+            pinInput = pinInput.."2"
             term.write("* ")
         elseif buttonPress == "num3" then 
-            pinInput = .."3"
+            pinInput = pinInput.."3"
             term.write("* ")
         elseif buttonPress == "num4" then 
-            pinInput = .."4"
+            pinInput = pinInput.."4"
             term.write("* ")
         elseif buttonPress == "num5" then 
-            pinInput = .."5"
+            pinInput = pinInput.."5"
             term.write("* ")
         elseif buttonPress == "num6" then 
-            pinInput = .."6"
+            pinInput = pinInput.."6"
             term.write("* ")
         elseif buttonPress == "num7" then 
-            pinInput = .."7"
+            pinInput = pinInput.."7"
             term.write("* ")
         elseif buttonPress == "num8" then 
-            pinInput = .."8"
+            pinInput = pinInput.."8"
             term.write("* ")
         elseif buttonPress == "num9" then 
-            pinInput = .."9"
+            pinInput = pinInput.."9"
             term.write("* ")
         elseif buttonPress == "num0" then 
-            pinInput = .."0"
+            pinInput = pinInput.."0"
             term.write("* ")
         elseif buttonPress == "buttonEnter" then 
             term.write("Pin entered")
