@@ -279,5 +279,5 @@ while true do
     drawATM()
     drawScreen("PIN")
     local pin = pinInput()
-    print pin
+    print(pin)
 end
