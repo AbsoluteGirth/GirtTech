@@ -230,7 +230,6 @@ function pinInput()
     local pinInput = ""
     while string.len(pinInput) < 4 do 
         local buttonPress = readButtons()
-        term.setCursorPos(18,8)
 
         if buttonPress == "num1" then 
             pinInput = pinInput.."1"
@@ -268,6 +267,7 @@ function pinInput()
             term.setCursorPos(18,8)
             term.write("        ")
             pinInput = ""
+            term.setCursorPos(18,8)
         end
     end
 end
