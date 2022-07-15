@@ -302,7 +302,7 @@ function readCard()
         table.insert(cardlines, line)
     end
 
-    for poop on cardlines do 
+    for poop in cardlines do 
         print(cardlines[poop])
     end
 end
