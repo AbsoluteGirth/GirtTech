@@ -296,11 +296,15 @@ function pinInput()
 end
 
 function readCard()
+    local cardlines = {}
     local card = fs.open("disk/card", "r")
-    local cardLines = card.readLines()
-    print(cardlines[1])
-    print(cardlines[2])
-    print(cardlines[3])
+    for line in card.readLine do 
+        table.insert(cardlines, line)
+    end
+
+    for poop on cardlines do 
+        print(cardlines[poop])
+    end
 end
 
 while true do 
