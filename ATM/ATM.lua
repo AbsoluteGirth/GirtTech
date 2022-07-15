@@ -298,6 +298,7 @@ end
 function readCard()
     local card = fs.open("disk/card", r)
     print(card.readAll())
+end
 
 while true do 
     drawATM()
