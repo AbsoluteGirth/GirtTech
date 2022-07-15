@@ -271,7 +271,7 @@ function pinInput()
             term.setCursorPos(18,8)
         end
     end
-    return pin
+    return pinInput
 end
 
 
