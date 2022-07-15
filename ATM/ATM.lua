@@ -280,4 +280,5 @@ while true do
     drawScreen("PIN")
     local pin = pinInput()
     print(pin)
+    sleep(2)
 end
