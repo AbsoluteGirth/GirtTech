@@ -296,7 +296,7 @@ function pinInput()
 end
 
 function readCard()
-    local card = fs.open("disk/card", r)
+    local card = fs.open("disk/card", "r")
     print(card.readAll())
 end
 
