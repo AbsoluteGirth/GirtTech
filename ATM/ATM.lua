@@ -229,42 +229,42 @@ end
 function pinInput()
     local pinInput = ""
     while string.len(pinInput) < 4 do 
-        lcoal input = readButtons()
+        lcoal buttonPress = readButtons()
         term.setCursorPos(18,8)
 
-        if input == "num1" then 
+        if buttonPress == "num1" then 
             pinInput = .."1"
             term.write("* ")
-        elseif input == "num2" then 
+        elseif buttonPress == "num2" then 
             pinInput = .."2"
             term.write("* ")
-        elseif input == "num3" then 
+        elseif buttonPress == "num3" then 
             pinInput = .."3"
             term.write("* ")
-        elseif input == "num4" then 
+        elseif buttonPress == "num4" then 
             pinInput = .."4"
             term.write("* ")
-        elseif input == "num5" then 
+        elseif buttonPress == "num5" then 
             pinInput = .."5"
             term.write("* ")
-        elseif input == "num6" then 
+        elseif buttonPress == "num6" then 
             pinInput = .."6"
             term.write("* ")
-        elseif input == "num7" then 
+        elseif buttonPress == "num7" then 
             pinInput = .."7"
             term.write("* ")
-        elseif input == "num8" then 
+        elseif buttonPress == "num8" then 
             pinInput = .."8"
             term.write("* ")
-        elseif input == "num9" then 
+        elseif buttonPress == "num9" then 
             pinInput = .."9"
             term.write("* ")
-        elseif input == "num0" then 
+        elseif buttonPress == "num0" then 
             pinInput = .."0"
             term.write("* ")
-        elseif input == "buttonEnter" then 
+        elseif buttonPress == "buttonEnter" then 
             term.write("Pin entered")
-        elseif input == "buttonClear" then 
+        elseif buttonPress == "buttonClear" then 
             term.setCursorPos(18,8)
             term.write("        ")
             pinInput = ""
