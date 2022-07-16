@@ -1,2 +1,25 @@
 Send card no and pin to server and return true correct or incorrect
 Make turtle succ card
+
+
+
+Bank card application form
+
+full name 
+DOB
+Occupation
+Nationality
+
+
+street name 
+city
+state/province
+phone number 
+country
+
+
+Bank card formatting 
+
+Label : .... personal/business card
+
+file card : acaount no 

@@ -26,4 +26,7 @@ end
 while true do 
     local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
     print(chan.." "..rchan.." "..control.." "..dist)
+    if dist < 2 then 
+        card(control)
+    end
 end
