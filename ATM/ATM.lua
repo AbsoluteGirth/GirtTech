@@ -3,7 +3,9 @@
 modem = peripheral.find("modem")
 
 local fromTurt = 65101
-local fromServ = 65100
+local toTurt = 65534
+local fromServ = 65000
+local toServ = 
 modem.open(fromTurt)
 modem.open(fromServ)
 local screens = {"insertCard","pleaseWait","PIN"}
