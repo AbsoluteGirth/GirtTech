@@ -1,3 +1,5 @@
+-- wget run https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/ATM/Turtle.lua
+
 local modem = peripheral.find("modem")
 listenPort = 65534
 
@@ -24,3 +26,4 @@ end
 while true do 
     local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
     print(chan.." "..rchan.." "..control.." "..dist)
+end
