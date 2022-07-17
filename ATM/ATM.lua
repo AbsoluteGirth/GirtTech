@@ -315,6 +315,7 @@ while true do
     drawATM()
     drawScreen("PIN")
     local pin = pinInput()
+    print(pin)
     readCard()
     sleep(2)
 end
