@@ -305,9 +305,9 @@ function readCard()
     end
 
     sendServ = {}
-    table.insert(sendServ,1,cardlines[2])
-    table.insert(sendServ,2,pin)
-    table.insert(sendServ,3,"bal")
+    table.insert(sendServ,cardlines[2])
+    table.insert(sendServ,pin)
+    table.insert(sendServ,"bal")
     modem.transmit(65000,fromServ,sendServ)
 end
 
