@@ -9,7 +9,7 @@ modem.open(65002)
 while true do 
     local event,side,chan,rchan,message,dist = os.pullEvent("modem_message")
     local acctlines = {}
-    local acct = fs.open(message[1], "r")
+    local acct = fs.open("accounts/"..message[1], "r")
     for line in acct.readLine do 
         table.insert(acctlines, line)
     end
