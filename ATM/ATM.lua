@@ -303,17 +303,16 @@ function readCard()
     for line in card.readLine do 
         table.insert(cardlines, line)
     end
-
-    for i=1,#cardlines do 
-        print(cardlines[i])
-    end
+    local sendServ = {}
+    cardlines[3] = pin
+    cardlines[4] = "bal"
+    modem.transmit(65000,fromserv,cardlines)
 end
 
 while true do 
     drawATM()
     drawScreen("PIN")
     local pin = pinInput()
-    print(pin)
     readCard()
     sleep(2)
 end
