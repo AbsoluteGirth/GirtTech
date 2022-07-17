@@ -1,3 +1,5 @@
+-- wget run https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/ATM/Server.lua
+
 modem = peripheral.find("nmodem")
 
 modem.open(65000)
