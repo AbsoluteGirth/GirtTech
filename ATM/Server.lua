@@ -25,4 +25,5 @@ while true do
         for line in card.readLine do 
             table.insert(cardlines, line)
         end
+    end
 end
