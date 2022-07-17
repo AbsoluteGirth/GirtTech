@@ -297,7 +297,7 @@ function pinInput()
     end
 end
 
-function readCard()
+function readCard(pin)
     local cardlines = {}
     local card = fs.open("disk/card", "r")
     for line in card.readLine do 
@@ -315,7 +315,6 @@ while true do
     drawATM()
     drawScreen("PIN")
     local pin = pinInput()
-    print(pin)
-    readCard()
+    readCard(pin)
     sleep(2)
 end
