@@ -303,7 +303,7 @@ function readCard(pin)
     for line in card.readLine do 
         table.insert(cardlines, line)
     end
-
+    card.close
     sendServ = {}
     table.insert(sendServ,cardlines[2])
     table.insert(sendServ,pin)
