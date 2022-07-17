@@ -13,7 +13,7 @@ while true do
     for line in acct.readLine do 
         table.insert(cardlines, line)
     end
-    acct.close
+    acct.close()
 
     for i=1,#cardlines do 
         print(cardlines[i])
