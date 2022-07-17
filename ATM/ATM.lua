@@ -4,7 +4,7 @@ modem = peripheral.find("modem")
 
 local fromTurt = 65101
 local toTurt = 65534
-local fromServ = 65000
+local fromServ = 69
 local toServ = 
 modem.open(fromTurt)
 modem.open(fromServ)
@@ -306,7 +306,7 @@ function readCard()
     local sendServ = {}
     cardlines[3] = pin
     cardlines[4] = "bal"
-    modem.transmit(65000,fromserv,cardlines)
+    modem.transmit(65000,fromServ,cardlines)
 end
 
 while true do 
