@@ -4,7 +4,7 @@ modem = peripheral.find("modem")
 
 modem.open(65000)
 modem.open(65001)
-modem.opem(65002)
+modem.open(65002)
 
 while true do 
     local event,side,chan,rchan,message,dist = os.pullEvent("modem_message")
