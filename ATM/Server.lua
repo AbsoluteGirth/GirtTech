@@ -15,8 +15,8 @@ while true do
     end
     acct.close()
 
-    for i=1,#cardlines do 
-        print(cardlines[i])
+    for i=1,#acctlines do 
+        print(acctlines[i])
     end
 
     if message[3] == "bal" then
