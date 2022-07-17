@@ -303,10 +303,12 @@ function readCard()
     for line in card.readLine do 
         table.insert(cardlines, line)
     end
-    local sendServ = {}
-    cardlines[3] = pin
-    cardlines[4] = "bal"
-    modem.transmit(65000,fromServ,cardlines)
+
+    sendServ = {}
+    table.insert(sendServ,1,cardlines[2])
+    table.insert(sendServ,2,pin)
+    table.insert(sendServ,3,"bal")
+    modem.transmit(65000,fromServ,sendServ)
 end
 
 while true do 
