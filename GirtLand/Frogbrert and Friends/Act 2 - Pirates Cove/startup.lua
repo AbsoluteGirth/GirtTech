@@ -4,9 +4,9 @@ local radius = 15
 local scriptlines = {}
 local linepos = 1
 
-print("123")
+print("456")
 script = fs.open("/script", "r")
-for lines in script.readLine do
+for line in script.readLine do
     table.insert(scriptlines,line)
 end
 
@@ -45,7 +45,7 @@ while true do
         print(speaker)
         print(line)
         
-        --exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..textcolor.."\"}]</color></insert>")
+        exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..textcolor.."\"}]</color></insert>")
         sleep(sleepTime)
 
     end
