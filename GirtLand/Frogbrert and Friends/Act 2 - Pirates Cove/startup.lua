@@ -33,7 +33,7 @@ while true do
 
         if speaker == "command" then 
             exec(line)
-            sleep(tostring(linecolor))
+            sleep(tonumber(linecolor))
         else
             exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..linecolor.."\",\"bold\":\""..linebold.."\",\"italic\":\""..lineitalic.."\"}]</color></insert>")
             sleep(sleepTime)
