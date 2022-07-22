@@ -19,7 +19,6 @@ while true do
     term.setCursorPos(1,1)
     print("Scene Playing")
     while true do 
-        print("Line "..5/linepos)
         local speaker = scriptlines[linepos]
         local line = scriptlines[linepos+1]
         local linecolor = scriptlines[linepos+2]
@@ -30,7 +29,9 @@ while true do
 
         if speaker == "end" then 
             break
-        elseif speaker == "command" then 
+        end
+
+        if speaker == "command" then 
             exec(line)
             sleep(tostring(linecolor))
         else
