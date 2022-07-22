@@ -1,9 +1,9 @@
-local radius = 15
-
+local radius = 5
+local scriptdir = "/disk/startup"
 local scriptlines = {}
 local linepos = 1
 
-script = fs.open("/script", "r")
+script = fs.open(scriptdir, "r")
 for line in script.readLine do
     table.insert(scriptlines,line)
 end
