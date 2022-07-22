@@ -12,7 +12,7 @@ while true do
     term.clear()
     term.setCursorPos(1,1)
     print("Ready")
-    local event = os.pullEvent()
+    local event = os.pullEvent("redstone")
     linepos = 1
     term.clear()
     term.setCursorPos(1,1)
