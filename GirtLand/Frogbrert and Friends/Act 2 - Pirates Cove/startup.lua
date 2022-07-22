@@ -5,7 +5,7 @@ local scriptlines = {}
 local linepos = 1
 
 script = fs.open("script", "r")
-for lines in script.readLine() do
+for lines in script.readLine do
     table.insert(scriptlines,line)
 end
 
