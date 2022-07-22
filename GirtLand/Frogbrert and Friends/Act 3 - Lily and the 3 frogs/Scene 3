@@ -1,19 +1,55 @@
 <@>
-But little did he know, someone had already done this for him...
+Froggo searched and searched, but alas....
 white
 true
 true
-3
-<Kerro>
-COME ON! COME ON! WHAT'S TAKING SO LONG!!
-aqua
-false
-false
 3
 <@>
-Froggle could not seem to find the dango anywhere...
+No dango could be found....
 white
 true
 true
+3
+<Lily>
+What's the matter Froggle? Can you not find it?
+light_purple
+false
+false
+3
+<Froggle>
+*Shakes head*
+dark_green
+false
+true
+3
+<@>
+And almost on que, in walks Fribbet with a mouth full of dango!
+white
+true
+true
+3
+<Fribbet>
+Hey guys! You should try some of this dango! It's great!!
+green
+false
+false
+3
+<Lily>
+NOOO STOP!!
+light_purple
+false
+false
+0
+<@>
+But before she could get out her words, Fribbet ate the last bite and Kerro ran away crying....
+white
+true
+true
+3
+<Lily>
+KERRO! COME BACK!!!
+light_purple
+false
+false
 3
 end
