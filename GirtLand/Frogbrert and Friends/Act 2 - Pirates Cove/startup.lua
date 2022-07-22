@@ -24,7 +24,7 @@ while true do
 
         if speaker == "end" then 
             break
-        elseif spealer == "command" then 
+        elseif speaker == "command" then 
             exec(line)
         else
             exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..linecolor.."\",\"bold\":\""..linebold.."\",\"italic\":\""..lineitalic.."\"}]</color></insert>")
