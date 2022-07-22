@@ -29,7 +29,7 @@ while true do
         end
 
         
-        exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..linecolor.."\"}]</color></insert>")
+        exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..linecolor.."\",\"bold\":\""..linebold.."\",\"italic\":\""..lineitalic"\"}]</color></insert>")
         sleep(sleepTime)
 
     end
