@@ -4,7 +4,7 @@ local radius = 15
 local scriptlines = {}
 local linepos = 1
 
-print("456")
+print("sss")
 script = fs.open("/script", "r")
 for line in script.readLine do
     table.insert(scriptlines,line)
@@ -22,6 +22,7 @@ while true do
             local textcolor = "red"
             local bold = "false"
             local italic = "false"
+            print("froggo")
             
         elseif speaker == "<Pirate Squidette>" then 
             local textcolor = "blue"
@@ -40,10 +41,10 @@ while true do
 
         elseif speaker == "end" then 
             break
+        else
+            print("no speaker")
         end
 
-        print(speaker)
-        print(line)
         
         exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..textcolor.."\"}]</color></insert>")
         sleep(sleepTime)
