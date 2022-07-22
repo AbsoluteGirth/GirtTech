@@ -11,7 +11,7 @@ end
 
 while true do 
     local event = os.pullEvent()
-    linepos = 1
+    linepos = 0
     while true do 
         local speaker = scriptlines[linepos]
         local line = scriptlines[linepos+1]
