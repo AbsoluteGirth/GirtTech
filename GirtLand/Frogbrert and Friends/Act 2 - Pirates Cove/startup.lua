@@ -4,7 +4,7 @@ local radius = 15
 local scriptlines = {}
 local linepos = 1
 
-print("sss")
+print("final")
 script = fs.open("/script", "r")
 for line in script.readLine do
     table.insert(scriptlines,line)
@@ -24,13 +24,11 @@ while true do
 
         if speaker == "end" then 
             break
+        elseif spealer == "command" then 
+            exec(line)
         else
-            print("no speaker")
+            exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..linecolor.."\",\"bold\":\""..linebold.."\",\"italic\":\""..lineitalic.."\"}]</color></insert>")
+            sleep(sleepTime)
         end
-
-        
-        exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..linecolor.."\",\"bold\":\""..linebold.."\",\"italic\":\""..lineitalic.."\"}]</color></insert>")
-        sleep(sleepTime)
-
     end
 end
