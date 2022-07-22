@@ -11,7 +11,7 @@ end
 
 while true do 
     local event = os.pullEvent()
-    linepos = 0
+    linepos = 1
     while true do 
         local speaker = scriptlines[linepos]
         local line = scriptlines[linepos+1]
@@ -41,7 +41,10 @@ while true do
             break
         end
 
-        exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..textcolor.."\"}]</color></insert>")
+        print(speaker)
+        print(line)
+        
+        --exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..textcolor.."\"}]</color></insert>")
         sleep(sleepTime)
 
     end
