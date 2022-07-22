@@ -16,37 +16,20 @@ while true do
     while true do 
         local speaker = scriptlines[linepos]
         local line = scriptlines[linepos+1]
-        linepos = linepos + 2
+        local linecolor = scriptlines[linepos+2]
+        local linebold = scriptlines[linepos+3]
+        local lineitalic = scriptlines[linepos+4]
 
-        if speaker == "<Captain Froggo>" then 
-            local textcolor = "red"
-            local bold = "false"
-            local italic = "false"
-            print("froggo")
-            
-        elseif speaker == "<Pirate Squidette>" then 
-            local textcolor = "blue"
-            local bold = "false"
-            local italic = "false"
+        linepos = linepos + 5
 
-        elseif speaker == "<@>" then 
-            local textcolor = "white"
-            local bold = "false"
-            local italic = "true"
-        
-        elseif speaker == "<Frogbert>" then 
-            local textcolor = "lime"
-            local bold = "true"
-            local italic = "true"
-
-        elseif speaker == "end" then 
+        if speaker == "end" then 
             break
         else
             print("no speaker")
         end
 
         
-        exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..textcolor.."\"}]</color></insert>")
+        exec("/tellraw @a[r="..radius.."] [{\"text\":\""..speaker.." "..line.."\",\"color\":\""..linecolor.."\"}]</color></insert>")
         sleep(sleepTime)
 
     end
