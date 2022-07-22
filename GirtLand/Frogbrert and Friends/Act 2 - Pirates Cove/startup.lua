@@ -4,7 +4,7 @@ local radius = 15
 local scriptlines = {}
 local linepos = 1
 
-script = fs.open("script")
+script = fs.open("script", "r")
 for lines in script.readLine() do
     table.insert(scriptlines,line)
 end
