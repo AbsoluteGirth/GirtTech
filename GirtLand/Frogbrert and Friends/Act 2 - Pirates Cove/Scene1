@@ -1,26 +1,37 @@
+<@>
+Our story starts in the depths of a spooky cave where see Captain Froggo and Pirate Squidette seem to have found something on the floor.
+white
+true
+true
+5
 <Captain Froggo>
 SQUIDETTE LOOK!!!
 red
 false
 false
+3
 <Pirate Squidette>
 IS THAT WHAT I THINK IT IS?!?!?!
 blue
 false
 false
+3
 <Captain Froggo>
 I THINK IT IS SQUIDDY
 red
 false
 false
+3
 <Pirate Squidette>
 OH MY GOD WE'RE GOING ON A TREASURE HUNT!!!!
 blue
 false
 false
+3
 <@>
 So off the pair went in search of buried treasure.
 whiite
 true
 true
+3
 end
