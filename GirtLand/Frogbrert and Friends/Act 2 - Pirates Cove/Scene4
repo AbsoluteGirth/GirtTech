@@ -1,0 +1,97 @@
+<Pirate Squidette>
+I SEE SOMETHING FROGGO! I SEE IT!! WHAT IS IT?!
+blue
+false
+false
+3
+<@>
+Filled with excitement they flung open the chest only to find something incredible!
+white
+true
+true
+3
+<Captain Froggo>
+OH MY GOSH IT'S AMAZING!!
+red
+false
+false
+3
+<@>
+The pair could not believe their eyes for the treasure was....
+white
+true
+true
+3
+<Pirate Squidette>
+I can't believe my eyes! It's....
+blue
+false
+false
+3
+<Captain Froggo>
+I can't belive it's really......
+red
+false
+false
+3
+command
+/setblock 738 70 1032 redstone_block
+0.2
+
+
+
+<Frogbert>
+IT'S THE NEW SPECIAL EDITION FROGBERT PLUSHIES!!!!!
+green
+true
+false
+3
+<Frogbert>
+AVAILABLE NOW AT THE GIFT SHOP!!!
+green
+true
+false
+3
+<Captain Froggo>
+I LOVE THEM!!! I ONLY WISH I HAD MORE!!!!!
+red
+false
+false
+3
+<Pirate Squidette>
+IT'S LIKE A DREAM COME TRUE!!
+blue
+false
+false
+3
+<Frogbert>
+GET YOURS FROM THE GIFT SHOP TODAY! ONLY Y1999!
+green
+true
+false
+3
+<@>
+And so... after a long day of adventuring the pirates went home with all of their loot...
+white
+true
+true
+3
+<@>
+and they spent some quality time with their new Frogbert plushies....
+white
+true
+true
+3
+<@>
+and settled into bed, ready to adventure another day.
+white
+true
+true
+3
+<@>
+The End.
+white
+true
+true
+3
+end
