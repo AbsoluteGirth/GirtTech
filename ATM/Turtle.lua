@@ -37,7 +37,7 @@ function withdraw(amountStr)
     amount = amount + 1000
     no1000 = no1000 - 1
 
-    while amount >= 0 do 
+    while amount > 0 do 
         amount = amount - 500
         no500 = no500 + 1
     end
