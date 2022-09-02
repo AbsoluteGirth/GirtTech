@@ -59,7 +59,7 @@ function appenedFile()
     acct.writeLine(acctNo)
     acct.writeLine(pin)
     acct.writeLine(bal)
-    acct.close
+    acct.close()
     return true
 end
 
