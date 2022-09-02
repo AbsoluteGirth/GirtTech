@@ -12,6 +12,10 @@ modem.open(listenPort)
 
 function withdraw(amountStr)
     local amount = tonumber(amountStr)
+    no10000 = 0
+    no5000 = 0
+    no1000 = 0
+    no500 = 0
     while amount > 0 do 
         amount = amount - 10000
         no10000 = no10000 + 1
