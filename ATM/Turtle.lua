@@ -41,13 +41,12 @@ function withdraw(amountStr)
         amount = amount - 500
         no500 = no500 + 1
     end
-    amount = amount + 500
-    no500 = no500 - 1
 
     print(no10000)
     print(no5000)
     print(no1000)
     print(no500)
+    print(amount)
 end
 
 
