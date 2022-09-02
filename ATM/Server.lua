@@ -44,6 +44,7 @@ function request(cardNo, request, amount)
             appendFile()
             return true
         return
+    end
 
     elseif request == "query" then 
         return acctlines
