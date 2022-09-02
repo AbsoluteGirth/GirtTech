@@ -15,6 +15,7 @@ function card(control)
             return("errored")
         end
     elseif control == "return" then
+        turtle.select(1)
         if turtle.drop() == true then
             return("completed")
         else 
