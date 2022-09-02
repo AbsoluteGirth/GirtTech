@@ -54,7 +54,7 @@ function request(cardNo, request, amount)
 end
 
 function appendFile()
-    local acct = fs.open("accounts/"..cardNo, "w")
+    local acct = fs.open("accounts/"..acctNo, "w")
     acct.writeLine(name)
     acct.writeLine(acctNo)
     acct.writeLine(pin)
