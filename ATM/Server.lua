@@ -60,7 +60,6 @@ function appendFile()
     acct.writeLine(pin)
     acct.writeLine(bal)
     acct.close()
-    return true
 end
 
 
