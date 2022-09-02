@@ -47,6 +47,9 @@ function withdraw(amountStr)
         turtle.placeDown()
         turtle.select(8)
         turtle.suckDown(no10000)
+        while turtle.drop() == false do 
+            sleep(0.5)
+        end
         turtle.select(12)
         turtle.digDown()
     end
@@ -54,8 +57,11 @@ function withdraw(amountStr)
     if no5000 > 0 then 
         turtle.select(11)
         turtle.placeDown()
-        turtle.select(7)
+        turtle.select(8)
         turtle.suckDown(no5000)
+        while turtle.drop() == false do 
+            sleep(0.5)
+        end
         turtle.select(11)
         turtle.digDown()
     end
@@ -63,8 +69,11 @@ function withdraw(amountStr)
     if no1000 > 0 then 
         turtle.select(10)
         turtle.placeDown()
-        turtle.select(6)
+        turtle.select(8)
         turtle.suckDown(no1000)
+        while turtle.drop() == false do 
+            sleep(0.5)
+        end
         turtle.select(10)
         turtle.digDown()
     end
@@ -72,11 +81,16 @@ function withdraw(amountStr)
     if no500 > 0 then 
         turtle.select(9)
         turtle.placeDown()
-        turtle.select(5)
+        turtle.select(8)
         turtle.suckDown(no500)
+        while turtle.drop() == false do 
+            sleep(0.5)
+        end
         turtle.select(9)
         turtle.digDown()
     end
+
+    
 end
 
 
