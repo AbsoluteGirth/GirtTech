@@ -15,10 +15,10 @@ function request(cardNo, request, amount)
     end
     acct.close()
 
-    local name = acctlines [1]
-    local acctNo = acctlines[2]
-    local pin = acctlines[3]
-    local bal = acctlines[4]
+    name = acctlines [1]
+    acctNo = acctlines[2]
+    pin = acctlines[3]
+    bal = acctlines[4]
 
     if request == "pin" then
         if amount == pin then 
