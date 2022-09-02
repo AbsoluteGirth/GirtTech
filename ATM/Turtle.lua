@@ -42,11 +42,41 @@ function withdraw(amountStr)
         no500 = no500 + 1
     end
 
-    print(no10000)
-    print(no5000)
-    print(no1000)
-    print(no500)
-    print(amount)
+    if no10000 > 0 then 
+        turtle.select(12)
+        turtle.placeDown()
+        turtle.select(8)
+        turtle.suckDown(no10000)
+        turtle.select(12)
+        turtle.digDown()
+    end
+
+    if no5000 > 0 then 
+        turtle.select(11)
+        turtle.placeDown()
+        turtle.select(7)
+        turtle.suckDown(no5000)
+        turtle.select(11)
+        turtle.digDown()
+    end
+
+    if no1000 > 0 then 
+        turtle.select(10)
+        turtle.placeDown()
+        turtle.select(6)
+        turtle.suckDown(no1000)
+        turtle.select(10)
+        turtle.digDown()
+    end
+
+    if no500 > 0 then 
+        turtle.select(9)
+        turtle.placeDown()
+        turtle.select(5)
+        turtle.suckDown(no500)
+        turtle.select(9)
+        turtle.digDown()
+    end
 end
 
 
