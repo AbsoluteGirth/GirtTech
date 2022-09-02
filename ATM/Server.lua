@@ -43,9 +43,7 @@ function request(cardNo, request, amount)
             bal = newBal
             appendFile()
             return true
-        return
-    end
-
+        end
     elseif request == "query" then 
         return acctlines
 
