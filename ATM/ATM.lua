@@ -185,7 +185,7 @@ function drawScreen(screen)
     
     elseif screen == "menu" then 
         term.setCursorPos(14,2)
-        term.wite("Hey "..name.."!")
+        term.write("Hey "..name.."!")
         term.setCursorPos(15,5)
         term.write("Balance")
         term.setCursorPos(15,7)
