@@ -109,7 +109,7 @@ function countMoney()
         if item ~= nil then 
             if item.name == "rtm:money" then 
                 if item.damage == 5 then 
-                    local no500 = no500 + turtle.getItemCount() 
+                    no500 = no500 + turtle.getItemCount() 
                     turtle.select(9)
                     turtle.placeDown()
                     turtle.select(i)
