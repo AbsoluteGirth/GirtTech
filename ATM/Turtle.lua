@@ -173,6 +173,9 @@ function card(control)
     end
 end
 
+amount = read()
+withdraw(17500)
+read()
 countMoney()
 
 --while true do 
