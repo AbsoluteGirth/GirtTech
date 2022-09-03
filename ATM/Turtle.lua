@@ -174,7 +174,7 @@ function card(control)
 end
 
 amount = read()
-withdraw(17500)
+withdraw(amount)
 read()
 countMoney()
 
