@@ -99,13 +99,13 @@ end
 
 function countMoney()
     local slot = 8
+
     for i=1, slot do
         turtle.select(i)
         item = turtle.getItemDetail()
         if item.name == "rtm:money" then 
             if item.damage == 5 then 
-                local no500 = turtle.getItemCount() 
-                print(no500)
+                local no500 = no500 + turtle.getItemCount() 
                 turtle.select(9)
                 turtle.placeDown()
                 turtle.select(i)
@@ -113,7 +113,7 @@ function countMoney()
                 turtle.select(9)
                 turtle.digDown()
             elseif item.damage == 6 then 
-                no1000 = turtle.getItemCount() 
+                no1000 = no1000 + turtle.getItemCount() 
                 turtle.select(10)
                 turtle.placeDown()
                 turtle.select(i)
@@ -121,7 +121,7 @@ function countMoney()
                 turtle.select(10)
                 turtle.digDown()
             elseif item.damage == 7 then 
-                no5000 = turtle.getItemCount()
+                no5000 = no5000 + turtle.getItemCount()
                 turtle.select(11)
                 turtle.placeDown()
                 turtle.select(i)
@@ -129,7 +129,7 @@ function countMoney()
                 turtle.select(11)
                 turtle.digDown()
             elseif item.damage == 8 then 
-                no10000 = turtle.getItemCount() 
+                no10000 = no10000 + turtle.getItemCount() 
                 turtle.select(12)
                 turtle.placeDown()
                 turtle.select(i)
