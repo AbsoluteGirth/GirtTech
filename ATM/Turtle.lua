@@ -99,7 +99,10 @@ end
 
 function countMoney()
     local slot = 8
-
+    local no500 = 0
+    local no1000 = 0
+    local no5000 = 0 
+    local no10000 = 0
     for i=1, slot do
         turtle.select(i)
         item = turtle.getItemDetail()
