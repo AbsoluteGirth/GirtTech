@@ -449,7 +449,7 @@ while true do
                     if button == "button3" then
                         drawScreen("processing")
                         sleep(2)
-                        if sendServ(cardNo, 1000, withdraw) == true then
+                        if sendServ(cardNo, 1000, "withdraw") == true then
                             turtle("withdraw", "1000")
                         else 
                             drawScreen("failed")
@@ -458,7 +458,7 @@ while true do
                     elseif button == "button4" then
                         drawScreen("processing")
                         sleep(2)
-                        if sendServ(cardNo, 2000, withdraw) == true then
+                        if sendServ(cardNo, 2000, "withdraw") == true then
                             turtle("withdraw", "2000")
                         else 
                             drawScreen("failed")
@@ -468,7 +468,7 @@ while true do
                     elseif button == "button7" then
                         drawScreen("processing")
                         sleep(2)
-                        if sendServ(cardNo, 5000, withdraw) == true then
+                        if sendServ(cardNo, 5000, "withdraw") == true then
                             turtle("withdraw", "5000")
                         else 
                             drawScreen("failed")
