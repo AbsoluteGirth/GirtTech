@@ -14,11 +14,11 @@ local balance = 12340000
 
 function turtle(action, control)
     if action == card then
-        if control == take then 
+        if control == "take" then 
             -- take card 
             modem.transmit(65534,atmPort,{"card", "take"})
             return os.pullEvent("modem_message")
-        elseif control == return then 
+        elseif control == "return" then 
             --return card
             modem.transmit(65534,atmPort,{"card", "return"})
             return os.pullEvent("modem_message")
