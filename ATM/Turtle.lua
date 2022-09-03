@@ -98,7 +98,7 @@ function suckMoney(control)
 
 function countMoney()
     local slot = 8
-    while i=1, slot
+    for i=1, slot do
         local no500 = 0
         local no1000 = 0
         local no5000 = 0
