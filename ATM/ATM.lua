@@ -428,6 +428,27 @@ while true do
                     
                 elseif button == "button4" then 
                     drawScreen("withdraw")
+                    button = readButtons()
+                    
+                    if button == "button3" then
+                        drawScreen("processing")
+                        sleep(2)
+                        if sendServ(cardNo, 1000, withdraw) == true then
+                            turtle("withdraw", "1000")
+                        else 
+                            drawScreen("failed")
+                        end
+                    
+                    elseif button == "button3" then
+                        drawScreen("processing")
+                        sleep(2)
+                        if sendServ(cardNo, 2000, withdraw) == true then
+                            turtle("withdraw", "2000")
+                        else 
+                            drawScreen("failed")
+                        end
+                    end
+
                 elseif button == "buttonCancel" then
                     break
                 end
