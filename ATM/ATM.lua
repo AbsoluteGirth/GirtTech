@@ -136,7 +136,7 @@ function drawScreen(screen)
         term.write("INSERT CARD")
     
     elseif screen == "pleaseWait" then 
-        term.setCursorPos(17,5)
+        term.setCursorPos(17,6)
         term.write("PLEASE WAIT")
         term.setCursorPos(16,5)
         term.write("Reading Card")
@@ -193,6 +193,16 @@ function drawScreen(screen)
         term.setCursorPos(15,9)
         term.write("Withdraw")
         term.setCursorBlink(false)
+
+    elseif screen == "deposit" then 
+        --draw deposit screen
+
+    elseif screen == "withdraw" then
+        --draw withdraw screen
+
+    elseif screen == "cancel" then 
+        --draw cancel screen
+
     end
 end
 
@@ -342,10 +352,6 @@ function readCard()
     card.close()
     return cardlines
 end
-    
-    
-    -- modem.transmit(65000,atmPort,sendServ)
-
 
 while true do 
     while true do
@@ -372,16 +378,27 @@ while true do
             turtle("card", "return")
             break
         end
-
-        drawScreen("menu")
-        read()
         
         while true do
-            -- draw menu 
-            -- read buttons
-            -- different screens 
-
-        sleep(2)
+            drawScreen("menu")
+            while true do
+                local button = readButtons()
+                if button == "button2" then 
+                    drawScreen("bal")
+                    break
+                elseif button == "button3" then
+                    drawScreen("deposit")
+                    break
+                elseif button == "button4" then 
+                    drawScreen("withdraw")
+                    break
+                elseif button == "buttonCancel"
+                    drawScreen("cancel")
+                    turtle("card", "return")
+                    sleep(5)
+                    break
+                end
+            end
         end
     end
 end
