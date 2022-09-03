@@ -476,7 +476,7 @@ while true do
                     elseif button == "buttonCancel" then
                         break
                     end
-
+                end
                 elseif button == "buttonCancel" then
                     break
                 end
