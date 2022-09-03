@@ -100,15 +100,11 @@ end
 function countMoney()
     local slot = 8
     for i=1, slot do
-        local no500 = 0
-        local no1000 = 0
-        local no5000 = 0
-        local no10000 = 0
         turtle.select(i)
         item = turtle.getItemDetail()
         if item.name == "rtm.money" then 
             if item.damage == 5 then 
-                no500 = turtle.getItemCount() 
+                local no500 = turtle.getItemCount() 
                 print(no500)
                 turtle.select(9)
                 turtle.placeDown()
