@@ -412,7 +412,7 @@ while true do
             while true do
                 local button = readButtons()
                 if button == "button2" then 
-                    balance = sendServ(cardNo, " ", "bal")
+                    balance = sendServ(cardNo, " ", "checkBal")
                     drawScreen("bal")
                     break
                 elseif button == "button3" then
