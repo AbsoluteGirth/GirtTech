@@ -95,6 +95,7 @@ end
 
 function suckMoney(control)
     turtle.suck()
+end
 
 function countMoney()
     local slot = 8
