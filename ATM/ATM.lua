@@ -18,26 +18,8 @@ function sendServ(msg1, msg2, msg3)
 end
 
 function turtle(action, control)
-    if action == "card" then
-        if control == "take" then 
-            -- take card 
-            modem.transmit(65534,atmPort,{"card", "take"})
-            return os.pullEvent("modem_message")
-        elseif control == "return" then 
-            --return card
-            modem.transmit(65534,atmPort,{"card", "return"})
-            return os.pullEvent("modem_message")
-        end
-
-    
-    elseif action == "withdraw" then 
-        -- withdraw shit
-        modem.transmit(65534,atmPort,{"withdraw", control})
-        return os.pullEvent("modem_message")
-    
-    
-    end
-
+    modem.transmit(65534,atmPort,{action, control})
+    return os.pullEvent("modem_message")
 end
 
 function drawATM()
@@ -249,7 +231,16 @@ function drawScreen(screen)
         --processing transaction screen
         term.setCursorPos(15, 3)
         term.write("processing")
-        
+
+    elseif screen == "complete" then
+        term.setCursorPos(15, 3)
+        term.write("transaction")
+        term.setCursorPos(15, 4)
+        term.write("complete")
+        term.setCursorPos(15, 6)
+        term.write("Please take")
+        term.setCursorPos(15,7)
+        term.write("your card.")
     end
 end
 
@@ -437,6 +428,8 @@ while true do
                     button = readButtons()
                     
                     if button == "buttonCancel" then 
+                        drawScreen("cancel")
+                        turtle("card", "return")
                         break
                     end
 
@@ -471,7 +464,11 @@ while true do
                         drawScreen("processing")
                         sleep(2)
                         if sendServ(cardNo, 5000, "withdraw") == true then
+                            turtle("card", "return")
                             turtle("withdraw", "5000")
+                            drawScreen("complete")
+                            sleep(5)
+                            break
                         else 
                             drawScreen("failed")
                         end
@@ -481,12 +478,12 @@ while true do
                             drawScreen("customWithdraw")
 
                     elseif button == "buttonCancel" then
+                        drawScreen("cancel")
+                        turtle("card", "return")
                         break
                     end
                 end
             end
-            drawScreen("cancel")
-            turtle("card", "return")
             sleep(5)
             break
         end
