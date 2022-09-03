@@ -18,7 +18,7 @@ function sendServ(msg1, msg2, msg3)
 end
 
 function turtle(action, control)
-    if action == card then
+    if action == "card" then
         if control == "take" then 
             -- take card 
             modem.transmit(65534,atmPort,{"card", "take"})
