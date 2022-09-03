@@ -232,6 +232,16 @@ function drawScreen(screen)
         term.write("Please take")
         term.setCursorPos(15,7)
         term.write("your card.")
+    
+    elseif screen == "failed" then 
+        --transaction failed screen
+
+    elseif screen == "customWithdraw"
+        --custom withdrawl screen
+
+    elseif screen == "processing"
+        --processing transaction screen
+        
     end
 end
 
@@ -439,7 +449,7 @@ while true do
                             drawScreen("failed")
                         end
                     
-                    elseif button == "button3" then
+                    elseif button == "button4" then
                         drawScreen("processing")
                         sleep(2)
                         if sendServ(cardNo, 2000, withdraw) == true then
@@ -447,6 +457,24 @@ while true do
                         else 
                             drawScreen("failed")
                         end
+                    
+
+                    elseif button == "button7" then
+                        drawScreen("processing")
+                        sleep(2)
+                        if sendServ(cardNo, 5000, withdraw) == true then
+                            turtle("withdraw", "5000")
+                        else 
+                            drawScreen("failed")
+                        end
+                    
+
+                    elseif button == "button8" then
+                            drawScreen("customWithdraw")
+                            
+                        end
+                    elseif button == "buttonCancel" then
+                        break
                     end
 
                 elseif button == "buttonCancel" then
