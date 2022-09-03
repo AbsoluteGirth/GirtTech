@@ -470,6 +470,7 @@ while true do
                         drawScreen("processing")
                         sleep(2)
                         if sendServ(cardNo, 5000, "withdraw") == true then
+                            print("istrue")
                             turtle("withdraw", "5000")
                         else 
                             drawScreen("failed")
