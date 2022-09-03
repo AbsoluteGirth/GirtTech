@@ -423,10 +423,11 @@ while true do
                     break
                 elseif button == "buttonCancel" then
                     drawScreen("cancel")
-                    turtle("card", "return")
                     sleep(5)
                     break
                 end
+                turtle("card", "return")
+                break
             end
         end
     end
