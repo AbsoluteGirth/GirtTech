@@ -142,7 +142,10 @@ function countMoney()
             end
         end
     end
-
+    print(no500)
+    print(no1000)
+    print(no5000)
+    print(no10000)
     local total = (no500 * 500) + (no1000 * 1000) + (no5000 * 5000) + (no10000 * 10000)
     print(total)
 end
