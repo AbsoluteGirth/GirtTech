@@ -109,6 +109,7 @@ function countMoney()
         if item.name == "rtm.money" then 
             if item.damage == 5 then 
                 no500 = turtle.getItemCount() 
+                print(no500)
                 turtle.select(9)
                 turtle.placeDown()
                 turtle.select(i)
