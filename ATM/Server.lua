@@ -31,12 +31,12 @@ function request(cardNo, amount, request)
         return bal
 
     elseif request == "deposit" then
-        bal = bal + amount
+        bal = bal + tonumber(amount)
         appendFile()
         return true
 
     elseif request == "withdraw" then
-        newBal = bal - amount
+        newBal = bal - tonumber(amount)
         if newBal < 0 then 
             return false
         else
