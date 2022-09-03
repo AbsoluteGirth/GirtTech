@@ -360,5 +360,6 @@ while true do
             -- different screens 
 
         sleep(2)
+        end
     end
 end
