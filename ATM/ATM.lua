@@ -392,9 +392,10 @@ while true do
         sleep(1)
         drawScreen("pleaseWait")
         cardlines = readCard()
+        turtle("card", "take")
         sleep(2)
 
-        turtle("card", "take")
+        
         name = cardlines[1]
         cardNo = cardlines[2]
 
