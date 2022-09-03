@@ -464,9 +464,10 @@ while true do
                         drawScreen("processing")
                         sleep(2)
                         if sendServ(cardNo, 5000, "withdraw") == true then
+                            drawScreen("complete")
                             turtle("card", "return")
                             turtle("withdraw", "5000")
-                            drawScreen("complete")
+                            
                             sleep(5)
                             break
                         else 
