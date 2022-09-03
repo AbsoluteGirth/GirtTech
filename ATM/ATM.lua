@@ -14,6 +14,7 @@ term.setCursorBlink(false)
 function sendServ(msg1, msg2, msg3)
     modem.transmit(65000, atmPort, {msg1, msg2, msg3})
     local event,side,chan,rchan,message,dist = os.pullEvent("modem_message")
+    print(message)
     return message
 end
 
