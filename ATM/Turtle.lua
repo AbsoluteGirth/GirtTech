@@ -93,11 +93,11 @@ function withdraw(amountStr)
     
 end
 
-function suckMoney(control)
+function succ(control)
     turtle.suck()
 end
 
-function countMoney()
+function deposit()
     local slot = 8
     local no500 = 0
     local no1000 = 0
@@ -152,8 +152,6 @@ function countMoney()
     print(total)
 end
 
-
-
 function card(control)
     turtle.select(1)
     if control == "take" then
@@ -173,15 +171,20 @@ function card(control)
     end
 end
 
-amount = read()
-withdraw(amount)
-read()
-countMoney()
 
---while true do 
---    local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
---    print(chan.." "..rchan.." "..control.." "..dist)
---    if dist < 2 then 
---        card(control)
---    end
---end
+
+while true do 
+    local event,side,chan,rchan,message,dist = os.pullEvent("modem_message")
+    
+    if dist < 2 then 
+        if message[1] == deposit then 
+            modem.transmit(rchan, 65534, deposit(message[2]))
+        elseif message[1] == withdraw then 
+            modem.transmit(rchan, 65534, withdraw(message[2]))
+        elseif message[1] == card then 
+            modem.transmit(rchan, 65534, card(message[2]))
+        elseif message[1] == succ then 
+            modem.transmit(rchan, 65534, succ())
+        end
+    end
+end

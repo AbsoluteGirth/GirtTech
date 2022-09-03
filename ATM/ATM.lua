@@ -2,13 +2,14 @@
 
 modem = peripheral.find("modem")
 
-local fromTurt = 65101
-local toTurt = 65534
-local fromServ = 69
-modem.open(fromTurt)
-modem.open(fromServ)
+local atmPort = 65101
+local turtlePort = 65534
+modem.open(atmPort)
+
 local screens = {"insertCard","pleaseWait","PIN"}
+
 term.setCursorBlink(false)
+
 local balance = 12340000
 
 
@@ -220,7 +221,7 @@ function readCard(pin)
     table.insert(sendServ,cardlines[2])
     table.insert(sendServ,pin)
     table.insert(sendServ,"bal")
-    modem.transmit(65000,fromServ,sendServ)
+    modem.transmit(65000,atmPort,sendServ)
 end
 
 while true do 
