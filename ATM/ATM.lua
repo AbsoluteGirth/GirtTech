@@ -426,9 +426,9 @@ while true do
                     sleep(5)
                     break
                 end
-                turtle("card", "return")
-                break
             end
+            turtle("card", "return")
+            break
         end
     end
 end
