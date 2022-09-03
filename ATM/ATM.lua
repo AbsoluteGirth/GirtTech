@@ -177,6 +177,16 @@ function drawScreen(screen)
         term.write("Withdraw")
         term.setCursorPos(24,9)
         term.write("Other")
+    
+    elseif screen == "menu" then 
+        term.setCursorPos(14,2)
+        term.wite("Hey "..name.."!")
+        term.setCursorPos(15,5)
+        term.write("Balance")
+        term.setCursorPos(15,7)
+        term.write("Deposit")
+        term.setCursorPos(15,9)
+        term.write("Withdraw")
     end
 end
 
@@ -334,6 +344,10 @@ end
 while true do 
     while true do
         drawATM()
+        
+        drawScreen("menu")
+        read()
+
         drawScreen("insertCard")
         os.pullEvent("disk")
         sleep(1)
@@ -342,8 +356,8 @@ while true do
         sleep(2)
 
         turtle("card", "take")
-        local name = cardlines[1]
-        local cardNo = cardlines[2]
+        name = cardlines[1]
+        cardNo = cardlines[2]
 
         drawScreen("PIN")
         local pin = pinInput()
