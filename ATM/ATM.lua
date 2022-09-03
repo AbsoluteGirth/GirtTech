@@ -192,6 +192,7 @@ function drawScreen(screen)
         term.write("Deposit")
         term.setCursorPos(15,9)
         term.write("Withdraw")
+        term.setCursorBlink(false)
     end
 end
 
