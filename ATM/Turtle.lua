@@ -1,9 +1,9 @@
 -- wget run https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/ATM/Turtle.lua
 
--- 500   9  / 13
--- 1000  10 / 14
--- 5000  11 / 15
--- 10000 12 / 16
+-- 500   damage 5
+-- 1000  damage 6
+-- 5000  damage 7
+-- 10000 damage 8 
 
 local modem = peripheral.find("modem")
 listenPort = 65534
@@ -12,10 +12,10 @@ modem.open(listenPort)
 
 function withdraw(amountStr)
     local amount = tonumber(amountStr)
-    no10000 = 0
-    no5000 = 0
-    no1000 = 0
-    no500 = 0
+    local no10000 = 0
+    local no5000 = 0
+    local no1000 = 0
+    local no500 = 0
     while amount >= 0 do 
         amount = amount - 10000
         no10000 = no10000 + 1
@@ -93,6 +93,60 @@ function withdraw(amountStr)
     
 end
 
+function suckMoney(control)
+    turtle.suck()
+
+function countMoney()
+    local slot = 8
+    while i=1, slot
+        local no500 = 0
+        local no1000 = 0
+        local no5000 = 0
+        local no10000 = 0
+        turtle.select(i)
+        item = turtle.getItemDetail()
+        if item.name == "rtm.money" then 
+            if item.damage == 5 then 
+                no500 = item.count 
+                turtle.select(9)
+                turtle.placeDown()
+                turtle.select(i)
+                turtle.dropDown()
+                turtle.select(9)
+                turtle.digDown()
+            elseif item.damage == 6 then 
+                no1000 = item.count 
+                turtle.select(10)
+                turtle.placeDown()
+                turtle.select(i)
+                turtle.dropDown()
+                turtle.select(10)
+                turtle.digDown()
+            elseif item.damage == 7 then 
+                no5000 = item.count 
+                turtle.select(11)
+                turtle.placeDown()
+                turtle.select(i)
+                turtle.dropDown()
+                turtle.select(11)
+                turtle.digDown()
+            elseif item.damage == 8 then 
+                no10000 = item.count 
+                turtle.select(12)
+                turtle.placeDown()
+                turtle.select(i)
+                turtle.dropDown()
+                turtle.select(12)
+                turtle.digDown()
+            end
+        end
+    end
+
+    local total = (no500 * 500) + (no1000 * 1000) + (no5000 * 5000) + (no10000 * 10000)
+    print(total)
+end
+
+
 
 function card(control)
     turtle.select(1)
@@ -113,8 +167,7 @@ function card(control)
     end
 end
 
-test = read()
-withdraw(test)
+countMoney()
 
 --while true do 
 --    local event,side,chan,rchan,control,dist = os.pullEvent("modem_message")
