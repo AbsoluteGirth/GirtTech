@@ -6,7 +6,7 @@ modem.open(65000)
 modem.open(65001)
 modem.open(65002)
 
-function request(cardNo, request, amount)
+function request(cardNo, amount, request)
 
     local acctlines = {}
     local acct = fs.open("accounts/"..cardNo, "r")
