@@ -345,8 +345,7 @@ while true do
     while true do
         drawATM()
         
-        drawScreen("menu")
-        read()
+        
 
         drawScreen("insertCard")
         os.pullEvent("disk")
@@ -367,6 +366,9 @@ while true do
             turtle("card", "return")
             break
         end
+
+        drawScreen("menu")
+        read()
         
         while true do
             -- draw menu 
