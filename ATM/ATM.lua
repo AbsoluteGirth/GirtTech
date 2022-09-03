@@ -392,7 +392,7 @@ while true do
                 elseif button == "button4" then 
                     drawScreen("withdraw")
                     break
-                elseif button == "buttonCancel"
+                elseif button == "buttonCancel" then
                     drawScreen("cancel")
                     turtle("card", "return")
                     sleep(5)
