@@ -14,7 +14,6 @@ term.setCursorBlink(false)
 function sendServ(msg1, msg2, msg3)
     modem.transmit(65000, atmPort, {msg1, msg2, msg3})
     local event,side,chan,rchan,message,dist = os.pullEvent("modem_message")
-    print(message)
     return message
 end
 
@@ -31,8 +30,10 @@ function turtle(action, control)
         end
 
     
-    elseif action == deposit then 
-        -- deposit shit
+    elseif action == "withdraw" then 
+        -- withdraw shit
+        modem.transmit(65534,atmPort,{"withdraw", control})
+        return os.pullEvent("modem_message")
     
     
     end
@@ -470,7 +471,6 @@ while true do
                         drawScreen("processing")
                         sleep(2)
                         if sendServ(cardNo, 5000, "withdraw") == true then
-                            print("istrue")
                             turtle("withdraw", "5000")
                         else 
                             drawScreen("failed")
