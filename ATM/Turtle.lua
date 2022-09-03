@@ -102,7 +102,7 @@ function countMoney()
     for i=1, slot do
         turtle.select(i)
         item = turtle.getItemDetail()
-        if item.name == "rtm.money" then 
+        if item.name == "rtm:money" then 
             if item.damage == 5 then 
                 local no500 = turtle.getItemCount() 
                 print(no500)
