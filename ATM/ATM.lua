@@ -12,6 +12,26 @@ term.setCursorBlink(false)
 
 local balance = 12340000
 
+function turtle(action, control)
+    if action == card then
+        if control == take then 
+            -- take card 
+            modem.transmit(65534,atmPort,{"card", "take"})
+            return os.pullEvent("modem_message")
+        elseif control == return then 
+            --return card
+            modem.transmit(65534,atmPort,{"card", "return"})
+            return os.pullEvent("modem_message")
+        end
+
+    
+    elseif action == deposit then 
+        -- deposit shit
+    
+    
+    end
+end
+
 function drawATM()
     term.setBackgroundColor(colors.white)
     term.clear()
@@ -297,24 +317,43 @@ function pinInput()
     end
 end
 
-function readCard(pin)
+function readCard()
     local cardlines = {}
     local card = fs.open("disk/card", "r")
     for line in card.readLine do 
         table.insert(cardlines, line)
     end
     card.close()
-    sendServ = {}
-    table.insert(sendServ,cardlines[2])
-    table.insert(sendServ,pin)
-    table.insert(sendServ,"bal")
-    modem.transmit(65000,atmPort,sendServ)
+    return cardlines
 end
+    
+    
+    -- modem.transmit(65000,atmPort,sendServ)
+
 
 while true do 
-    drawATM()
-    drawScreen("PIN")
-    local pin = pinInput()
-    readCard(pin)
-    sleep(2)
+    while true do
+        drawATM()
+        drawScreen("insertCard")
+        os.pullEvent("disk")
+        sleep(1)
+        drawScreen("pleaseWait")
+        readCard()
+        sleep(2)
+
+        turtle("card", "take")
+        local name = cardlines[1]
+        local cardNo = cardlines[2]
+
+        drawScreen("PIN")
+        local pin = pinInput()
+
+        if sendServ(cardNo, pin, "pin") == false then 
+            -- incorrect pin
+            turtle("card", "return")
+            break
+        end
+        
+        sleep(2)
+    end
 end
