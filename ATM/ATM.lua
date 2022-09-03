@@ -471,14 +471,10 @@ while true do
 
                     elseif button == "button8" then
                             drawScreen("customWithdraw")
-                            
-                        end
+
                     elseif button == "buttonCancel" then
                         break
                     end
-                end
-                elseif button == "buttonCancel" then
-                    break
                 end
             end
             drawScreen("cancel")
