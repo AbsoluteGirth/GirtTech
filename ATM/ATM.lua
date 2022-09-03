@@ -236,10 +236,10 @@ function drawScreen(screen)
     elseif screen == "failed" then 
         --transaction failed screen
 
-    elseif screen == "customWithdraw"
+    elseif screen == "customWithdraw" then
         --custom withdrawl screen
 
-    elseif screen == "processing"
+    elseif screen == "processing" then
         --processing transaction screen
         
     end
