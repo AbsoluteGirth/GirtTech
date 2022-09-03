@@ -338,7 +338,7 @@ while true do
         os.pullEvent("disk")
         sleep(1)
         drawScreen("pleaseWait")
-        readCard()
+        cardlines = readCard()
         sleep(2)
 
         turtle("card", "take")
@@ -354,6 +354,11 @@ while true do
             break
         end
         
+        while true do
+            -- draw menu 
+            -- read buttons
+            -- different screens 
+
         sleep(2)
     end
 end
