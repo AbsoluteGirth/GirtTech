@@ -1,3 +1,4 @@
+
 -- wget run https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/ATM/ATM.lua
 
 modem = peripheral.find("modem")
@@ -10,7 +11,11 @@ local screens = {"insertCard","pleaseWait","PIN"}
 
 term.setCursorBlink(false)
 
-local balance = 12340000
+function sendServ(msg1, msg2, msg3)
+    modem.transmit(65000, atmPort, {msg1, msg2, msg3})
+    local event,side,chan,rchan,message,dist = os.pullEvent("modem_message")
+    return message
+end
 
 function turtle(action, control)
     if action == card then
