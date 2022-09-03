@@ -196,13 +196,41 @@ function drawScreen(screen)
 
     elseif screen == "deposit" then 
         --draw deposit screen
+        term.setCursorPos(15, 3)
+        term.write("Please insert")
+        term.setCursorPos(15, 4)
+        term.write("cash and")
+        term.setCursorPos(15, 5)
+        term.write("press select.")
 
     elseif screen == "withdraw" then
         --draw withdraw screen
+        term.setCursorPos(15, 3)
+        term.write("Please select")
+        term.setCursorPos(15, 4)
+        term.write("amount to")
+        term.setCursorPos(15, 5)
+        term.write("withdraw.")
+
+        term.setCursorPos(15,7)
+        term.write("Y1000")
+        term.setCursorPos(15,9)
+        term.write("Y2000")
+        term.setCursorPos(22,7)
+        term.write("Y5000")
+        term.setCursorPos(22,9)
+        term.write("Other")
 
     elseif screen == "cancel" then 
         --draw cancel screen
-
+        term.setCursorPos(15, 3)
+        term.write("Teansaction")
+        term.setCursorPos(15, 4)
+        term.write("cancelled")
+        term.setCursorPos(15, 6)
+        term.write("Please take")
+        term.setCursorPos(15,7)
+        term.write("your card.")
     end
 end
 
@@ -384,6 +412,7 @@ while true do
             while true do
                 local button = readButtons()
                 if button == "button2" then 
+                    balance = sendServ(cardNo, " ", "bal")
                     drawScreen("bal")
                     break
                 elseif button == "button3" then
