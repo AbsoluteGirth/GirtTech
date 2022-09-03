@@ -225,7 +225,7 @@ function drawScreen(screen)
     elseif screen == "cancel" then 
         --draw cancel screen
         term.setCursorPos(15, 3)
-        term.write("Teansaction")
+        term.write("Transaction")
         term.setCursorPos(15, 4)
         term.write("cancelled")
         term.setCursorPos(15, 6)
@@ -235,12 +235,18 @@ function drawScreen(screen)
     
     elseif screen == "failed" then 
         --transaction failed screen
+        term.setCursorPos(15, 3)
+        term.write("failed")
 
     elseif screen == "customWithdraw" then
         --custom withdrawl screen
+        term.setCursorPos(15, 3)
+        term.write("custom withdraw")
 
     elseif screen == "processing" then
         --processing transaction screen
+        term.setCursorPos(15, 3)
+        term.write("processing")
         
     end
 end
