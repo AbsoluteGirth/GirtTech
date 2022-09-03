@@ -177,13 +177,13 @@ while true do
     local event,side,chan,rchan,message,dist = os.pullEvent("modem_message")
     
     if dist < 2 then 
-        if message[1] == deposit then 
+        if message[1] == "deposit" then 
             modem.transmit(rchan, 65534, deposit(message[2]))
-        elseif message[1] == withdraw then 
+        elseif message[1] == "withdraw" then 
             modem.transmit(rchan, 65534, withdraw(message[2]))
-        elseif message[1] == card then 
+        elseif message[1] == "card" then 
             modem.transmit(rchan, 65534, card(message[2]))
-        elseif message[1] == succ then 
+        elseif message[1] == "succ" then 
             modem.transmit(rchan, 65534, succ())
         end
     end
