@@ -35,6 +35,7 @@ function turtle(action, control)
     
     
     end
+
 end
 
 function drawATM()
@@ -179,9 +180,9 @@ function drawScreen(screen)
         term.setCursorPos(16,6)
         term.write("Y"..balance)
         term.setCursorPos(14,9)
-        term.write("Withdraw")
-        term.setCursorPos(24,9)
-        term.write("Other")
+        term.write("")
+        term.setCursorPos(23,9)
+        term.write("Return")
     
     elseif screen == "menu" then 
         term.setCursorPos(14,2)
@@ -415,21 +416,25 @@ while true do
                 if button == "button2" then 
                     balance = sendServ(cardNo, " ", "checkBal")
                     drawScreen("bal")
-                    readButtons()
-                    break
+                    button = readButtons()
+                    
+                    if button == "buttonCancel" then 
+                        break
+                    end
+
+
                 elseif button == "button3" then
                     drawScreen("deposit")
-                    break
+                    
                 elseif button == "button4" then 
                     drawScreen("withdraw")
-                    break
                 elseif button == "buttonCancel" then
-                    drawScreen("cancel")
-                    sleep(5)
                     break
                 end
             end
+            drawScreen("cancel")
             turtle("card", "return")
+            sleep(5)
             break
         end
     end
