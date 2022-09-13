@@ -11,16 +11,16 @@ local transmitchannel1 =  -- Max = 65535
 local transmitchannel2 = 
 
 
-local dest1 == {" [Villeport]  ", 
+local dest1 = {" [Villeport]  ", 
                 "  [Girtland]  "}
 
-local dest1Color == {colors.brown, 
+local dest1Color = {colors.brown, 
                      colors.lime}
 
-local dest2 == {"     [OUT]    ",
+local dest2 = {"     [OUT]    ",
                 "     [IN]     "}
 
-local dest2Color == {colors.red, 
+local dest2Color = {colors.red, 
                      colors.green}
 
 
@@ -32,8 +32,8 @@ local textcolor = colors.white
 modem.transmit(transmitchannel1, 1, false)
 modem.transmit(transmitchannel2, 1, false)
 
-local dest1Option == 1
-local dest2Option == 1
+local dest1Option = 1
+local dest2Option = 1
 
 -- Don't touch anything past here --
 

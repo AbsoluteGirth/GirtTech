@@ -12,7 +12,7 @@ local modem = peripheral.find("modem")
 
 local recievechannel = 
 
-local invert == false
+local invert = false
 
 
 
