@@ -46,7 +46,9 @@ while true do
 
     term.setCursorPos(2,2)
     term.setBackgroundColor(bgcolor)
-    term.write("Door Remote")
+    term.write("Kamikatsu station")
+    term.setCursorPos(2,3)
+    term.write("point controller")
         
     term.setCursorPos(7,7)
     term.setBackgroundColor(dest1Color[dest1Option])
