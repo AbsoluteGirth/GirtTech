@@ -38,7 +38,7 @@ function split(str, delimiter)
 
 
 
-  local peripheral = require("peripheral")
+  -- local peripheral = require("peripheral")
   local term = peripheral.wrap("top")
   local computer = require("computer")
   
