@@ -13,9 +13,7 @@ end
 
 
 
-local component = require("component")
-local term = component.term
-local computer = require("computer")
+
 
 function split(str, delimiter)
     local result = {}
@@ -38,29 +36,43 @@ function split(str, delimiter)
     return result
   end
 
-function readWebPage(url)
-  local handle = component.internet.request(url)
-  local result = handle.read(math.huge)
-  handle.close()
-  return result
-end
 
-function runWebPage(url)
-  local content = readWebPage(url)
-  local func, err = load(content)
-  if not func then
-    term.write(err)
-  else
-    pcall(func)
+
+  local peripheral = require("peripheral")
+  local term = peripheral.wrap("top")
+  local computer = require("computer")
+  
+  function split(str, delimiter)
+    -- Code for the split function goes here
   end
-end
-
-function main()
-  term.write("Enter the string to split: ")
-  local input = term.read()
-  local parts = split(input, ".")
-  local url = "https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/girtweb/site/" .. parts[3] .. parts[2] .. "/" .. parts[1]
-  runWebPage(url)
-end
-
-main()
+  
+  function readWebPage(url)
+    local handle = peripheral.call("top", "http.get", url)
+    local result = handle.readAll()
+    handle.close()
+    return result
+  end
+  
+  function runWebPage(url)
+    local content = readWebPage(url)
+    local func, err = load(content)
+    if not func then
+      term.write(err)
+    else
+      pcall(func)
+    end
+  end
+  
+  function main()
+    term.write("Enter the string to split: ")
+    local input = term.read()
+    local parts = split(input, ".")
+    local url = "https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/girtweb/site/" .. parts[2] .. "/" .. parts[1]
+    runWebPage(url)
+  end
+  
+  main()
+  
+  
+  
+  
