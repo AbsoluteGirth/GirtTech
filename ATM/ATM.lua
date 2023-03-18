@@ -405,6 +405,7 @@ while true do
         turtle("card", "take")
         sleep(2)
 
+        -- add check for invalid card here 5head
         
         name = cardlines[1]
         cardNo = cardlines[2]
