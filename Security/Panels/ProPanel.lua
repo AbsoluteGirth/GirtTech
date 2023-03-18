@@ -6,9 +6,7 @@
 
 
 
-local password = ""
-local passwordlen = 6
-local opentime = 5
+
  
 local bgcolor = colors.lightGray
 local buttoncolor = colors.gray
@@ -22,28 +20,50 @@ local textcolor = colors.white
  
 if fs.exists("panelPrefs") == false then 
     --setup goes here
+
+    term.setTextColor(colors.white)
+    term.setBackgroundColor(colors.gray)
+
     term.clear()
-    print("Thank you for your purchase of your new GirtTech pro panel!")
+    term.setCursorPos(1,1)
+    print("Thank you for your purchase of your new GirtTech pro security panel!")
     print("First we need to get you set up")
     print("Press enter to continue...")
     read()
     term.clear()
+    term.setCursorPos(1,1)
     
 
     print("First things first you need to make a password")
     print("Make sure you write it down as recovery will require GirtTech support and is NOT covered by your warranty")
-    local password = read("*")
-    local passwordlen = string.len(password)
+    
+    while true do 
+        local input = read("*")
+        if tonumber(input) == nil then 
+            term.clear()
+            term.setCursorPos(1,1)
+            print("That wasn't a valid number!")
+            print("Please enter a valid number")
+        else 
+            local password = input
+            local passwordlen = string.len(password)
+            break
+        end
+    end
+    
+
 
     term.clear()
+    term.setCursorPos(1,1)
     print("Great!")
     print("Now all that's left is to choose how long you want the door to stay open for when you enter the password")
     print("We reccomend 5 for gates and 30 for garages")
 
     while true do 
         local input = read()
-        if (tostring(input)) == nil then 
+        if tonumber(input) == nil then 
             term.clear()
+            term.setCursorPos(1,1)
             print("That wasn't a valid number!")
             print("Please enter a valid number")
         else 
@@ -53,6 +73,7 @@ if fs.exists("panelPrefs") == false then
     end
 
     term.clear()
+    term.setCursorPos(1,1)
     print("Great!")
     print("All that's left now is to set up your opener")
     print("After this your new security panel will be ready to go!")
@@ -66,9 +87,10 @@ if fs.exists("panelPrefs") == false then
     prefs.close()
 
     term.clear()
-    shell.run("opendoor", tonumber(opentime))
+    shell.run("opendoor")
 
     term.clear()
+    term.setCursorPos(1,1)
     print("Great!")
     print("You're all good to go!")
     print("If you encounter any issues make sure to contact GirtTech support as soon as possible")
@@ -77,16 +99,16 @@ if fs.exists("panelPrefs") == false then
     os.reboot()   
     
 else 
-    local prefs = fs.open("panelPrefs", "w")
+    local prefs = fs.open("panelPrefs", "r")
     -- add the reading bit here
     for line in prefs.readLine do 
         table.insert(preferences, line)
     end
     prefs.close()
 
-    password = preferences[1]
-    passwordlen = preferences[2]
-    opentime = preferences[3]
+    local password = preferences[1]
+    local passwordlen = preferences[2]
+    local opentime = preferences[3]
 end
 
     

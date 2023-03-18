@@ -19,6 +19,65 @@ local textcolor = colors.white
 
 -- Don't touch anything past here --
 
+if fs.exists("panelPrefs") == false then 
+    --setup goes here
+
+    term.setTextColor(colors.white)
+    term.setBackgroundColor(colors.gray)
+
+    term.clear()
+    term.setCursorPos(1,1)
+    print("Thank you for your purchase of your new GirtTech remote security panel!")
+    print("First we need to get you set up")
+    print("Press enter to continue...")
+    read()
+    term.clear()
+    term.setCursorPos(1,1)
+    
+
+    print("First things first you need to choose a 4 digit encryption key")
+    print("Make sure you write it down as recovery will require GirtTech support and is NOT covered by your warranty")
+    
+    while true do 
+        local input = read("*")
+        if tonumber(input) == nil then 
+            term.clear()
+            term.setCursorPos(1,1)
+            print("That wasn't a valid number!")
+            print("Please enter a valid number")
+        else 
+            local transmitchannel = input
+            break
+        end
+    end
+    
+    local prefs = fs.open("panelPrefs", "w")
+    prefs.writeLine(transmitchannel)
+    prefs.close()
+
+
+    term.clear()
+    term.setCursorPos(1,1)
+    print("Great!")
+    print("You're all good to go!")
+    print("If you encounter any issues make sure to contact GirtTech support as soon as possible")
+    print("Press enter to secure your home with GirtTech")
+    read()
+    os.reboot()   
+    
+else 
+    local prefs = fs.open("panelPrefs", "r")
+    -- add the reading bit here
+    for line in prefs.readLine do 
+        table.insert(preferences, line)
+    end
+    prefs.close()
+
+    local transmitchannel = preferences[1]
+
+end
+
+
 term.setBackgroundColor(bgcolor)
 term.setTextColor(textcolor)
 term.clear()
