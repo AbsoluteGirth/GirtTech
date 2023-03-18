@@ -20,7 +20,68 @@ local textcolor = colors.white
 -- Don't touch anything past here --
  
  
- 
+if fs.exists("panelPrefs") == false then 
+    --setup goes here
+    term.clear()
+    print("Thank you for your purchase of your new GirtTech pro panel!")
+    print("First we need to get you set up")
+    print("Press enter to continue...")
+    read()
+    term.clear()
+    
+
+    print("First things first you need to make a password")
+    print("Make sure you write it down as recovery will require GirtTech support and is NOT covered by your warranty")
+    local password = read("*")
+    local passwordlen = string.len(password)
+
+    term.clear()
+    print("Great!")
+    print("Now all that's left is to choose how long you want the door to stay open for when you enter the password")
+    print("We reccomend 5 for gates and 30 for garages")
+
+    while true do 
+        local input = read()
+        if (tostring(input)) == nil then 
+            term.clear()
+            print("That wasn't a valid number!")
+            print("Please enter a valid number")
+        else 
+            local opentime = input
+            break
+        end
+    end
+
+    term.clear()
+    print("Great!")
+    print("All that's left now is to set up your opener")
+    print("After this your new security panel will be ready to go!")
+    print("Press enter to continue to opener setup")
+    read()
+
+    local prefs fs.open("panelPrefs", "w")
+    prefs.writeline(password)
+    prefs.writeline(passwordlen)
+    preft.writeline(opentime)
+    prefs.close()
+
+    term.clear()
+    shell.run("opendoor", tonumber(opentime))
+
+    term.clear()
+    print("Great!")
+    print("You're all good to go!")
+    print("If you encounter any issues make sure to contact GirtTech support as soon as possible")
+    print("Press enter to secure your home with GirtTech")
+    read()
+    os.reboot()   
+    
+else 
+    local prefs fs.open("panelPrefs", "w")
+    -- add the reading bit here
+end
+
+    
  
 local cIn = ""
 while true do
