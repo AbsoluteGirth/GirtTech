@@ -81,6 +81,7 @@ else
     -- add the reading bit here
     for line in prefs.readLine do 
         table.insert(preferences, line)
+    end
     prefs.close()
 
     password = line[1]
