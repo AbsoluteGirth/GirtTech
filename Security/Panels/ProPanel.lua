@@ -60,9 +60,9 @@ if fs.exists("panelPrefs") == false then
     read()
 
     local prefs = fs.open("panelPrefs", "w")
-    prefs.writeline(password)
-    prefs.writeline(passwordlen)
-    preft.writeline(opentime)
+    prefs.writeLine(password)
+    prefs.writeLine(passwordlen)
+    prefs.writeLine(opentime)
     prefs.close()
 
     term.clear()
@@ -77,8 +77,15 @@ if fs.exists("panelPrefs") == false then
     os.reboot()   
     
 else 
-    local prefs fs.open("panelPrefs", "w")
+    local prefs = fs.open("panelPrefs", "w")
     -- add the reading bit here
+    for line in prefs.readLine do 
+        table.insert(preferences, line)
+    prefs.close()
+
+    password = line[1]
+    passwordlen = line[2]
+    opentime = line[3]
 end
 
     
