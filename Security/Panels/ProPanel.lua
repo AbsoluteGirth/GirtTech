@@ -59,7 +59,7 @@ if fs.exists("panelPrefs") == false then
     print("Press enter to continue to opener setup")
     read()
 
-    local prefs fs.open("panelPrefs", "w")
+    local prefs = fs.open("panelPrefs", "w")
     prefs.writeline(password)
     prefs.writeline(passwordlen)
     preft.writeline(opentime)
