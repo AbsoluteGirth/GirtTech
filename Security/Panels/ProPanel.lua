@@ -84,9 +84,9 @@ else
     end
     prefs.close()
 
-    password = line[1]
-    passwordlen = line[2]
-    opentime = line[3]
+    password = preferences[1]
+    passwordlen = preferences[2]
+    opentime = preferences[3]
 end
 
     
