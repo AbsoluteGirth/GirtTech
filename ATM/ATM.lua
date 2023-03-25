@@ -502,6 +502,7 @@ function newmain()
     while true do 
         drawATM()
         drawScreen(currentScreen)
+    end
 end
 
 
