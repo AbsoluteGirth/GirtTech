@@ -391,6 +391,7 @@ function readCard()
     return cardlines
 end
 
+function main()
 while true do 
     while true do
         drawATM()
@@ -491,3 +492,17 @@ while true do
         end
     end
 end
+end 
+
+
+function newmain()
+    --ok time to start again
+
+    local currentScreen = "welcome"
+    while true do 
+        drawATM()
+        drawScreen(currentScreen)
+end
+
+
+main()
