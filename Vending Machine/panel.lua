@@ -194,7 +194,7 @@ while true do
                     
                     -- PAYMENT CODE HERE
 
-                    modem.transmit(rchan, 2445, cIn)
+                    modem.transmit(0, 2445, cIn)
 
                     sleep(2)
                     break

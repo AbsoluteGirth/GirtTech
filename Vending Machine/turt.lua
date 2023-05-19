@@ -7,16 +7,17 @@ while true do
     if dist < 2 then 
         if message == "a0" then 
             turtle.select(5)
-        elseif message = "a1" then
+        elseif message == "a1" then
             turtle.select(6)
-        elseif message = "a2" then
+        elseif message == "a2" then
             turtle.select(7)
-        elseif message = "c0" then
+        elseif message == "c0" then
             turtle.select(13)
-        elseif message = "c1" then
+        elseif message == "c1" then
             turtle.select(14)
-        elseif message = "c2" then
+        elseif message == "c2" then
             turtle.select(15)
+        end
     end
 
     turtle.placeDown()
