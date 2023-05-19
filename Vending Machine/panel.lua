@@ -193,9 +193,60 @@ while true do
                     
                     
                     -- PAYMENT CODE HERE
+                    local event, button, x, y = os.pullEvent("mouse_click")
+                    if event == "mouse_click" and x >= 18 and x <= 20 and y == 12 then 
+                        break 
+                    elseif event == "disk" then 
+                        if not fs.exists("disk/card") then 
+                            
+                            term.setCursorPos(10,1)
+                            term.write("                   ")
+                            term.setCursorPos(10,2)
+                            term.write("                   ")
+                            term.setCursorPos(10,3)
+                            term.write("                   ")
+                            term.setCursorPos(10,4)
+                            term.write("                   ")
+                            
+                            term.setCursorPos(11,2)
+                            term.write("INVALID CARD")
+                            term.setCursorPos(11,3)
+                            term.write("Please try again")
+                            sleep(2)
+                            break
+                        
+                        else
+                            local card = fs.open("disk/card", "r")
+                            local cardLines = textutils.unserialise(card.readAll())
+                            card.close()
 
-                    modem.transmit(0, 2445, cIn)
-
+                            if cardLines.bal >= prices[cIn] then 
+                                cardLines.bal = cardLines.bal - prices[cIn]
+                                card = fs.open("disk/card", "w")
+                                card.write(textutils.serialise(cardLines))
+                                card.close()
+                                modem.transmit(2445, 2445, cIn)
+                                sleep(2)
+                                break 
+                            else 
+                                term.setCursorPos(10,1)
+                                term.write("                   ")
+                                term.setCursorPos(10,2)
+                                term.write("                   ")
+                                term.setCursorPos(10,3)
+                                term.write("                   ")
+                                term.setCursorPos(10,4)
+                                term.write("                   ")
+                                
+                                term.setCursorPos(11,2)
+                                term.write("INSUFFICIENT FUNDS")
+                                term.setCursorPos(11,3)
+                                term.write("Please try again")
+                                sleep(2)
+                                break
+                            end
+                        end
+                    end
                     sleep(2)
                     break
 

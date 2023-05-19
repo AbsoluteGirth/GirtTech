@@ -22,7 +22,7 @@ while true do
 
     turtle.placeDown()
     turtle.suckDown(1)
+    turtle.dropUp()
     turtle.digDown()
     turtle.select(1)
-    turtle.dropUp()
 end
