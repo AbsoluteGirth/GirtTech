@@ -5,7 +5,7 @@ modem.open(2445)
 while true do 
     local event,side,chan,rchan,message,dist = os.pullEvent("modem_message")
     if dist < 2 then 
-        if message = "a0" then 
+        if message == "a0" then 
             turtle.select(5)
         elseif message = "a1" then
             turtle.select(6)
