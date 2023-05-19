@@ -1,5 +1,6 @@
 local cIn = ""
 spk = peripheral.wrap("right")
+modem = peripheral.wrap("left")
 
 local bgcolor = colors.lightGray
 local buttoncolor = colors.gray
