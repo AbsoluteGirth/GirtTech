@@ -83,7 +83,7 @@ while true do
     term.write("                   ")
     
     term.setCursorPos(11,2)
-    term.write("Please enter selection:")
+    term.write("Enter Selection:")
     term.setCursorPos(11,3)
      
        
@@ -118,6 +118,7 @@ while true do
                     spk.playSound("minecraft:ui.button.click")
                     cIn = cIn.."d"
                     term.write("D")
+                end
             end
         
         elseif x >= 18 and x <= 20 then
@@ -149,24 +150,35 @@ while true do
                 if string.len(cIn) < passwordlen then
                     spk.playSound("minecraft:ui.button.click")
                     cIn = cIn.."3"
-                    term.write("* ")
+                    term.write("3")
                 end
             elseif y == 8 then  --6
                 if string.len(cIn) < passwordlen then
                     spk.playSound("minecraft:ui.button.click")
-                    cIn = cIn.."6"
-                    term.write("* ")
+                    cIn = cIn.."4"
+                    term.write("4")
                 end
             elseif y == 10 then  --9
                 if string.len(cIn) < passwordlen then
                     spk.playSound("minecraft:ui.button.click")
-                    cIn = cIn.."9"
-                    term.write("* ")
+                    cIn = cIn.."5"
+                    term.write("5")
                 end
             elseif y == 12 then  --o
                 spk.playSound("minecraft:ui.button.click")
+                term.setBackgroundColor(colors.black)
+
+                term.setCursorPos(10,1)
+                term.write("                   ")
+                term.setCursorPos(10,2)
+                term.write("                   ")
+                term.setCursorPos(10,3)
+                term.write("                   ")
+                term.setCursorPos(10,4)
+                term.write("                   ")
+
                 term.setCursorBlink(false)
-                if not products[input] then
+                if not products[cIn] then
                     term.setCursorPos(11,2)
                     term.write("INVALID SELECTION")
                     sleep(2)
@@ -174,10 +186,15 @@ while true do
                     
                 else
                     term.setCursorPos(11,2)
-                    term.write(products[input])
+                    term.write(products[cIn])
                     term.setCursorPos(11,3)
-                    term.write(prices[input])
+                    term.write("Y"..prices[cIn])
+                    
+                    
                     -- PAYMENT CODE HERE
+
+                    modem.transmit(rchan, 2445, cIn)
+
                     sleep(2)
                     break
 
