@@ -1,6 +1,10 @@
 local cIn = ""
 spk = peripheral.wrap("left")
 
+local bgcolor = colors.lightGray
+local buttoncolor = colors.gray
+local textcolor = colors.white
+
 local prices = {
     a0 = 150, 
     a1 = 200, 
