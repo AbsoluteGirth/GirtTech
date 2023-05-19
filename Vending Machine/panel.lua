@@ -5,6 +5,8 @@ local bgcolor = colors.lightGray
 local buttoncolor = colors.gray
 local textcolor = colors.white
 
+local passwordlen = 2
+
 local prices = {
     a0 = 150, 
     a1 = 200, 
@@ -80,8 +82,9 @@ while true do
     term.setCursorPos(10,4)
     term.write("                   ")
     
-    term.setCursorPos((27-passwordlen),5)
-    
+    term.setCursorPos(11,2)
+    term.write("Please enter selection:")
+    term.setCursorPos(11,3)
      
        
     term.setCursorBlink(true)
@@ -91,90 +94,93 @@ while true do
  
     while true do
         local event, button, x, y = os.pullEvent("mouse_click")
-        if x >= 21 and x <= 23 then
-            if y == 8 then       --1
+        if x >= 14 and x <= 16 then
+            if y == 6 then       --1
+                if string.len(cIn) < passwordlen then
+                    spk.playSound("minecraft:ui.button.click")
+                    cIn = cIn.."a"
+                    term.write("A")
+                end
+            elseif y == 8 then  --4
+                if string.len(cIn) < passwordlen then
+                    spk.playSound("minecraft:ui.button.click")
+                    cIn = cIn.."b"
+                    term.write("B")
+                end
+            elseif y == 10 then  --7
+                if string.len(cIn) < passwordlen then    
+                    spk.playSound("minecraft:ui.button.click")
+                    cIn = cIn.."c"
+                    term.write("C")
+                end
+            elseif y == 12 then  --x
+                if string.len(cIn) < passwordlen then    
+                    spk.playSound("minecraft:ui.button.click")
+                    cIn = cIn.."d"
+                    term.write("D")
+            end
+        
+        elseif x >= 18 and x <= 20 then
+            if y == 6 then       --2
+                if string.len(cIn) < passwordlen then
+                    spk.playSound("minecraft:ui.button.click")
+                    cIn = cIn.."0"
+                    term.write("0")
+                end
+            elseif y == 8 then  --5
                 if string.len(cIn) < passwordlen then
                     spk.playSound("minecraft:ui.button.click")
                     cIn = cIn.."1"
-                    term.write("* ")
+                    term.write("1")
                 end
-            elseif y == 10 then  --4
+            elseif y == 10 then  --8
                 if string.len(cIn) < passwordlen then
                     spk.playSound("minecraft:ui.button.click")
-                    cIn = cIn.."4"
-                    term.write("* ")
+                    cIn = cIn.."2"
+                    term.write("2")
                 end
-            elseif y == 12 then  --7
-                if string.len(cIn) < passwordlen then    
-                    spk.playSound("minecraft:ui.button.click")
-                    cIn = cIn.."7"
-                    term.write("* ")
-                end
-            elseif y == 14 then  --x
+            elseif y == 12 then  --0
                 spk.playSound("minecraft:ui.button.click") 
                 break
             end
         
-        elseif x >= 25 and x <= 27 then
-            if y == 8 then       --2
-                if string.len(cIn) < passwordlen then
-                    spk.playSound("minecraft:ui.button.click")
-                    cIn = cIn.."2"
-                    term.write("* ")
-                end
-            elseif y == 10 then  --5
-                if string.len(cIn) < passwordlen then
-                    spk.playSound("minecraft:ui.button.click")
-                    cIn = cIn.."5"
-                    term.write("* ")
-                end
-            elseif y == 12 then  --8
-                if string.len(cIn) < passwordlen then
-                    spk.playSound("minecraft:ui.button.click")
-                    cIn = cIn.."8"
-                    term.write("* ")
-                end
-            elseif y == 14 then  --0
-                if string.len(cIn) < passwordlen then
-                    spk.playSound("minecraft:ui.button.click")
-                    cIn = cIn.."0"
-                    term.write("* ")
-                end
-            end
-        
-        elseif x >= 29 and x <= 31 then
-            if y == 8 then       --3
+        elseif x >= 22 and x <= 24 then
+            if y == 6 then       --3
                 if string.len(cIn) < passwordlen then
                     spk.playSound("minecraft:ui.button.click")
                     cIn = cIn.."3"
                     term.write("* ")
                 end
-            elseif y == 10 then  --6
+            elseif y == 8 then  --6
                 if string.len(cIn) < passwordlen then
                     spk.playSound("minecraft:ui.button.click")
                     cIn = cIn.."6"
                     term.write("* ")
                 end
-            elseif y == 12 then  --9
+            elseif y == 10 then  --9
                 if string.len(cIn) < passwordlen then
                     spk.playSound("minecraft:ui.button.click")
                     cIn = cIn.."9"
                     term.write("* ")
                 end
-            elseif y == 14 then  --o
+            elseif y == 12 then  --o
                 spk.playSound("minecraft:ui.button.click")
                 term.setCursorBlink(false)
                 if not products[input] then
                     term.setCursorPos(11,2)
                     term.write("INVALID SELECTION")
-
-                    -- PAYMENT CODE HERE
+                    sleep(2)
+                    break
+                    
                 else
                     term.setCursorPos(11,2)
                     term.write(products[input])
                     term.setCursorPos(11,3)
                     term.write(prices[input])
+                    -- PAYMENT CODE HERE
                     sleep(2)
+                    break
+
                 end
                 break
             end        
