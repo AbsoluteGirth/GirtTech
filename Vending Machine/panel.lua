@@ -1,5 +1,5 @@
 local cIn = ""
-spk = peripheral.wrap("left")
+spk = peripheral.wrap("right")
 
 local bgcolor = colors.lightGray
 local buttoncolor = colors.gray
@@ -35,49 +35,49 @@ while true do
     
     --buttons
     
-    term.setCursorPos(14,7)
-    term.write("[1]")
-    term.setCursorPos(18,7)
-    term.write("[2]")
-    term.setCursorPos(22,7)
-    term.write("[3]")
-    term.setCursorPos(14,9)
-    term.write("[4]")
-    term.setCursorPos(18,9)
-    term.write("[5]")
-    term.setCursorPos(14,9)
-    term.write("[6]")
-    term.setCursorPos(14,11)
-    term.write("[7]")
-    term.setCursorPos(118,11)
-    term.write("[8]")
-    term.setCursorPos(22,11)
-    term.write("[9]")
-    term.setCursorPos(18,13)
+    term.setCursorPos(14,6)
+    term.write("[A]")
+    term.setCursorPos(18,6)
     term.write("[0]")
+    term.setCursorPos(22,6)
+    term.write("[3]")
+    term.setCursorPos(14,8)
+    term.write("[B]")
+    term.setCursorPos(18,8)
+    term.write("[1]")
+    term.setCursorPos(22,8)
+    term.write("[4]")
+    term.setCursorPos(14,10)
+    term.write("[C]")
+    term.setCursorPos(18,10)
+    term.write("[2]")
+    term.setCursorPos(22,10)
+    term.write("[5]")
+    term.setCursorPos(14,12)
+    term.write("[D]")
     
     term.setBackgroundColor(colors.red)
-    term.setCursorPos(14,13)
+    term.setCursorPos(18,12)
     term.write("[x]")
     
     term.setBackgroundColor(colors.green)
-    term.setCursorPos(22,13)
+    term.setCursorPos(22,12)
     term.write("[o]")
  
     --screen
     
     term.setBackgroundColor(bgcolor)
-    term.setCursorPos(2,1)
+    term.setCursorPos(1,13)
     term.write("NO CHANGE GIVEN")
     
     term.setBackgroundColor(colors.black)
-    term.setCursorPos(18,2)
+    term.setCursorPos(10,1)
     term.write("                   ")
-    term.setCursorPos(18,3)
+    term.setCursorPos(10,2)
     term.write("                   ")
-    term.setCursorPos(18,4)
+    term.setCursorPos(10,3)
     term.write("                   ")
-    term.setCursorPos(2,5)
+    term.setCursorPos(10,4)
     term.write("                   ")
     
     term.setCursorPos((27-passwordlen),5)
@@ -165,14 +165,14 @@ while true do
                 spk.playSound("minecraft:ui.button.click")
                 term.setCursorBlink(false)
                 if not products[input] then
-                    term.setCursorPos(3,3)
+                    term.setCursorPos(11,2)
                     term.write("INVALID SELECTION")
 
                     -- PAYMENT CODE HERE
                 else
-                    term.setCursorPos(3,3)
+                    term.setCursorPos(11,2)
                     term.write(products[input])
-                    term.setCursorPos(3,4)
+                    term.setCursorPos(11,3)
                     term.write(prices[input])
                     sleep(2)
                 end
