@@ -193,7 +193,7 @@ while true do
                     
                     
                     -- PAYMENT CODE HERE
-                    local event, button, x, y = os.pullEvent("mouse_click")
+                    local event, button, x, y = os.pullEvent()
                     if event == "mouse_click" and x >= 18 and x <= 20 and y == 12 then 
                         break 
                     elseif event == "disk" then 
@@ -221,6 +221,20 @@ while true do
                             card.close()
 
                             if cardLines.bal >= prices[cIn] then 
+                                term.setCursorPos(10,1)
+                                term.write("                   ")
+                                term.setCursorPos(10,2)
+                                term.write("                   ")
+                                term.setCursorPos(10,3)
+                                term.write("                   ")
+                                term.setCursorPos(10,4)
+                                term.write("                   ")
+                                
+                                term.setCursorPos(11,2)
+                                term.write("READING CARD")
+                                term.setCursorPos(11,3)
+                                term.write("Please wait")
+                                sleep(2)
                                 cardLines.bal = cardLines.bal - prices[cIn]
                                 card = fs.open("disk/card", "w")
                                 card.write(textutils.serialise(cardLines))
@@ -247,9 +261,7 @@ while true do
                             end
                         end
                     end
-                    sleep(2)
                     break
-
                 end
                 break
             end        
