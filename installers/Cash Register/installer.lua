@@ -12,8 +12,8 @@ files = {
 }
 
 config = {
-    programFile = "/keypad"
-    reqFiles = {"/keypad", "/opendoor"}
+    programFile = "register"
+    reqFiles = {"register", "regConfig"}
 }
 
 function install(i)
