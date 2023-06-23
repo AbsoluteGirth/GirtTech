@@ -12,7 +12,7 @@ files = {
 }
 
 config = {
-    programFile = "register"
+    programFile = "register",
     reqFiles = {"register", "regConfig"}
 }
 

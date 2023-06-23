@@ -12,7 +12,7 @@ files = {
 }
 
 config = {
-    programFile = "/keypad"
+    programFile = "/keypad",
     reqFiles = {"/keypad", "/opendoor"}
 }
 

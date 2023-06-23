@@ -21,14 +21,14 @@ if not tempFile then
 end
 print("Installing...")
 drawProgBar()
-f = fs.open(files[i].file, "w")
+f = fs.open("startup", "w")
 f.write(tempFile.readAll())
 f.close()
 sleep(0.5)
 term.clear()
 term.setCursorPos(1,1)
 print("Installation complete!")
-print("Restarting in, ")
+print("Restarting in")
 for i=1,6 do 
     term.setCursorPos(15, 2)
     term.write(6-i)
