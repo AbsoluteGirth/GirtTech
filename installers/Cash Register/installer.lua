@@ -1,19 +1,19 @@
 files = {
     {
         url = "https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/installers/Cash%20Register/CashRegisterNew.lua",
-        file = "register",
+        file = "register.lua",
         update = true
     },
     {
         url = "https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/installers/Cash%20Register/defaultConfig.lua",
-        file  = "regConfig",
+        file  = "regConfig.lua",
         update = false
     }
 }
 
 config = {
-    programFile = "register",
-    reqFiles = {"register", "regConfig"}
+    programFile = "register.lua",
+    reqFiles = {"register.lua", "regConfig.lua"}
 }
 
 function install(i)
