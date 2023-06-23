@@ -3,7 +3,6 @@ sel = 1
 termX, termY = term.getSize()
 checkoutOpenness = 0
 list = {items = {}, prices = {}}
-modem_side = "front"
 cardReader = 3
 dofile("regConfig.lua")
 

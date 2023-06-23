@@ -1,12 +1,12 @@
 files = {
     {
-        url = "github url gere",
-        file = "/keypad",
+        url = "https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/installers/Cash%20Register/CashRegisterNew.lua",
+        file = "register",
         update = true
     },
     {
-        url = "another url here",
-        file  = "/opendoor",
+        url = "https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/installers/Cash%20Register/defaultConfig.lua",
+        file  = "regConfig",
         update = false
     }
 }

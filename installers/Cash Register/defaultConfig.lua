@@ -1,3 +1,5 @@
+modem_side = "front"
+
 theme = { -- color scheme
     itemBG = colors.white,
     itemButt = colors.lightGray,
