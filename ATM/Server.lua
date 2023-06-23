@@ -67,3 +67,52 @@ while true do
     local event,side,chan,rchan,message,dist = os.pullEvent("modem_message")
     modem.transmit(rchan, 65000, request(message[1], message[2], message[3]))
 end
+
+--[
+Aaron
+12345678
+1234
+6969
+]--
+
+local f = fs.open("accounts", "r")
+local accounts = textutils.unserialise(f.readAll())
+f.close()
+
+local accounts = {
+    {
+        name = "Aron",
+        cardNo = 1,
+        pin = "1234",
+        bal = 6969,
+        addr = "...."
+        transactions = {
+            {
+                vendor = "Pissy pets"
+                ref = "1x Rat cage"
+                date = "10/04/23"
+                time = "04:20"
+                amount = "500"
+            }
+        }
+    },
+    {
+        name = "John",
+        ..... 
+    }
+}
+
+lcoal messave port dfsjf.... = os.pullEvent("modem_message")
+local activeBal = accounts[message[acctNo]].bal 
+
+print(activebal)
+
+local trans = {
+    vendor = "Pissy pets"
+    ref = "1x cat bed"
+    date = "12/04/23"
+    time = "04:20"
+    amount = "11000"
+}
+
+table.insert(accounts[message.acctNo].transactions, message.trans)

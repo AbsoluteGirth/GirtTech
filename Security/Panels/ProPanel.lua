@@ -99,9 +99,10 @@ if fs.exists("panelPrefs") == false then
     os.reboot()   
     
 else 
+    local preferences = {}
     local prefs = fs.open("panelPrefs", "r")
     -- add the reading bit here
-    for line in prefs.readLine do 
+    for line in prefs.readLine() do 
         table.insert(preferences, line)
     end
     prefs.close()

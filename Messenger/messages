@@ -1,0 +1,23 @@
+contacts = {
+    0123456 = {
+        name = "girt",
+        theme = "pink"
+    }
+}
+
+messages = {
+    0123456 = {
+        {
+            sender = 0123456,
+            time = "03:15",
+            date = "04/20/23",
+            content = "Hello"
+        },
+        {
+            sender = "me",
+            time = "03:18",
+            date = "04/20/23",
+            content = "Helo hwo are you"
+        },
+    },
+}
