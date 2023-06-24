@@ -4,9 +4,8 @@ end
 
 function loadSite(url)
 
-    
-
-    local site = http.get("https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/girtweb/"..)
+  
+    local site = http.get("https://raw.githubusercontent.com/AbsoluteGirth/GirtTech/main/girtweb/")
 end
 
 function drawNavBar()
